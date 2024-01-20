@@ -11000,6 +11000,9 @@ header.masthead h1, header.masthead .h1 {
 
 .ul1 {
   list-style: none;
+  font-size: small;
+  padding-left: 1px;
+  font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 .ul1 li::before {
   content: "•";
@@ -11007,9 +11010,13 @@ header.masthead h1, header.masthead .h1 {
   font-weight: bold;
   display: inline-block;
   width: 15px;
+  
 }
 
 b{
   font-size: larger;
   color: white;
 }
+
+
+
