@@ -10,7 +10,7 @@
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Bootstrap Icons-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
     <!-- Google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic"
@@ -24,14 +24,7 @@
 <body id="page-top">
     <!-- Navigation-->
     <!---->
-    /**
-    * Navigation bar and header section for website.
-    *
-    * Contains navbar with branding, navigation links and toggle button.
-    * Also includes header content with greeting, description and call to action.
-    *
-    * Styled with Bootstrap classes for responsive mobile-friendly design.
-    */
+
     <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
         <div class="container px-4 px-lg-5">
             <a class="navbar-brand" href="#page-top">Orpheus Lau</a>
@@ -149,8 +142,7 @@
             <div class="container-fluid p-0 mt-5 mb-5">
                 <div class="row g-0 justify-content-center">
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/1.jpg"
-                            title="Student Management Information Syfdasfdasfstem">
+                        <a class="portfolio-box" href="#smis" title="Student Management Information Syfdasfdasfstem">
                             <img class="img-fluid" src="assets/img/portfolio/thumbnails/1.jpg" alt="..." />
                             <div class="portfolio-box-caption">
                                 <div class="project-category text-white-50">Reactjs + nodejs (2024)</div>
@@ -222,40 +214,100 @@
     <!-- Contact-->
 
     <!-- Services-->
-    <section class="page-section" id="services">
+    <section class="page-section" id="smis">
         <div class="container px-4 px-lg-5 mt-5">
-            <h2 class="text-center mt-0">At Your Service</h2>
+            <h2 class="text-center mt-0">Full stack application: SMIS</h2>
             <hr class="divider" />
             <div class="row gx-4 gx-lg-5">
+                <img src="assets/img/smis.png" alt="..." class="img-fluid" />
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="mt-5">
                         <div class="mb-2"><i class="bi-gem fs-1 text-primary"></i></div>
-                        <h3 class="h4 mb-2">Sturdy Themes</h3>
-                        <p class="text-muted mb-0">Our themes are updated regularly to keep them bug free!</p>
+                        <h3 class="h4 mb-2">React+Node.js</h3>
+                        <p class="text-muted mb-0"> ReactJS, a popular JavaScript library for building user interfaces.
+                            Besides Node.js allows for the development of fast and lightweight web applications!</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="mt-5">
-                        <div class="mb-2"><i class="bi-laptop fs-1 text-primary"></i></div>
-                        <h3 class="h4 mb-2">Up to Date</h3>
-                        <p class="text-muted mb-0">All dependencies are kept current to keep things fresh.</p>
+                        <div class="mb-2"><i class="bi-database-add fs-1 text-primary"></i></div>
+                        <h3 class="h4 mb-2">MongoDB</h3>
+                        <p class="text-muted mb-0">MongoDB's document-oriented approach allows for the storage of data
+                            in a JSON-like format, making it easy to work with.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="mt-5">
-                        <div class="mb-2"><i class="bi-globe fs-1 text-primary"></i></div>
-                        <h3 class="h4 mb-2">Ready to Publish</h3>
-                        <p class="text-muted mb-0">You can use this design as is, or you can make changes!</p>
+                        <div class="mb-2"><i class="bi-house-lock fs-1 text-primary"></i></div>
+                        <h3 class="h4 mb-2">JSON Web Tokens (JWT)</h3>
+                        <p class="text-muted mb-0">By generating a token upon successful login, JWT ensures that only
+                            authenticated users can access the protected routes and resources of my full stack system.
+                        </p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="mt-5">
-                        <div class="mb-2"><i class="bi-heart fs-1 text-primary"></i></div>
-                        <h3 class="h4 mb-2">Made with Love</h3>
-                        <p class="text-muted mb-0">Is it really open source if it's not made with love?</p>
+                        <div class="mb-2"><i class="bi-file-text fs-1 text-primary"></i></div>
+                        <h3 class="h4 mb-2">Dashboard and export</h3>
+                        <p class="text-muted mb-0">Enabling teachers to generate assessment reports for students in PDF
+                            & Excel format. While visualization of data, e.g. charts and graphs, can aid in
+                            decision-making and identifying trends.</p>
                     </div>
                 </div>
             </div>
+            <hr class="divider" />
+            <div class="row gx-4 gx-lg-5 mt-2">
+                <h3 class="h4 mb-3 mt-2">Key Pages and Features:</h3>
+                <p></p>
+                <div class="col-lg-4 col-md-6"><img src="assets/img/1.png" class="img-fluid" /> <strong> Student Profile
+                        (CRUD)</strong>
+                    <p class="text-muted"> This page allows teachers to manage student profiles, including creating,
+                        reading, updating, and deleting student information.
+                        CRUD operations refer to the basic functions of persistent storage.</p>
+                </div>
+                <div class="col-lg-4 col-md-6"><img src="assets/img/2.png" class="img-fluid" /><strong> Assessment
+                        (CRUD)</strong>
+                    <p class="text-muted"> Teachers can create, read, update, and delete assessments on this page.
+                        Assessments are an integral part of the educational process, allowing teachers to evaluate
+                        student
+                        performance.</p>
+                </div>
+                <div class="col-lg-4 col-md-6"><img src="assets/img/3.png" class="img-fluid" /> <strong>Export in PDF
+                        and Excel Format</strong>
+                    <p class="text-muted"> This feature enables teachers to generate individual assessment reports for
+                        students in PDF format.
+                        PDF can serve as a print-out version and present to other parties. Also teachers can export
+                        consolidated assessment results in Excel format for complex data manipulation and analysis.</p>
+                </div>
+                <div class="col-lg-4 col-md-6"><img src="assets/img/4.png" class="img-fluid" /> <strong> Dashboard from
+                        Student Data</strong>
+                    <p class="text-muted">The dashboard provides a visual representation of student and assessment data,
+                        allowing teachers to
+                        gain insights and track progress. Visualizing data through charts and graphs can aid in
+                        decision-making and identifying trends.
+                        Search</p>
+                </div>
+                <div class="col-lg-4 col-md-6"><img src="assets/img/5.png" class="img-fluid" /> <strong>Search</strong>
+                    <p class="text-muted">This feature enables teachers to search for specific student profiles or
+                        assessments based on
+                        various criteria.
+                        Efficient search functionality enhances user experience and improves productivity.</p>
+                </div>
+                <div class="col-lg-4 col-md-6"><img src="assets/img/6.png" class="img-fluid" /> <strong>User Setup
+                        (Administrator)</strong>
+                    <p class="text-muted">This page allows the administrators to create and manage user accounts for the
+                        application.
+                        Administrators have the authority to grant or revoke access privileges to different users. While
+                        common users can only access their own record and change their passwords securely, ensuring the
+                        confidentiality of their
+                        accounts.</p>
+                </div>
+
+            </div>
+
+
+
+
         </div>
     </section>
 
@@ -265,6 +317,7 @@
             <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-lg-8 col-xl-6 text-center">
                     <h2 class="mt-0">Let's Get In Touch!</h2>
+                    <img src="assets/img/diagram2 (1).jpg" alt="..." class="img-fluid" />
                     <hr class="divider" />
                     <p class="text-muted mb-5"> Welcome! Feel free to browse the site and learn more about what I do. If
                         you have any other questions or would like to discuss a potential project, please don't hesitate
