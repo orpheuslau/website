@@ -66,11 +66,9 @@
 
   <script>
     const apiKey = "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"; // router ai qwene 2.5 vl 32b  
-    //const apiKey = "sk-c7d3592c6d364d2fbcb30e1f6483f65d"; //REAL qwen vl MAX
-
+    
     const MODEL = "qwen/qwen2.5-vl-32b-instruct:free";
-    //const MODEL = "qwen-vl-max";
-
+    
     const fileInput = document.getElementById("imageUpload");
     const preview = document.getElementById("preview");
     const responseDiv = document.getElementById("response");
@@ -134,7 +132,6 @@
       }];
 
       try {
-        //const res = await fetch("https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions", {
         const res = await fetch("https://openrouter.ai/api/v1/chat/completions", {
           method: "POST",
           headers: {
