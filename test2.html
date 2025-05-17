@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NuVision - AI-Powered Nutrition Analysis</title>
+    <!-- CSS styles are defined here, within the <style> tags -->
+    <style>
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background: #007bff;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            font-size: 1.1rem;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .section h2 {
+            color: #007bff;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .feature-item {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .feature-item img {
+            max-width: 60px;
+            margin-bottom: 10px;
+        }
+
+        .privacy-first, .our-mission {
+            background-color: #e7f3ff;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .call-to-action {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .call-to-action p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .app-store-badge {
+            display: inline-block;
+            background: #000;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .app-store-badge:hover {
+            background: #333;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+            margin-top: 30px;
+        }
+        
+        .tagline {
+            text-align: center;
+            font-style: italic;
+            margin-top: 10px;
+            color: #555;
+        }
+
+        /* Responsive adjustments for smaller screens */
+        @media (max-width: 768px) {
+            .container {
+                width: 95%; /* Use more width on smaller screens */
+            }
+
+            header h1 {
+                font-size: 2rem; /* Slightly smaller heading for mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>NuVision</h1>
+        <p>Your AI-Powered Guide to Healthier Eating</p>
+        <p class="tagline">"Love in the Service of Hope" – Let us go the extra mile for families in need with our hearts, hands, and technology.</p>
+    </header>
+
+    <div class="container">
+        <section id="challenge" class="section">
+            <h2>The Challenge: Nutrition in Confined Spaces</h2>
+            <p>In Hong Kong, many families reside in subdivided flats with limited cooking space. This often makes preparing nutritious home-cooked meals difficult, leading to a heavy reliance on takeout. Such circumstances can pose significant challenges to maintaining a healthy and balanced diet, particularly for underprivileged communities.</p>
+        </section>
+
+        <section id="introducing-nuvision" class="section">
+            <h2>Introducing NuVision: Smart Nutrition Made Simple</h2>
+            <p>To address these nutritional challenges, Caritas Social Work Services Division (Service Development) has launched NuVision – a <strong>free, AI-powered mobile application</strong> designed to empower individuals and families to make informed dietary choices. NuVision is the third AI app developed by the creator since 2024, reflecting a commitment to leveraging technology for social good.</p>
+            <p>With just a single photo of a meal, NuVision instantly analyzes its nutritional content, providing a valuable tool for those striving for better health in challenging living conditions.</p>
+        </section>
+
+        <section id="key-features" class="section">
+            <h2>Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <!-- Using a generic icon placeholder; replace with actual icon path if available -->
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E🤖%3C/text%3E%3C/svg%3E" alt="AI Icon">
+                    <h3>Instant Food Recognition</h3>
+                    <p>Snap a photo, and NuVision identifies food items, recognizing hundreds of common foods, including diverse Chinese and Western dishes.</p>
+                </div>
+                <div class="feature-item">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E📊%3C/text%3E%3C/svg%3E" alt="Nutrition Icon">
+                    <h3>Detailed Nutritional Breakdown</h3>
+                    <p>Get comprehensive information on calories, carbohydrates, protein, fat, and more. The app accurately estimates portion sizes and cooking methods.</p>
+                </div>
+                <div class="feature-item">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E👤%3C/text%3E%3C/svg%3E" alt="Personalization Icon">
+                    <h3>Personalized Recommendations</h3>
+                    <p>Receive dietary advice tailored to your age, gender, and body weight, helping you meet your specific nutritional needs.</p>
+                </div>
+                <div class="feature-item">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E📈%3C/text%3E%3C/svg%3E" alt="Tracking Icon">
+                    <h3>Progress Tracking</h3>
+                    <p>Monitor your daily intake and view daily, weekly, and monthly trend reports to stay on track with your healthy eating goals.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="privacy-first" class="section privacy-first">
+            <h2>Privacy First: Your Data, Your Control</h2>
+            <p>NuVision is designed with your privacy as a top priority, especially for the underprivileged communities it aims to serve. Key privacy features include:</p>
+            <ul>
+                <li><strong>Completely Free & Ad-Free:</strong> No hidden costs or distracting advertisements.</li>
+                <li><strong>Local Data Storage:</strong> All your nutritional data is stored locally on your iOS device, not on external servers.</li>
+                <li><strong>Data Encryption:</strong> Your locally stored data is protected by encryption.</li>
+                <li><strong>User Data Ownership:</strong> You fully own your data and can easily export it for backup or further personal analysis.</li>
+                <li><strong>No Identifiable Personal Information Collected:</strong> The app operates without collecting information that can directly identify you, ensuring the highest standards of privacy.</li>
+            </ul>
+        </section>
+        
+        <section id="about-caritas" class="section">
+            <h2>About Caritas Social Work Services Division</h2>
+            <p>Caritas Social Work Services Division (Service Development) is dedicated to addressing emerging social needs in Hong Kong. NuVision is a testament to their commitment to leveraging technology to support and empower communities, particularly those facing challenging circumstances.</p>
+        </section>
+
+        <section id="our-mission" class="section our-mission">
+            <h2>Our Mission with NuVision</h2>
+            <p>NuVision is more than just an app; it's a commitment to supporting families in need. By providing accessible and accurate nutritional information, we aim to empower individuals to take control of their health, even when faced with challenging living situations. We believe in going the extra mile, utilizing technology to foster hope and well-being within our communities.</p>
+        </section>
+
+        <section id="get-nuvision" class="section call-to-action">
+            <h2>Get Started with NuVision Today!</h2>
+            <p>Download NuVision for free on your iOS device and take the first step towards a healthier lifestyle.
+            (Note: Currently, NuVision is available for iOS devices.)</p>
+            <!-- Placeholder for App Store badge/link -->
+            <a href="#" class="app-store-badge">Download on the App Store (Link to be added)</a>
+             <p><small>As NuVision is a new app, a direct App Store link might not yet be indexed. Please search for "NuVision by Caritas Social Work Services Division" on the iOS App Store.</small></p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024-2025 Caritas Social Work Services Division (Service Development). All Rights Reserved.</p>
+         <p>"Love in the Service of Hope"</p>
+    </footer>
+
+</body>
+</html>
