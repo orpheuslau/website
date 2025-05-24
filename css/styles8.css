@@ -1,0 +1,142 @@
+/* styles8.css */
+
+/* Ensure HTML and Body take full height for sticky footer or full-screen hero if needed */
+html, body {
+    height: 100%;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Custom scrollbar (optional, for aesthetics) */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #f4623a; /* primary color */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #c34e2e; /* darker primary */
+}
+
+
+/* Masthead specific styles if needed beyond Tailwind */
+.masthead {
+    /* background-attachment: fixed; */ /* If you want a parallax-like effect, but can have performance implications */
+}
+
+/* Divider styles (if not fully covered by Tailwind or for specific variations) */
+hr.divider {
+    /* Tailwind classes are used in HTML, but you can add fallbacks or more complex styles here */
+}
+
+/* Navigation link active state (can be enhanced beyond basic color change) */
+/* Tailwind handles active states well, but for complex transitions or underlines: */
+/*
+.nav-link.active {
+    position: relative;
+}
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #f4623a; // primary color
+}
+*/
+
+/* Portfolio item hover effects (can be enhanced) */
+.portfolio-item-custom .portfolio-image-wrapper img {
+    /* Tailwind's group-hover:scale-110 is used, additional transitions can be here */
+}
+
+.portfolio-item-custom .portfolio-caption-custom {
+    /* Tailwind classes for opacity and transform are used */
+}
+
+/* Project Detail Sections - for common styling if any */
+.project-detail-section {
+    /* Common padding/margin if not handled by page-section and Tailwind */
+}
+
+/* Animation classes (can be defined here if more complex than Tailwind's defaults) */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceSlow {
+  0%, 100% {
+    transform: translateY(-5%);
+    animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+
+.animate-fade-in-down {
+    animation: fadeInDown 0.8s ease-out forwards;
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out 0.3s forwards; /* Delay for staggered effect */
+    opacity: 0; /* Start hidden before animation */
+}
+.animate-bounce-slow {
+    animation: bounceSlow 2s infinite 0.8s; /* Delay to start after text */
+}
+
+
+/* Back to Top Button - Tailwind handles most of this */
+/* #backToTopBtn {} */
+
+/* Specific overrides or very custom components */
+/* Example:
+.custom-card-title {
+    font-family: 'YourSpecialFont', serif;
+    color: #333;
+}
+*/
+
+/* Ensure smooth scroll behavior is applied */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Fix for navbar height when scrolling to sections */
+section[id] {
+  scroll-margin-top: 70px; /* Adjust this value based on your navbar's height */
+}
+
+/* When navbar is shrunk (if you add a shrink class via JS) */
+body.navbar-shrunk section[id] {
+  scroll-margin-top: 60px; /* Adjust if navbar height changes on shrink */
+}
+
+
