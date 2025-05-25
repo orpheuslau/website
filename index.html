@@ -1,431 +1,551 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
-
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <title>ORPHEUS LAU</title>
-    <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="assets/icons8-o-67.png" />
-    <!-- Bootstrap Icons-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORPHEUS LAU - Redesigned</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
-    <!-- Google fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic"
-        rel="stylesheet" type="text/css" />
-    <!-- SimpleLightbox plugin CSS-->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
-    <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles2.css" rel="stylesheet" />
-
-    
-
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles8.css">
+    <link rel="icon" type="image/x-icon" href="assets/icons8-o-67.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#f4623a', // Original primary color
+                        secondary: '#4a5568', // A softer secondary
+                        accent: '#38b2ac', // A teal accent
+                    }
+                }
+            }
+        }
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SVWP2YHJN5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-SVWP2YHJN5');
+    </script>
 </head>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SVWP2YHJN5"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<body class="bg-gray-100 text-gray-800 antialiased">
 
-  gtag('config', 'G-SVWP2YHJN5');
-</script>
-
-<body id="page-top">
-    <!-- Navigation-->
-    <!---->
-
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
-        <div class="container px-4 px-lg-5">
-            <a class="navbar-brand" href="#page-top">ORPHEUS LAU</a>
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ms-auto my-2 my-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <!-- <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>-->
-                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
+    <nav id="mainNav"
+        class="bg-white/80 backdrop-blur-md shadow-md fixed w-full z-50 top-0 transition-all duration-300">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex items-center justify-between">
+                <a href="#page-top"
+                    class="text-2xl font-bold text-primary hover:text-primary/80 transition-colors">ORPHEUS LAU</a>
+                <div class="md:hidden">
+                    <button id="nav-toggle" class="text-gray-700 focus:outline-none">
+                        <i class="fas fa-bars fa-lg"></i>
+                    </button>
+                </div>
+                <div id="nav-menu" class="hidden md:flex md:items-center space-x-6">
+                    <a href="#about"
+                        class="nav-link text-gray-700 hover:text-primary transition-colors font-medium">About</a>
+                    <a href="#portfolio"
+                        class="nav-link text-gray-700 hover:text-primary transition-colors font-medium">Portfolio</a>
+                    <a href="#contact"
+                        class="nav-link text-gray-700 hover:text-primary transition-colors font-medium">Contact</a>
+                </div>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden mt-3 space-y-2">
+                <a href="#about"
+                    class="block nav-link text-gray-700 hover:text-primary transition-colors py-2">About</a>
+                <a href="#portfolio"
+                    class="block nav-link text-gray-700 hover:text-primary transition-colors py-2">Portfolio</a>
+                <a href="#contact"
+                    class="block nav-link text-gray-700 hover:text-primary transition-colors py-2">Contact</a>
             </div>
         </div>
     </nav>
-    <!-- Masthead-->
-    <header class="masthead">
-        <div class="container px-4 px-lg-5 h-100">
-            <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
-                <div class="col-lg-8 align-self-end">
-                    <h1 class="text-white font-weight-bold">Welcome, Curious mind!</h1>
-                    <hr class="divider" />
-                </div>
-                <div class="col-lg-8 align-self-baseline">
-                    <p class="text-white-75 mb-5">Welcome! I'm Orpheus, a passionate newcomer to AI, AR, iOS app development, and full-stack web development. Explore this site to discover my skills, projects, and innovations. Join me on a dynamic journey through code, creativity, and relentless learning!</p>
 
-                    <a class="btn btn-primary btn-xl" href="#about">Find Out More</a>
-                </div>
-            </div>
-            <br><br><br><br><br>
+    <header id="page-top"
+        class="masthead bg-gradient-to-br from-primary to-orange-500 text-white min-h-screen flex items-center justify-center py-20 px-4">
+        <div class="container mx-auto text-center">
+            <h1 class="text-5xl md:text-6xl font-extrabold mb-6 animate-fade-in-down">Welcome, Curious Mind!</h1>
+            <hr class="divider w-24 h-1.5 bg-white mx-auto mb-8 rounded-full" />
+            <p class="text-lg md:text-xl text-gray-200 mb-10 max-w-3xl mx-auto animate-fade-in-up">
+                I'm Orpheus, a passionate newcomer to AI, AR, iOS app development, and full-stack web development.
+                Explore this site to discover my skills, projects, and innovations. Join me on a dynamic journey through
+                code, creativity, and relentless learning!
+            </p>
+            <a class="btn bg-white text-primary hover:bg-gray-100 font-bold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg animate-bounce-slow"
+                href="#about">
+                Find Out More <i class="fas fa-arrow-down ml-2"></i>
+            </a>
         </div>
     </header>
-    <!-- About-->
-    <section class="page-section bg-primary" id="about">
-        <div class="container px-4 px-lg-5  h-100">
-            <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-start">
-                <div class="col-lg-8 align-self-baselinet">
-                    <h2 class="text-white mt-0 text-center">About</h2>
-                    <hr class="divider divider-light">
 
-                    <p class="text-white-75 mb-4 lh-lg"> As a social worker turned tech leader,
-                        I've managed various technology projects throughout my career in non-profit sector.
-                        With over 20 years experience in social services, I have initiated 10+ technology initiatives
-                        including
-                        <b>AI, AR, iOS app development, Case Information System and VR project</b>.
-
-                        Blending my passions for social impact and innovative solutions, I explore how emerging
-                        technologies can create new opportunities and build a more compassionate world.
-
-                    </p>
-                    <p class="text-white-85 h6"> Education and certificate:</p>
-                    <ul class="text-white-85 lh-lg ul1">
-                        <li>Bachelor of Social Work (Hons), <i>The Universtiy of Hong Kong</i></li>
-                        <li>Diploma in IT, <i>The Universtiy of Hong Kong(SPACE)</i></li>
-                        <li>Master of Social Sciences (mgt), <i>The Universtiy of Hong Kong</i></li>
-                        <li>Bachelor of Computing Science (1st Hon), <i>University of Greenwich</i></li>
-                        <li>Google Data Analytics Certificate, <i>Google</i></li>
+    <section class="page-section bg-primary text-white py-20 px-4" id="about">
+        <div class="container mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold">About Me</h2>
+                <hr class="divider w-20 h-1 bg-white mx-auto mt-4 mb-6 rounded-full" />
+            </div>
+            <div class="max-w-3xl mx-auto text-center md:text-left">
+                <p class="text-lg mb-6 leading-relaxed">
+                    As a social worker turned tech leader, I've managed various technology projects throughout my career
+                    in the non-profit sector. With over 20 years of experience in social services, I have initiated 10+
+                    technology initiatives including
+                    <strong class="font-semibold">AI, Cyber Security, AR, iOS app development, Case Information Systems, and VR
+                        projects</strong>.
+                </p>
+                <p class="text-lg mb-8 leading-relaxed">
+                    Blending my passions for social impact and innovative solutions, I explore how emerging technologies
+                    can create new opportunities and build a more compassionate world.
+                </p>
+                <div class="bg-white/20 p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-semibold mb-4 text-center">Education & Certificates</h3>
+                    <ul class="space-y-3 text-left">
+                        <li class="flex items-start"><i
+                                class="fas fa-graduation-cap text-xl mr-3 mt-1 text-orange-300"></i>Bachelor of Social
+                            Work (Hons), <em>The University of Hong Kong</em></li>
+                        <li class="flex items-start"><i
+                                class="fas fa-graduation-cap text-xl mr-3 mt-1 text-orange-300"></i>Diploma in IT, <em>The
+                                University of Hong Kong (SPACE)</em></li>
+                        <li class="flex items-start"><i
+                                class="fas fa-graduation-cap text-xl mr-3 mt-1 text-orange-300"></i>Master of Social
+                            Sciences (Mgt), <em>The University of Hong Kong</em></li>
+                        <li class="flex items-start"><i
+                                class="fas fa-graduation-cap text-xl mr-3 mt-1 text-orange-300"></i>Bachelor of Computing
+                            Science (1st Hon), <em>University of Greenwich</em></li>
+                        <li class="flex items-start"><i
+                                class="fab fa-google text-xl mr-3 mt-1 text-orange-300"></i>Google Data Analytics
+                            Certificate, <em>Google</em></li>
                     </ul>
                 </div>
-
             </div>
-            <br>
-
-            <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-start">
-                <div class="col-lg-8 align-self-center text-center">
-                    <a class="btn bg-light btn-xl text-primary" href="#portfolio">Portfolio</a>
-                </div>
-
+            <div class="text-center mt-12">
+                <a class="btn bg-white text-primary hover:bg-gray-100 font-bold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+                    href="#portfolio">
+                    View My Portfolio <i class="fas fa-briefcase ml-2"></i>
+                </a>
             </div>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
         </div>
     </section>
-    <!-- Services-->
-    <!--<section class="page-section" id="services">
-            <div class="container px-4 px-lg-5">
-                <h2 class="text-center mt-0">At Your Service</h2>
-                <hr class="divider" />
-                <div class="row gx-4 gx-lg-5">
-                    <div class="col-lg-3 col-md-6 text-center">
-                        <div class="mt-5">
-                            <div class="mb-2"><i class="bi-gem fs-1 text-primary"></i></div>
-                            <h3 class="h4 mb-2">Sturdy Themes</h3>
-                            <p class="text-muted mb-0">Our themes are updated regularly to keep them bug free!</p>
+
+    <section class="page-section py-20 px-4 bg-gray-50" id="portfolio">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800">Portfolio</h2>
+                <hr class="divider w-20 h-1 bg-primary mx-auto mt-4 mb-6 rounded-full" />
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div
+                    class="portfolio-item-custom group bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
+                    <a href="#nuvision-details" class="block">
+                        <div class="relative h-56 overflow-hidden">
+                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                src="assets/img/nuphoto/small/NV_output6.jpg" alt="NuVision AI App"
+                                onerror="this.onerror=null;this.src='https://placehold.co/600x400/f4623a/white?text=NuVision+App';">
+                            <div
+                                class="absolute inset-0 bg-white/10 group-hover:bg-black/60 transition-all duration-300">
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 text-center">
-                        <div class="mt-5">
-                            <div class="mb-2"><i class="bi-laptop fs-1 text-primary"></i></div>
-                            <h3 class="h4 mb-2">Up to Date</h3>
-                            <p class="text-muted mb-0">All dependencies are kept current to keep things fresh.</p>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-primary mb-1">NuVision: AI Nutrition</h3>
+                            <p class="text-sm text-gray-500 mb-2">LLM + Vision + iOS (2025)</p>
+                            <p class="text-gray-700 text-sm">Empowering Healthier Eating with AI. Snap a photo, get
+                                instant nutritional analysis.</p>
                         </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 text-center">
-                        <div class="mt-5">
-                            <div class="mb-2"><i class="bi-globe fs-1 text-primary"></i></div>
-                            <h3 class="h4 mb-2">Ready to Publish</h3>
-                            <p class="text-muted mb-0">You can use this design as is, or you can make changes!</p>
+                    </a>
+                </div>
+
+                <div
+                    class="portfolio-item-custom group bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
+                    <a href="#imemymine-details" class="block">
+                        <div class="relative h-56 overflow-hidden">
+                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                src="assets/img/portfolio/thumbnails/thumbnail_imemymine.jpg" alt="IMeMyMine AI App"
+                                onerror="this.onerror=null;this.src='https://placehold.co/600x400/38b2ac/white?text=IMeMyMine+App';">
+                            <div
+                                class="absolute inset-0 bg-white/10 group-hover:bg-black/60 transition-all duration-300">
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 text-center">
-                        <div class="mt-5">
-                            <div class="mb-2"><i class="bi-heart fs-1 text-primary"></i></div>
-                            <h3 class="h4 mb-2">Made with Love</h3>
-                            <p class="text-muted mb-0">Is it really open source if it's not made with love?</p>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-primary mb-1">IMeMyMine: AI Face Swap</h3>
+                            <p class="text-sm text-gray-500 mb-2">Pytorch + SDXL + iOS (2024)</p>
+                            <p class="text-gray-700 text-sm">AI-powered face swap app for thematic portraits, promoting
+                                inclusion.</p>
                         </div>
-                    </div>
+                    </a>
+                </div>
+
+                <div
+                    class="portfolio-item-custom group bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
+                    <a href="#passsecure-details" class="block">
+                        <div class="relative h-56 overflow-hidden">
+                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                src="assets/img/portfolio/thumbnails/thumbnail_passSecure.jpg" alt="Pass Secure App"
+                                onerror="this.onerror=null;this.src='https://placehold.co/600x400/4a5568/white?text=Pass+Secure';">
+                            <div
+                                class="absolute inset-0 bg-white/10 group-hover:bg-black/60 transition-all duration-300">
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-primary mb-1">Pass Secure: Password Manager</h3>
+                            <p class="text-sm text-gray-500 mb-2">SwiftData + CloudKit + iOS (2024)</p>
+                            <p class="text-gray-700 text-sm">Securely manage your passwords with SwiftData and iCloudKit
+                                integration.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div
+                    class="portfolio-item-custom group bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
+                    <a href="#smis-details" class="block">
+                        <div class="relative h-56 overflow-hidden">
+                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                src="assets/img/portfolio/thumbnails/1.jpg" alt="SMIS"
+                                onerror="this.onerror=null;this.src='https://placehold.co/600x400/f4623a/white?text=SMIS';">
+                            <div
+                                class="absolute inset-0 bg-white/10 group-hover:bg-black/60 transition-all duration-300">
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-primary mb-1">Student Management System</h3>
+                            <p class="text-sm text-gray-500 mb-2">React.js + Node.js + MongoDB (2024)</p>
+                            <p class="text-gray-700 text-sm">Full-stack application for managing student information and
+                                assessments.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div
+                    class="portfolio-item-custom group bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
+                    <a href="#caritasar-details" class="block">
+                        <div class="relative h-56 overflow-hidden">
+                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                src="assets/img/portfolio/thumbnails/2.jpg" alt="Caritas AR"
+                                onerror="this.onerror=null;this.src='https://placehold.co/600x400/38b2ac/white?text=Caritas+AR';">
+                            <div
+                                class="absolute inset-0 bg-white/10 group-hover:bg-black/60 transition-all duration-300">
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-primary mb-1">Caritas Gallery AR</h3>
+                            <p class="text-sm text-gray-500 mb-2">iOS AR App (2023)</p>
+                            <p class="text-gray-700 text-sm">Augmented Reality app to integrate logos into photos for
+                                events.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div
+                    class="portfolio-item-custom group bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
+                    <a href="#jquery-details" class="block">
+                        <div class="relative h-56 overflow-hidden">
+                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                src="assets/img/portfolio/thumbnails/3.jpg" alt="Rental Finder"
+                                onerror="this.onerror=null;this.src='https://placehold.co/600x400/4a5568/white?text=Rental+Finder';">
+                            <div
+                                class="absolute inset-0 bg-white/10 group-hover:bg-black/60 transition-all duration-300">
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-primary mb-1">Rental Apartments Finder</h3>
+                            <p class="text-sm text-gray-500 mb-2">jQuery + Java Android (2021)</p>
+                            <p class="text-gray-700 text-sm">Mobile app for finding, adding, and editing rental
+                                listings.</p>
+                        </div>
+                    </a>
                 </div>
             </div>
-        </section> -->
-    <!-- Portfolio-->
-<section id="portfolio" class="py-5"> <div class="container-fluid px-lg-5"> <h2 class="text-center mt-0 text-secondary h3">Portfolio</h2> <hr class="divider mx-auto" style="max-width: 100px; border-width: 0.2rem;" /> <div class="row g-4 justify-content-center mt-4"> <div class="col-lg-4 col-md-6"> <a class="portfolio-item-custom" href="#nuvision" title="AI ios apps: NuVision"> <div class="portfolio-image-wrapper"> <img class="img-fluid" src="assets/img/nuphoto/small/NV_output6.jpg" alt="NuVision AI App" /> </div> <div class="portfolio-caption-custom"> <div class="project-category text-white-75">LLM + Vision + iOS (2025)</div> <div class="project-name">NuVision: Empowering Healthier Eating with AI</div> </div> </a> </div> <div class="col-lg-4 col-md-6"> <a class="portfolio-item-custom" href="#imemymine" title="AI ios apps: IMeMyMine"> <div class="portfolio-image-wrapper"> <img class="img-fluid" src="assets/img/portfolio/thumbnails/thumbnail_imemymine.jpg" alt="IMeMyMine AI App" /> </div> <div class="portfolio-caption-custom"> <div class="project-category text-white-75">Pytorch + SDXL + iOS (2024)</div> <div class="project-name">IMeMyMine: AI Face Swap app</div> </div> </a> </div> <div class="col-lg-4 col-md-6"> <a class="portfolio-item-custom" href="#passsecure" title="Swiftdata ios apps: Pass Secure"> <div class="portfolio-image-wrapper"> <img class="img-fluid" src="assets/img/portfolio/thumbnails/thumbnail_passSecure.jpg" alt="Pass Secure App" /> </div> <div class="portfolio-caption-custom"> <div class="project-category text-white-75">SwiftData + iOS (2024)</div> <div class="project-name">Pass Secure: Password Manager</div> </div> </a> </div> <div class="col-lg-4 col-md-6"> <a class="portfolio-item-custom" href="#smis" title="Student Management Information System"> <div class="portfolio-image-wrapper"> <img class="img-fluid" src="assets/img/portfolio/thumbnails/1.jpg" alt="Student Management System" /> </div> <div class="portfolio-caption-custom"> <div class="project-category text-white-75">React.js + Node.js (2024)</div> <div class="project-name">Student Management Information System</div> </div> </a> </div> <div class="col-lg-4 col-md-6"> <a class="portfolio-item-custom" href="#caritasar" title="Augmented Reality Camera"> <div class="portfolio-image-wrapper"> <img class="img-fluid" src="assets/img/portfolio/thumbnails/2.jpg" alt="Caritas AR App" /> </div> <div class="portfolio-caption-custom"> <div class="project-category text-white-75">iOS AR app (2023)</div> <div class="project-name">Caritas Gallery AR</div> </div> </a> </div> <div class="col-lg-4 col-md-6"> <a class="portfolio-item-custom" href="#jquery" title="Rental Apartments Finder"> <div class="portfolio-image-wrapper"> <img class="img-fluid" src="assets/img/portfolio/thumbnails/3.jpg" alt="Rental Apartments Finder App" /> </div> <div class="portfolio-caption-custom"> <div class="project-category text-white-75">jQuery + Java Android (2021)</div> <div class="project-name">Rental Apartments Finder</div> </div> </a> </div> <div class="col-lg-4 col-md-6"> <a class="portfolio-item-custom" href="#rfid" title="RFID Project"> <div class="portfolio-image-wrapper"> <img class="img-fluid" src="assets/img/portfolio/thumbnails/4.jpg" alt="RFID Project" /> </div> <div class="portfolio-caption-custom"> <div class="project-category text-white-75">RFID Project (2022)</div> <div class="project-name">RFID Electronic Asset Management</div> </div> </a> </div> </div> </div> </section>
-    <!-- Call to action
-        <section class="page-section bg-dark text-white">
-            <div class="container px-4 px-lg-5 text-center">
-                <h2 class="mb-4">Free Download at Start Bootstrap!</h2>
-                <a class="btn btn-light btn-xl" href="https://startbootstrap.com/theme/creative/">Download Now!</a>
+        </div>
+    </section>
+
+    <section id="nuvision-details" class="project-detail-section page-section py-20 px-4 bg-white">
+        <div class="container mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800">NuVision: Empowering Healthier Eating with AI</h2>
+                <h3 class="text-center mt-3 text-secondary h6">"Love in the Service of Hope" – Let us go the extra mile
+                    for families in need with our hearts, hands, and technology.</h3>
+                <p class="text-primary mt-2">LLM + Vision + iOS (2025)</p>
+                <hr class="divider w-20 h-1 bg-primary mx-auto mt-4 mb-6 rounded-full" />
             </div>
-        </section>
-    <!-- Contact-->
+            <div class="max-w-4xl mx-auto">
+                <img src="assets/img/nuphoto/nu_diagram%20(5).png" alt="NuVision Diagram"
+                    class="rounded-lg shadow-xl mb-8 w-full h-auto object-cover"
+                    onerror="this.onerror=null;this.src='https://placehold.co/800x450/cccccc/333333?text=NuVision+Diagram';">
 
-    <!-- Services-->
 
-    
-
-    <section class="page-section" id="nuvision">
-        <div class="container px-4 px-lg-5 mt-5">
-            <h2 class="text-center mt-0 text-secondary h3">NuVision: Empowering Healthier Eating with AI</h2>
-
-            <h3 class="text-center mt-3 text-secondary h6">"Love in the Service of Hope" – Let us go the extra mile for families in need with our hearts, hands, and technology.</h3>
-            
-
-            <hr class="divider" />
-            <div class="row gx-4 gx-lg-5">
-                
-                <div class="col-lg-12 col-md-12 mb-lg-0 des">
-                    In Hong Kong, many families reside in subdivided flats with limited cooking space. This often makes preparing nutritious home-cooked meals difficult, leading to a heavy reliance on takeout. Such circumstances can pose significant challenges to maintaining a healthy and balanced diet, particularly for underprivileged communities.  
-                    <p></p>
-                    To address these nutritional challenges, Caritas Social Work Services Division (Service Development) has launched NuVision – a free, AI-powered mobile application designed to empower individuals and families to make informed dietary choices. NuVision is the third AI app developed by the creator since 2024, reflecting a commitment to leveraging technology for social good.
-                    <p></p>
-                    With just a single photo of a meal, NuVision instantly analyzes its nutritional content, providing a valuable tool for those striving for better health in challenging living conditions.                
-                  </div>           
-                  <p></p>
-                <img src="assets\img\nuphoto\nu_diagram (5).png" alt="..." class="img-fluid" />
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="mt-5">
-                        <div class="mb-2"><i class="bi bi-robot fs-1 text-primary"></i></div>
-                       
-                        <h3 class="h4 mb-2">Instant Food Recognition</h3>
-                        <p class="text-muted mb-0">Snap a photo, and NuVision identifies food items, recognizing hundreds of common foods, including diverse Chinese and Western dishes.</p>
-                    <img src="assets\img\nuphoto\output8.png" alt="..." class="img-fluid" />
-                    
-                    </div>
+                <div class="col-lg-12 col-md-12 mb-lg-0 des text-sm">
+                    In Hong Kong, many families reside in subdivided flats with limited cooking space. This often makes
+                    preparing nutritious home-cooked meals difficult, leading to a heavy reliance on takeout. Such
+                    circumstances can pose significant challenges to maintaining a healthy and balanced diet,
+                    particularly for underprivileged communities.
+                    <p></p><BR>
+                    To address these nutritional challenges, Caritas Social Work Services Division (Service Development)
+                    has launched NuVision – a free, AI-powered mobile application designed to empower individuals and
+                    families to make informed dietary choices. NuVision is the third AI app developed by the creator
+                    since 2024, reflecting a commitment to leveraging technology for social good.
+                    <p></p><BR>
+                    With just a single photo of a meal, NuVision instantly analyzes its nutritional content, providing a
+                    valuable tool for those striving for better health in challenging living conditions.
                 </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="mt-5">
+                <BR>
+                    <BR>
+
+                <h4 class="text-2xl font-semibold text-gray-800 mb-4">Privacy First: Your Data, Your Control:</h4>
+                <ul class="list-disc list-inside space-y-2 text-gray-700 mb-8">
+                    <li>Completely Free & Ad-Free: No hidden costs or distracting advertisements.</li>
+                    <li>Local Data Storage: All your nutritional data is stored locally on your iOS device</li>
+                    <li>Data Encryption: Your locally stored data is protected by encryption</li>
+                    <li>User Data Ownership: Fully own data and can easily export it.</li>
+                    <li>Privacy First: Local data storage, encryption, and no identifiable PII collected.</li>
+                </ul>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                    <!-- <img src="assets/img/nuphoto/output8.png" alt="NuVision Feature 1" class="rounded-md shadow-md"
+                        onerror="this.onerror=null;this.src='https://placehold.co/300x400/cccccc/333333?text=Feature+1';">
+                    <img src="assets/img/nuphoto/output9.png" alt="NuVision Feature 2" class="rounded-md shadow-md"
+                        onerror="this.onerror=null;this.src='https://placehold.co/300x400/cccccc/333333?text=Feature+2';">
+                    <img src="assets/img/nuphoto/output10.png" alt="NuVision Feature 3" class="rounded-md shadow-md"
+                        onerror="this.onerror=null;this.src='https://placehold.co/300x400/cccccc/333333?text=Feature+3';">
+                    <img src="assets/img/nuphoto/output11.png" alt="NuVision Feature 4" class="rounded-md shadow-md"
+                        onerror="this.onerror=null;this.src='https://placehold.co/300x400/cccccc/333333?text=Feature+4';">-->
+                    <div class="mt-5 text-center">
+                        <div class="mb-2"><i class="bi bi-robot fs-1 text-primary custom-icon-size"></i></div>
+
+                        <B>
+                            <h3 class="h4 mb-2">Instant Food Recognition</h3>
+                        </B>
+                        <p class="text-muted text-sm mb-0">Snap a photo, and NuVision identifies food items, recognizing
+                            hundreds of common foods, including diverse Chinese and Western dishes.</p>
+                        <img src="assets\img\nuphoto\output8.png" alt="..." class="img-fluid" />
+                    </div>
+                    <div class="mt-5 text-center">
                         <div class="mb-2"><i class="bi bi-clipboard-data fs-1 text-primary"></i></div>
-                        <h3 class="h4 mb-2">Detailed Nutritional Breakdown</h3>
-                        <p class="text-muted mb-0">Get comprehensive information on calories, carbohydrates, protein, fat, and more. The app accurately estimates portion sizes and cooking methods.</p>
-                    <img src="assets\img\nuphoto\output9.png" alt="..." class="img-fluid" />
+                        <B>
+                            <h3 class="h4 mb-2">Detailed Breakdown</h3>
+                        </B>
+                        <p class="text-muted text-sm mb-0">Get comprehensive information on calories, carbohydrates,
+                            protein, fat, and more. The app accurately estimates portion sizes and cooking methods.</p>
+                        <BR>
+                        <img src="assets\img\nuphoto\output9.png" alt="..." class="img-fluid" />
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="mt-5">
+                    <div class="mt-5 text-center">
                         <div class="mb-2"><i class="bi bi-person-hearts fs-1 text-primary"></i></div>
-                        <h3 class="h4 mb-2">Personalized Recommendations</h3>
-                        <p class="text-muted mb-0">Receive dietary advice tailored to your age, gender, and body weight, helping you meet your specific nutritional needs.                       
-                        </p>
+                        <B>
+                            <h3 class="h4 mb-2">Personalized</h3>
+                        </B>
+                        <p class="text-muted text-sm mb-0">Receive dietary advice tailored to your age, gender, and body
+                            weight, helping you meet your specific nutritional needs.
+                        </p><BR><BR>
                         <img src="assets\img\nuphoto\output10.png" alt="..." class="img-fluid" />
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="mt-5">
+                    <div class="mt-5 text-center">
                         <div class="mb-2"><i class="bi bi-graph-up-arrow fs-1 text-primary"></i></div>
-                        <h3 class="h4 mb-2">Progress Tracking</h3>
-                        <p class="text-muted mb-0">Monitor your daily intake and view daily, weekly, and monthly trend reports to stay on track with your healthy eating goals.</p>
-                    <img src="assets\img\nuphoto\output11.png" alt="..." class="img-fluid" />
+                        <B></v>
+                            <h3 class="h4 mb-2">Progress Tracking</h3>
+                        </B>
+                        <p class="text-muted text-sm mb-0">Monitor your daily intake and view daily, weekly, and monthly
+                            trend reports to stay on track with your healthy eating goals.</p>
+                        <BR><BR><img src="assets\img\nuphoto\output11.png" alt="..." class="img-fluid" />
                     </div>
                 </div>
-            </div>
-            <br>
-            <hr class="divider" />
-            
-            <div id="portfolio2">
+
                 <div class="row gx-4 gx-lg-5 mt-2">
-                    <h3 class="h4 mb-3 mt-2">Privacy First: Your Data, Your Control</h3>
+                    <h4 class="text-2xl font-semibold text-gray-800 mb-4">Our Mission with NuVision</h4>
                     <p class="text-muted mb-0">
-                        NuVision is designed with your privacy as a top priority, especially for the underprivileged communities it aims to serve. Key privacy features include:
+                        NuVision is more than just an app; it's a commitment to supporting families in need. By
+                        providing accessible and accurate nutritional information, we aim to empower individuals to take
+                        control of their health, even when faced with challenging living situations. We believe in going
+                        the extra mile, utilizing technology to foster hope and well-being within our communities.
                     </p>
-                   
-                    <p></p>
-
-                        <strong>Completely Free & Ad-Free:</strong>
-                        <p class="text-muted"> 
-                            No hidden costs or distracting advertisements.</p>
-                    </div>
-                    <div class="row gx-4 gx-lg-5 mt-2">
-                       
-                        <strong> Local Data Storage:</strong>
-                        <p class="text-muted"> All your nutritional data is stored locally on your iOS device, not on external servers.</p>
-                    </div>
-                    <div class="row gx-4 gx-lg-5 mt-2">
-                       
-                        <strong>Data Encryption:</strong>
-                        <p class="text-muted"> Your locally stored data is protected by encryption.
-                        </p>
-                    </div>
-                    <div class="row gx-4 gx-lg-5 mt-2">
-                      
-                        <strong>User Data Ownership:</strong>
-                        <p class="text-muted">You fully own your data and can easily export it for backup or further personal analysis.</p>
-                    </div>
-                    <div class="row gx-4 gx-lg-5 mt-2">
-                       
-
-                        <strong>No Identifiable Personal Information Collected:</strong>
-                        <p class="text-muted"> The app operates without collecting information that can directly identify you, ensuring the highest standards of privacy.</p>
-                    </div>
-
-
+                    <img src="assets\img\nuphoto\output6.png" alt="..." class="img-fluid" />
                 </div>
-                <hr class="divider" />
-                            <div id="portfolio3">
+                <BR>
+
+                <BR>
                 <div class="row gx-4 gx-lg-5 mt-2">
-                    <h3 class="h4 mb-3 mt-2">Our Mission with NuVision</h3>
-                    <p class="text-muted mb-0">
-                        NuVision is more than just an app; it's a commitment to supporting families in need. By providing accessible and accurate nutritional information, we aim to empower individuals to take control of their health, even when faced with challenging living situations. We believe in going the extra mile, utilizing technology to foster hope and well-being within our communities.
-                    </p>
-                   <img src="assets\img\nuphoto\output6.png" alt="..." class="img-fluid" />
-                    <p></p>
+                    <h4 class="text-2xl font-semibold text-gray-800 mb-4">App Highlights</h4>
 
-                    
-                    </div>
-
+                    <img src="assets\img\fout.png" alt="..." class="img-fluid" />
                 </div>
+                <BR>
 
-          
+                <div class="text-center">
+                    <a href="https://apps.apple.com/tr/app/nuvision/id6746086162" target="_blank"
+                        class="btn bg-primary text-white hover:bg-primary/80 font-semibold py-2 px-6 rounded-full inline-flex items-center mr-2 mb-2 md:mb-0">
+                        <i class="fab fa-apple mr-2"></i> App Store
+                        <a href="http://food.orpheuslau.dev/" target="_blank"
+                            class="btn bg-accent text-white hover:bg-accent/80 font-semibold py-2 px-6 rounded-full inline-flex items-center mr-2 mb-2 md:mb-0">
+                            <i class="fas fa-external-link-alt mr-2"></i> Web version
+                        </a></a>
 
+                    <a href="https://youtu.be/4cvz1z18Xy8?si=vFzz6WyID1SacJvQ" target="_blank"
+                        class="btn bg-red-600 text-white hover:bg-red-700 font-semibold py-2 px-6 rounded-full inline-flex items-center">
+                        <i class="fab fa-youtube mr-2"></i> YouTube Demo
+                    </a>
 
-                    <div class="row gx-4 gx-lg-5 mt-5 justify-content-center">
-                <div class="col-lg-8 col-xl-6 text-center">
-
-                    <p class="text-muted mb-5">Should you want to know more, you can download it from Apple app store
-                        and visit the app walkthrough from YouTube.</p>
-                    <div>
-                        <a href="https://apps.apple.com/tr/app/nuvision/id6746086162"><img
-                                src="assets/img/applogo.png" width="100px"
-                                title="Download from Apple app store" /></a><a
-                            href="https://youtu.be/4cvz1z18Xy8?si=vFzz6WyID1SacJvQ"><img src="assets/img/youtube.png"
-                                width="100px" title="Visit App Walkthrough in YouTube" /></a>
-                    </div>
-                </div>
-
-            </div>
-
-
-                <div class="row gx-4 gx-lg-5 mt-4 mb-5 h-100 align-items-center justify-content-center text-start">
-                    <div class="h7"><a href="#portfolio">
-                            -back to portfolio-
-                        </a>
-                    
-               </div>
                 </div>
             </div>
-
-            <br>
-          
-    
-            <br>
-      
-            
-<br>
-
-
-
-            
-            
-         
-
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-            
         </div>
     </section>
 
-
-    <section class="page-section" id="imemymine">
-        <div class="container px-4 px-lg-5 mt-5">
-            <h2 class="text-center mt-0 text-secondary h3">IMeMyMine: AI Face Swap app with Text-to-Image Diffusion Models</h2>
-            <hr class="divider" />
-            <div class="row gx-4 gx-lg-5">
-                
-                <div class="col-lg-12 col-md-12 mb-lg-0 des">
-                    This project aims to promote inclusion at a convention through an innovative iOS mobile app that uses AI-powered
-                    face-swapping technology. Users can transform their faces into various thematic portraits, visually demonstrating
-                    the diverse identities they can embody.  
-                    <p></p>
-                    To achieve this, the team overcame the technical challenge of face-swapping's computational demands by
-                    implementing a client-server architecture. They meticulously selected a powerful AI model, "IP-Adapter," and
-                    fine-tuned it over weeks to ensure efficient and visually appealing results.
-                    <p></p>
-                    The final stage involves developing the user-friendly mobile app interface. This interactive experience aims to
-                    spark conversations about inclusion and celebrate human diversity, leaving a lasting impact on attendees.
-                    
-                    
-                    Essentially, the project combines cutting-edge technology with a powerful message to create a memorable and
-                    thought-provoking experience that promotes inclusivity                 
-                  </div>           
-                <img src="assets/img/imemymine.png" alt="..." class="img-fluid" />
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="mt-5">
-                        <div class="mb-2"><i class="bi-gem fs-1 text-primary"></i></div>
-                        <h3 class="h4 mb-2">Modern AI Technology</h3>
-                        <p class="text-muted mb-0"> Utilizing and implementing sophisticated AI models "IP-Adapter" which empowers
-                        the app's ability to seamlessly swap faces, generate realistic results, and process images quickly</p>
-                    </div>
+    <section id="imemymine-details" class="project-detail-section page-section py-20 px-4 bg-gray-50">
+        <div class="container mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800">IMeMyMine: AI Face Swap App</h2>
+                <p class="text-primary mt-2">Pytorch + SDXL + iOS (2024)</p>
+                <hr class="divider w-20 h-1 bg-primary mx-auto mt-4 mb-6 rounded-full" />
+            </div>
+            <div class="max-w-4xl mx-auto">
+                <img src="assets/img/imemymine.png" alt="IMeMyMine Diagram"
+                    class="rounded-lg shadow-xl mb-8 w-full h-auto object-cover"
+                    onerror="this.onerror=null;this.src='https://placehold.co/800x450/cccccc/333333?text=IMeMyMine+Diagram';">
+                <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                    This project promotes inclusion using an iOS app with AI face-swapping. Users can transform their
+                    faces into thematic portraits, showcasing diverse identities. The project utilized a client-server
+                    architecture and the "IP-Adapter" AI model, fine-tuned for optimal results.
+                </p>
+                <h4 class="text-2xl font-semibold text-gray-800 mb-4">Highlights:</h4>
+                <ul class="list-disc list-inside space-y-2 text-gray-700 mb-8">
+                    <li>Modern AI Technology: Implements "IP-Adapter" for face swapping.</li>
+                    <li>Client-Server Architecture: Ensures a user-friendly mobile experience.</li>
+                    <li>User-Centric Design: Simple interface for photo capture and sharing.</li>
+                    <li>Impactful Message: Promotes inclusion by celebrating individuality and diversity.</li>
+                </ul>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
+                    <img src="assets/img/im1.png" alt="IMeMyMine Example 1" class="rounded-md shadow-md"
+                        onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=Example+1';">
+                    <img src="assets/img/im2.png" alt="IMeMyMine Example 2" class="rounded-md shadow-md"
+                        onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=Example+2';">
+                    <img src="assets/img/im3.png" alt="IMeMyMine Example 3" class="rounded-md shadow-md"
+                        onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=Example+3';">
                 </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="mt-5">
-                        <div class="mb-2"><i class="bi-database-add fs-1 text-primary"></i></div>
-                        <h3 class="h4 mb-2">Client-Server Architecture</h3>
-                        <p class="text-muted mb-0">This approach allows the mobile app to remain user-friendly while offloading computationally intensive tasks to
-                            a dedicated server, ensuring a smooth and responsive experience.</p>
-                    </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
+                    <img src="assets/img/im4.png" alt="IMeMyMine Example 4" class="rounded-md shadow-md"
+                        onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=Example+1';">
+                    <img src="assets/img/im5.png" alt="IMeMyMine Example 5" class="rounded-md shadow-md"
+                        onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=Example+2';">
+                    <img src="assets/img/im6.png" alt="IMeMyMine Example 6" class="rounded-md shadow-md"
+                        onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=Example+3';">
                 </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="mt-5">
-                        <div class="mb-2"><i class="bi-house-lock fs-1 text-primary"></i></div>
-                        <h3 class="h4 mb-2">User-Centric Design</h3>
-                        <p class="text-muted mb-0">The app's focus on user experience, with a simple interface for photo capture and sharing, ensures
-                            accessibility and engagement for all attendees.                       
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="mt-5">
-                        <div class="mb-2"><i class="bi-file-text fs-1 text-primary"></i></div>
-                        <h3 class="h4 mb-2">Impactful Message</h3>
-                        <p class="text-muted mb-0">The system takes a novel approach to promoting inclusion by using AI-powered face swap technology to celebrate individuality and diversity.</p>
-                    </div>
+                <div class="text-center">
+                    <a href="https://youtu.be/U5Sx3Rk-iEE?si=l24-UgYKbaMJQn0p" target="_blank"
+                        class="btn bg-red-600 text-white hover:bg-red-700 font-semibold py-2 px-6 rounded-full inline-flex items-center">
+                        <i class="fab fa-youtube mr-2"></i> YouTube Demo
+                    </a>
+                    <a href="https://github.com/tencent-ailab/IP-Adapter/tree/main" target="_blank"
+                        class="btn bg-gray-800 text-white hover:bg-gray-900 font-semibold py-2 px-6 rounded-full inline-flex items-center ml-2">
+                        <i class="fab fa-github mr-2"></i> IP-Adapter Resource
+                    </a>
                 </div>
             </div>
-            <br>
-            <hr class="divider" />
-            <!---
-            <div id="portfolio2">
-                <div class="row gx-4 gx-lg-5 mt-2">
-                    <h3 class="h4 mb-3 mt-2">Key Pages and Features:</h3>
-                    <p></p>
+        </div>
+    </section>
 
-                    <div class="col-lg-4 col-md-6">
-                        <a class="portfolio2-box" href="assets/img/1.png" title="Student Profile (CRUD)">
-                            <img src="assets/img/1.png" class="img-fluid" />
-                        </a>
+    <section id="passsecure-details" class="project-detail-section page-section py-20 px-4 bg-white">
+        <div class="container mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800">Pass Secure: iOS Password Manager</h2>
+                <p class="text-primary mt-2">SwiftData + CloudKit + iOS (2024)</p>
+                <hr class="divider w-20 h-1 bg-primary mx-auto mt-4 mb-6 rounded-full" />
+            </div>
+            <div class="max-w-4xl mx-auto">
+                <img src="assets/img/portfolio/thumbnails/thumbnail_passSecure.jpg" alt="Pass Secure App"
+                    class="rounded-lg shadow-xl mb-8 w-full h-auto object-contain max-h-[400px]"
+                    onerror="this.onerror=null;this.src='https://placehold.co/800x400/cccccc/333333?text=Pass+Secure+App';">
+                <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                    Pass Secure is an iOS app designed for easy and secure password management. It leverages SwiftData
+                    and iCloudKit for local data protection and seamless synchronization across Apple devices.
+                </p>
+                <h4 class="text-2xl font-semibold text-gray-800 mb-4">Security Features:</h4>
+                <ul class="list-disc list-inside space-y-2 text-gray-700 mb-8">
+                    <li>Biometric (Face ID/Fingerprint) or Passcode authentication.</li>
+                    <li>Passcode records synchronize across your iOS devices.</li>
+                    <li>Encrypted PDF export and plain CSV export options.</li>
+                    <li>Automatic session time-out every 5 minutes.</li>
+                    <li>Keyword search functionality.</li>
+                </ul>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+                    <img src="assets/img/ps1.png" alt="Pass Secure Feature 1"
+                        class="rounded-md shadow-md object-contain h-80 mx-auto"
+                        onerror="this.onerror=null;this.src='https://placehold.co/300x600/cccccc/333333?text=PS+Screen+1';">
+                    <img src="assets/img/ps3.png" alt="Pass Secure Feature 2"
+                        class="rounded-md shadow-md object-contain h-80 mx-auto"
+                        onerror="this.onerror=null;this.src='https://placehold.co/300x600/cccccc/333333?text=PS+Screen+2';">
+                    <img src="assets/img/ps4.png" alt="Pass Secure Feature 3"
+                        class="rounded-md shadow-md object-contain h-80 mx-auto"
+                        onerror="this.onerror=null;this.src='https://placehold.co/300x600/cccccc/333333?text=PS+Screen+3';">
+                </div>
+                <div class="text-center">
+                    <a href="https://apps.apple.com/hk/app/pass-secure-password-manager/id6479182542" target="_blank"
+                        class="btn bg-primary text-white hover:bg-primary/80 font-semibold py-2 px-6 rounded-full inline-flex items-center mr-2 mb-2 md:mb-0">
+                        <i class="fab fa-apple mr-2"></i> App Store
+                    </a>
+                    <a href="https://github.com/orpheuslau/Pass-Secure/tree/main" target="_blank"
+                        class="btn bg-gray-800 text-white hover:bg-gray-900 font-semibold py-2 px-6 rounded-full inline-flex items-center">
+                        <i class="fab fa-github mr-2"></i> GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <section id="smis-details" class="project-detail-section page-section py-20 px-4 bg-gray-50">
+        <div class="container mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800">Full Stack Application: SMIS</h2>
+                <p class="text-primary mt-2">React.js + Node.js + MongoDB (2024)</p>
+                <hr class="divider w-20 h-1 bg-primary mx-auto mt-4 mb-6 rounded-full" />
+            </div>
+            <div class="max-w-4xl mx-auto">
+                <img src="assets/img/smis.png" alt="SMIS Diagram"
+                    class="rounded-lg shadow-xl mb-8 w-full h-auto object-cover"
+                    onerror="this.onerror=null;this.src='https://placehold.co/800x450/cccccc/333333?text=SMIS+Diagram';">
+                <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                    The Student Management Information System (SMIS) is a full-stack web application built with ReactJS
+                    for the frontend, Node.js for the backend, and MongoDB as the database. It features JWT for secure
+                    authentication.
+                </p>
+                <h4 class="text-2xl font-semibold text-gray-800 mb-4">Key Pages & Features:</h4>
+                <ul class="list-disc list-inside space-y-2 text-gray-700 mb-8">
+                    <li>Student Profile Management (CRUD operations).</li>
+                    <li>Assessment Management (CRUD operations).</li>
+                    <li>Export data to PDF and Excel formats.</li>
+                    <li>Dashboard for student data visualization.</li>
+                    <li>Search functionality for profiles and assessments.</li>
+                    <li>User setup and management for administrators.</li>
+                </ul>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
+                    <div>
+                        <img src="assets/img/1.png" alt="SMIS Feature 1" class="rounded-md shadow-md"
+                            onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=SMIS+Feature+1';">
                         <strong> Student Profile
                             (CRUD)</strong>
                         <p class="text-muted"> This page allows teachers to manage student profiles, including creating,
                             reading, updating, and deleting student information.
                             CRUD operations refer to the basic functions of persistent storage.</p>
                     </div>
-                    <div class="col-lg-4 col-md-6">
-                        <a class="portfolio2-box" href="assets/img/2.png" title="Assessment (CRUD)">
-                            <img src="assets/img/2.png" class="img-fluid" />
-                        </a>
+                    <div>
+                        <img src="assets/img/2.png" alt="SMIS Feature 1" class="rounded-md shadow-md"
+                            onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=SMIS+Feature+1';">
                         <strong> Assessment
                             (CRUD)</strong>
                         <p class="text-muted"> Teachers can create, read, update, and delete assessments on this page.
                             Assessments are an integral part of the educational process, allowing teachers to evaluate
                             student
-                            performance.</p>
+                            performance</p>
                     </div>
-                    <div class="col-lg-4 col-md-6">
-                        <a class="portfolio2-box" href="assets/img/3.png" title="Export in
-                        PDF
-                        and Excel Format">
-                            <img src="assets/img/3.png" class="img-fluid" />
-                        </a>
-                        <strong>Export in
+                    <div>
+                        <img src="assets/img/3.png" alt="SMIS Feature 1" class="rounded-md shadow-md"
+                            onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=SMIS+Feature+1';">
+                        <strong> Export in
                             PDF
                             and Excel Format</strong>
                         <p class="text-muted"> This feature enables teachers to generate individual assessment reports
@@ -435,312 +555,39 @@
                             consolidated assessment results in Excel format for complex data manipulation and analysis.
                         </p>
                     </div>
-                    <div class="col-lg-4 col-md-6">
-                        <a class="portfolio2-box" href="assets/img/4.png" title="Dashboard
-                        of
-                        Student Data">
-                            <img src="assets/img/4.png" class="img-fluid" />
-                        </a>
-                        <strong>Dashboard
+
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
+                    <div>
+                        <img src="assets/img/4.png" alt="SMIS Feature 1" class="rounded-md shadow-md"
+                            onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=SMIS+Feature+1';">
+                        <strong> Dashboard
                             of
                             Student Data</strong>
-                        <p class="text-muted">The dashboard provides a visual representation of student and assessment
+                        <p class="text-muted"> The dashboard provides a visual representation of student and assessment
                             data,
                             allowing teachers to
                             gain insights and track progress. Visualizing data through charts and graphs can aid in
                             decision-making and identifying trends.
-                            Search</p>
+                            Search.</p>
                     </div>
-                    <div class="col-lg-4 col-md-6">
-                        <a class="portfolio2-box" href="assets/img/5.png" title="Search">
-                            <img src="assets/img/5.png" class="img-fluid" />
-                        </a>
-
-                        <strong>Search</strong>
+                    <div>
+                        <img src="assets/img/5.png" alt="SMIS Feature 1" class="rounded-md shadow-md"
+                            onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=SMIS+Feature+1';">
+                        <strong> Search</strong>
                         <p class="text-muted">This feature enables teachers to search for specific student profiles or
                             assessments based on
                             various criteria.
                             Efficient search functionality enhances user experience and improves productivity.</p>
                     </div>
-                    <div class="col-lg-4 col-md-6">
-                        <a class="portfolio2-box" href="assets/img/6.png" title="User Setup
-                        (Administrator)">
-                            <img src="assets/img/6.png" class="img-fluid" />
-                        </a>
-                        <strong>User Setup
+                    <div>
+                        <img src="assets/img/6.png" alt="SMIS Feature 1" class="rounded-md shadow-md"
+                            onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=SMIS+Feature+1';">
+                        <strong> User Setup
                             (Administrator)</strong>
-                        <p class="text-muted">This page allows the administrators to create and manage user accounts for
-                            the
-                            application.
-                            Administrators have the authority to grant or revoke access privileges to different users.
-                            While
-                            common users can only access their own record and change their passwords securely, ensuring
-                            the
-                            confidentiality of their
-                            accounts.</p>
-                    </div>
-
-                </div>
-
-                <div class="row gx-4 gx-lg-5 mt-4 mb-5 h-100 align-items-center justify-content-center text-start">
-                    <div class="col-lg-8 align-self-center text-center">
-                        <a class="btn bg-primary btn-xl text-white" href="http://front.orpheuslau.dev/"
-                            target="_blank">SMIS demo site</a>
-                        <div class="h7">(Test login: jkl, pass: 1)</div> 
-                    </div>
-                </div>
-                <div class="row gx-4 gx-lg-5 mt-4 mb-5 h-100 align-items-center justify-content-center text-start">
-                    <div class="h7"><a href="#portfolio">
-                            -back to portfolio-
-                        </a></div>
-                </div>
-            </div>-->
-
-            <br>
-            <h4 class="text-center mt-0 text-secondary h4">What do you think of their new look?</h4>
-                        <div class="row gx-4 gx-lg-5">
-                                        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0"><img src="assets/img/im1.png" class="img-fluid" /></div>
-                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0"><img src="assets/img/im2.png" class="img-fluid" /></div>
-                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0"><img src="assets/img/im3.png" class="img-fluid" /></div>
-<br>                            </div>
-            <br>
-            <div class="row gx-4 gx-lg-5">                       
-                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0"><img src="assets/img/im4.png" class="img-fluid" /></div>
-                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0"><img src="assets/img/im11.png" class="img-fluid" /></div>
-                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0"><img src="assets/img/im5.png" class="img-fluid" /></div>
-                <br>
-                                 
-            </div>
-            
-<br>
-
-<div class="row gx-4 gx-lg-5">                       
-    <div class="col-lg-4 col-md-6 mb-4 mb-lg-0"><img src="assets/img/im9.png" class="img-fluid" /></div>
-
-    
-    <br>
-    <div class="col-lg-4 col-md-6 mb-4 mb-lg-0" style="display: flex; justify-content: center;">
-        <div style="align-items: center; display: flex; height: 100%;">
-            <h4 class="text-center mt-0 text-secondary">Get creative and turn anyone's face into a stunning opposite sex apperance with this amazing app!</h4>
-        </div>
-    </div>
-    <div class="col-lg-4 col-md-6 mb-4 mb-lg-0"><img src="assets/img/im8.png" class="img-fluid" /></div>
-    <br>
-                     
-</div>
-
-            <br><a href="https://github.com/tencent-ailab/IP-Adapter/tree/main" target="_blank">Resrouce: IP-Adapter: Text Compatible Image Prompt Adapter for Text-to-Image Diffusion Models</a>
-            
-            <div class="row gx-4 gx-lg-5 mt-4 mb-4 h-100 align-items-center justify-content-center text-start">
-                <div class="h7"><a href="#portfolio">
-                        -back to portfolio-
-                    </a></div>
-            </div>
-
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-            
-        </div>
-    </section>
-
-    <section class="page-section" id="passsecure">
-        <div class="container px-4 px-lg-5 mt-5">
-            <h2 class="text-center mt-0 text-secondary h3">Pass Secure: iOS Password Manager</h2>
-            <hr class="divider" />
-            <div class="row gx-4 gx-lg-5 mt-2 mb-2">
-                <img src="assets/img/portfolio/thumbnails/thumbnail_passSecure.jpg" class="img-fluid" />
-            </div>
-
-            <div class="row gx-4 gx-lg-5 mt-1 mb-1">
-                <div class="col-lg-12 col-md-12 mb-lg-0 des">
-                    Pass Secure is designed to make your life easier. Using the latest iOS technology, Swiftdata and iCloudKit; your login credentials are securely protected on your device and are also seamlessly synchronized across your devices (e.g. iPhone and iPad), which are signed in with the same iCloud account. Additionally, Pass Secure incorporates the following security measures:
-
-                    <p></p>
-                    Features highlight:
-                    <ul class=" lh-lg ul1">
-                        <li>Biometrics (Face ID or Fingerprint) Or Passcode authentication</li>
-                        <li>Passcode records synchronize across your own iOS device</li>
-                        <li>Encrypted PDF export and plain CSV export</li>
-                        <li>Session time-out in every 5 minutes </li>
-                        <li>Keyword Search</li>               
-                    </ul>
-                </div>
-            </div>
-            <div id="portfolio2">
-                <div class="container-fluid p-0 mt-1 mb-5">
-                    <br>
-                    <div class="row g-0 justify-content-center">
-                        <div class="col-lg-3 col-sm-6">
-                            <a class="portfolio2-box" href="assets/img/ps1.png" title="Swipe to delete">
-                                <img class="img-fluid" src="assets/img/ps1.png" alt="..." />
-
-                            </a>
-                        </div>
-                        
-                        <div class="col-lg-1 col-sm-6">
-                        
-                        </div>
-                       
-                        <div class="col-lg-3 col-sm-6">
-                            <a class="portfolio2-box" href="assets/img/ps3.png" title="Keyword search">
-                                <img class="img-fluid" src="assets/img/ps3.png" alt="..." />
-
-                            </a>
-                        </div>
-
-                        <div class="col-lg-1 col-sm-6">
-                        
-                        </div>
-                       
-                        <div class="col-lg-3 col-sm-6">
-                            <a class="portfolio2-box" href="assets/img/ps4.png" title="Click the record and update">
-                                <img class="img-fluid" src="assets/img/ps4.png" alt="..." />
-
-                            </a>
-                        </div>
-
-                   
-                    </div>
-
-                    <div class="row gx-4 gx-lg-5 mt-4 mb-5 align-items-center justify-content-center text-start">
-                        <div><a href="https://developer.apple.com/xcode/swiftdata/" target="_blank">
-                                More information about swiftdata, pls visit here
-                            </a></div>
-                    </div>
-
-                    
-                
-                    <div class="row gx-4 gx-lg-5 mt-4 mb-5 h-100 align-items-center justify-content-center text-start">
-                        <div class="h7"><a href="#portfolio">
-                                -back to portfolio-
-                            </a></div>
-                    </div>
-
-                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                </div>
-            </div>
-    </section>
-
-    <section class="page-section" id="smis">
-        <div class="container px-4 px-lg-5 mt-5">
-            <h2 class="text-center mt-0 text-secondary h3">Full stack application: SMIS</h2>
-            <hr class="divider" />
-            <div class="row gx-4 gx-lg-5">
-                <img src="assets/img/smis.png" alt="..." class="img-fluid" />
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="mt-5">
-                        <div class="mb-2"><i class="bi-gem fs-1 text-primary"></i></div>
-                        <h3 class="h4 mb-2">ReactJs + Node.js</h3>
-                        <p class="text-muted mb-0"> ReactJS, a popular JavaScript library for building user interfaces.
-                            Besides Node.js allows for the development of fast and lightweight web applications!</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="mt-5">
-                        <div class="mb-2"><i class="bi-database-add fs-1 text-primary"></i></div>
-                        <h3 class="h4 mb-2">MongoDB</h3>
-                        <p class="text-muted mb-0">MongoDB's document-oriented approach allows for the storage of data
-                            in a JSON-like format, making it easy to work with.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="mt-5">
-                        <div class="mb-2"><i class="bi-house-lock fs-1 text-primary"></i></div>
-                        <h3 class="h4 mb-2">JSON Web Tokens (JWT)</h3>
-                        <p class="text-muted mb-0">By generating a token upon successful login, JWT ensures that only
-                            authenticated users can access the protected routes and resources of my full stack system.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="mt-5">
-                        <div class="mb-2"><i class="bi-file-text fs-1 text-primary"></i></div>
-                        <h3 class="h4 mb-2">Dashboard and export</h3>
-                        <p class="text-muted mb-0">Enabling teachers to generate assessment reports for students in PDF
-                            & Excel format. While visualization of data, e.g. charts and graphs, can aid in
-                            decision-making and identifying trends.</p>
-                    </div>
-                </div>
-            </div>
-            <hr class="divider" />
-            <div id="portfolio2">
-                <div class="row gx-4 gx-lg-5 mt-2">
-                    <h3 class="h4 mb-3 mt-2">Key Pages and Features:</h3>
-                    <p></p>
-
-                    <div class="col-lg-4 col-md-6">
-                        <a class="portfolio2-box" href="assets/img/1.png" title="Student Profile (CRUD)">
-                            <img src="assets/img/1.png" class="img-fluid" />
-                        </a>
-
-                        <strong> Student Profile
-                            (CRUD)</strong>
-                        <p class="text-muted"> This page allows teachers to manage student profiles, including creating,
-                            reading, updating, and deleting student information.
-                            CRUD operations refer to the basic functions of persistent storage.</p>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <a class="portfolio2-box" href="assets/img/2.png" title="Assessment (CRUD)">
-                            <img src="assets/img/2.png" class="img-fluid" />
-                        </a>
-                        <strong> Assessment
-                            (CRUD)</strong>
-                        <p class="text-muted"> Teachers can create, read, update, and delete assessments on this page.
-                            Assessments are an integral part of the educational process, allowing teachers to evaluate
-                            student
-                            performance.</p>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <a class="portfolio2-box" href="assets/img/3.png" title="Export in
-                        PDF
-                        and Excel Format">
-                            <img src="assets/img/3.png" class="img-fluid" />
-                        </a>
-                        <strong>Export in
-                            PDF
-                            and Excel Format</strong>
-                        <p class="text-muted"> This feature enables teachers to generate individual assessment reports
+                        <p class="text-muted"> This page allows the administrators to create and manage user accounts
                             for
-                            students in PDF format.
-                            PDF can serve as a print-out version and present to other parties. Also teachers can export
-                            consolidated assessment results in Excel format for complex data manipulation and analysis.
-                        </p>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <a class="portfolio2-box" href="assets/img/4.png" title="Dashboard
-                        of
-                        Student Data">
-                            <img src="assets/img/4.png" class="img-fluid" />
-                        </a>
-                        <strong>Dashboard
-                            of
-                            Student Data</strong>
-                        <p class="text-muted">The dashboard provides a visual representation of student and assessment
-                            data,
-                            allowing teachers to
-                            gain insights and track progress. Visualizing data through charts and graphs can aid in
-                            decision-making and identifying trends.
-                            Search</p>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <a class="portfolio2-box" href="assets/img/5.png" title="Search">
-                            <img src="assets/img/5.png" class="img-fluid" />
-                        </a>
-
-                        <strong>Search</strong>
-                        <p class="text-muted">This feature enables teachers to search for specific student profiles or
-                            assessments based on
-                            various criteria.
-                            Efficient search functionality enhances user experience and improves productivity.</p>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <a class="portfolio2-box" href="assets/img/6.png" title="User Setup
-                        (Administrator)">
-                            <img src="assets/img/6.png" class="img-fluid" />
-                        </a>
-                        <strong>User Setup
-                            (Administrator)</strong>
-                        <p class="text-muted">This page allows the administrators to create and manage user accounts for
                             the
                             application.
                             Administrators have the authority to grant or revoke access privileges to different users.
@@ -748,428 +595,266 @@
                             common users can only access their own record and change their passwords securely, ensuring
                             the
                             confidentiality of their
-                            accounts.</p>
+                            accounts..</p>
                     </div>
 
                 </div>
 
-                <div class="row gx-4 gx-lg-5 mt-4 mb-5 h-100 align-items-center justify-content-center text-start">
-                    <div class="col-lg-8 align-self-center text-center">
-                        <a class="btn bg-primary btn-xl text-white" href="http://front.orpheuslau.dev/"
-                            target="_blank">SMIS demo site</a>
-                       <!-- <div class="h7">(Test login: jkl, pass: 1)</div> -->
-                    </div>
-                </div>
-                <div class="row gx-4 gx-lg-5 mt-4 mb-5 h-100 align-items-center justify-content-center text-start">
-                    <div class="h7"><a href="#portfolio">
-                            -back to portfolio-
-                        </a></div>
+                <div class="text-center">
+                    <a href="http://front.orpheuslau.dev/" target="_blank"
+                        class="btn bg-accent text-white hover:bg-accent/80 font-semibold py-2 px-6 rounded-full inline-flex items-center mr-2 mb-2 md:mb-0">
+                        <i class="fas fa-external-link-alt mr-2"></i> Demo Site
+                    </a>
+                    <a href="https://github.com/orpheuslau/ReactJSfrontend" target="_blank"
+                        class="btn bg-gray-800 text-white hover:bg-gray-900 font-semibold py-2 px-6 rounded-full inline-flex items-center">
+                        <i class="fab fa-github mr-2"></i> GitHub
+                    </a>
                 </div>
             </div>
-            <br><br><br><br><br><br><br><br><br><br>
-
-
         </div>
     </section>
 
-    <section class="page-section" id="caritasar">
-        <div class="container px-4 px-lg-5 mt-5">
-            <h2 class="text-center mt-0 text-secondary h3">iOS AR apps: Caritas Gallery</h2>
-            <hr class="divider" />
-            <div class="row gx-4 gx-lg-5 mt-2 mb-2">
-                <img src="assets/img/ar1 (5).jpg" class="img-fluid" />
+    <section id="caritasar-details" class="project-detail-section page-section py-20 px-4 bg-white">
+        <div class="container mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800">iOS AR App: Caritas Gallery</h2>
+                <p class="text-primary mt-2">iOS AR App (2023)</p>
+                <hr class="divider w-20 h-1 bg-primary mx-auto mt-4 mb-6 rounded-full" />
             </div>
-
-            <div class="row gx-4 gx-lg-5 mt-1 mb-5">
-                <div class="col-lg-12 col-md-12 mb-lg-0 des">
-                    Introducing Caritas Gallery AR, the innovative iOS app that
-                    brings Augmented Reality (AR) to your fingertips. With this app, you can capture unique and
-                    memorable moments by seamlessly integrating the Caritas 70th Anniversary logo into your photos.
-                    Whether you're a fan of Caritas or simply love their logo, this app lets you take stunning pictures
-                    with the iconic symbol in a whole new way.</div>
-
-            </div>
-
-            <div class="row gx-4 gx-lg-5 mt-4">
-                <img src="assets/img/ar1 (3).jpg" class="img-fluid" />
-            </div>
-
-            <div class="row gx-4 gx-lg-5 mt-1 mb-4">
-                <div class="col-lg-12 col-md-12 mb-lg-0 des">
-                    Using advanced AR technology, Caritas Gallery AR superimposes the logo onto the real world
-                    through your
-                    iPhone's camera. Simply open the app, point your camera at a desired location, and watch as the
-                    Caritas
-                    logo seamlessly blends into the scene. Whether you're at a landmark, a special event, or simply
-                    exploring your surroundings, this app lets you capture moments with a touch of Caritas magic.
-                    </p>
+            <div class="max-w-4xl mx-auto">
+                <img src="assets/img/ar1%20(5).jpg" alt="Caritas AR App"
+                    class="rounded-lg shadow-xl mb-8 w-full h-auto object-cover"
+                    onerror="this.onerror=null;this.src='https://placehold.co/800x450/cccccc/333333?text=Caritas+AR+App';">
+                <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                    Caritas Gallery AR is an iOS app that uses Augmented Reality to integrate the Caritas 70th
+                    Anniversary logo into photos. Users can capture unique moments by superimposing the logo onto the
+                    real world through their iPhone's camera.
+                </p>
+                <h4 class="text-2xl font-semibold text-gray-800 mb-4">Features:</h4>
+                <ul class="list-disc list-inside space-y-2 text-gray-700 mb-8">
+                    <li>AR logo integration into live camera view.</li>
+                    <li>Customization options for logo size and position.</li>
+                    <li>Easy sharing to social media and camera roll.</li>
+                </ul>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+                    <img src="assets/img/ar1.jpg" alt="Caritas AR Example 1" class="rounded-md shadow-md"
+                        onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=AR+Example+1';">
+                    <img src="assets/img/ar1%20(7).jpg" alt="Caritas AR Example 2" class="rounded-md shadow-md"
+                        onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=AR+Example+2';">
+                    <img src="assets/img/ar1%20(8).jpg" alt="Caritas AR Example 3" class="rounded-md shadow-md"
+                        onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=AR+Example+3';">
+                </div>
+                <div class="text-center">
+                    <a href="https://apps.apple.com/tr/app/caritas-gallery-ar/id6449176352" target="_blank"
+                        class="btn bg-primary text-white hover:bg-primary/80 font-semibold py-2 px-6 rounded-full inline-flex items-center mr-2 mb-2 md:mb-0">
+                        <i class="fab fa-apple mr-2"></i> App Store
+                    </a>
+                    <a href="https://www.instagram.com/caritas70gallery/" target="_blank"
+                        class="btn bg-pink-500 text-white hover:bg-pink-600 font-semibold py-2 px-6 rounded-full inline-flex items-center mr-2 mb-2 md:mb-0">
+                        <i class="fab fa-instagram mr-2"></i> Instagram
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=UA6KdNF0PyE" target="_blank"
+                        class="btn bg-red-600 text-white hover:bg-red-700 font-semibold py-2 px-6 rounded-full inline-flex items-center">
+                        <i class="fab fa-youtube mr-2"></i> YouTube Demo
+                    </a>
                 </div>
             </div>
-
-            <div class="row gx-4 gx-lg-5">
-                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 des"> Caritas Gallery AR offers various customization options
-                    to
-                    ensure your pictures stand out. Adjust
-                    the
-                    size and position to perfectly match your composition. Once you've captured the perfect shot, easily
-                    share it with your friends and family through social media platforms or save it to your camera roll.
-                    <p></p>
-                    <img src="assets/img/ar1 (6).jpg" class="img-fluid" />
-
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0"><img src="assets/img/ar1 (7).jpg" class="img-fluid" /></div>
-                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0"><img src="assets/img/ar1 (8).jpg" class="img-fluid" /></div>
-            </div>
-
-            <div class="row gx-4 gx-lg-5 mt-4">
-                <div class="col-lg-12 col-md-12 mb-lg-0 des text-center"><strong>Caritas Gallery AR app
-                        walkthrough</strong></div>
-                <iframe width="560" height="600" src="https://www.youtube.com/embed/UA6KdNF0PyE?si=WYJXAB7L9V6HdaEJ"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen></iframe>
-            </div>
-
-
-
-            <div class="row gx-4 gx-lg-5 mt-5 justify-content-center">
-                <div class="col-lg-8 col-xl-6 text-center">
-
-                    <p class="text-muted mb-5">Should you want to know more, you can download it from Apple app store
-                        and visit the Instagram page of Caritas Gallery AR.</p>
-                    <div>
-                        <a href="https://apps.apple.com/tr/app/caritas-gallery-ar/id6449176352"><img
-                                src="assets/img/applogo.png" width="100px"
-                                title="Download from Apple app store" /></a><a
-                            href="https://www.instagram.com/caritas70gallery/"><img src="assets/img/iglogo.jpg"
-                                width="100px" title="Visit the Instagram page" /></a>
-                    </div>
-                </div>
-
-            </div>
-
-
-
-
-
-
-            <div class="row gx-4 gx-lg-5 mt-5 mb-5 h-100 align-items-center justify-content-center text-start">
-                <div class="h7"><a href="#portfolio">
-                        -back to portfolio-
-                    </a></div>
-            </div>
-
-            <br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-
-
-    </section>
-
-
-    <section class="page-section" id="jquery">
-        <div class="container px-4 px-lg-5 mt-5">
-            <h2 class="text-center mt-0 text-secondary h3">JQUERY and JAVA Android app</h2>
-            <hr class="divider" />
-            <div class="row gx-4 gx-lg-5 mt-2 mb-2">
-                <img src="assets/img/portfolio/thumbnails/3.jpg" class="img-fluid" />
-            </div>
-
-            <div class="row gx-4 gx-lg-5 mt-1 mb-1">
-                <div class="col-lg-12 col-md-12 mb-lg-0 des">
-                    This android mobile app, Rental Apartments Finder, is created by using Apache cordova and jQuery.
-                    jQuery is a fast and feature-rich JavaScript library that simplifies web development while Apache
-                    Cordova, formerly known as PhoneGap, is an open-source mobile development framework that allows
-                    developers to build mobile apps using web technologies like HTML, CSS, and JavaScript. This app
-                    allows user to find, add and edit rental listings.
-
-                    <p></p>
-                    Features highlight:
-                    <ul class=" lh-lg ul1">
-                        <li>Landing and input screen</li>
-                        <li>Form validation</li>
-                        <li>Store, view and delete the basic details and check for duplicate events</li>
-                        <li>Search</li>
-                        <li>Embedding photo and youtube link</li>
-                        <li>Add a note input screen</li>
-                        <li>Store data on the phone (Web SQL) </li>
-                    </ul>
-                </div>
-            </div>
-            <div id="portfolio2">
-                <div class="container-fluid p-0 mt-1 mb-5">
-                    <br>
-                    <div class="row g-0 justify-content-center">
-                        <div class="col-lg-4 col-sm-6">
-                            <a class="portfolio2-box" href="assets/img/j11.png" title="Landing page">
-                                <img class="img-fluid" src="assets/img/j11.png" alt="..." />
-
-                            </a>
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <a class="portfolio2-box" href="assets/img/j2.png" title="Form validation">
-                                <img class="img-fluid" src="assets/img/j2.png" alt="..." />
-
-                            </a>
-                        </div>
-                    </div>
-                    <div class="row g-0 justify-content-center">
-                        <div class="col-lg-4 col-sm-6">
-                            <a class="portfolio2-box" href="assets/img/j14.png" title="Keyword search">
-                                <img class="img-fluid" src="assets/img/j14.png" alt="..." />
-
-                            </a>
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <a class="portfolio2-box" href="assets/img/j15.png" title="Update record">
-                                <img class="img-fluid" src="assets/img/j15.png" alt="..." />
-
-                            </a>
-                        </div>
-                        <!--<div class="col-lg-4 col-sm-6">
-                            <a class="portfolio-box" href="assets/img/portfolio/fullsize/5.jpg" title="Project Name">
-                                <img class="img-fluid" src="assets/img/portfolio/thumbnails/5.jpg" alt="..." />
-                                <div class="portfolio-box-caption">
-                                    <div class="project-category text-white-50">Category</div>
-                                    <div class="project-name">Project Name</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <a class="portfolio-box" href="assets/img/portfolio/fullsize/6.jpg" title="Project Name">
-                                <img class="img-fluid" src="assets/img/portfolio/thumbnails/6.jpg" alt="..." />
-                                <div class="portfolio-box-caption p-3">
-                                    <div class="project-category text-white-50">Category</div>
-                                    <div class="project-name">Project Name</div>
-                                </div>
-                            </a>
-                        </div>-->
-                    </div>
-                    <div class="row gx-4 gx-lg-5 mt-4 mb-1">
-                        <div class="col-lg-12 col-md-12 mb-lg-0 des">
-                            I have also made a simiplfied version of RentalZ written in JAVA.
-                        </div>
-                    </div>
-                    <div class="row g-0 justify-content-center">
-                        <div class="col-lg-4 col-sm-6">
-                            <a class="portfolio2-box" href="assets/img/j16.png" title="JAVA layout">
-                                <img class="img-fluid" src="assets/img/j16.png" alt="..." />
-
-                            </a>
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <a class="portfolio2-box" href="assets/img/j17.png" title="Using Android studio">
-                                <img class="img-fluid" src="assets/img/j17.png" alt="..." />
-
-                            </a>
-                        </div>
-                    </div>
-                    <div class="row gx-4 gx-lg-5 mt-5 mb-1">
-                        <div class="col-lg-12 col-md-12 mb-lg-0 des text-center">
-                            Should you want to learn more about this app, you can download the software specification
-                            (code included)
-                            from the
-                            following link:
-                        </div>
-                    </div>
-                    <div class="row gx-4 gx-lg-5 mt-4 mb-5 h-100 align-items-center justify-content-center text-start">
-                        <div class="col-lg-8 align-self-center text-center">
-                            <a class="btn bg-success btn-xl text-white" href="assets/JqueryJAVAReport.pdf"
-                                target="_blank">Software Spec</a>
-                        </div>
-                    </div>
-                    <div class="row gx-4 gx-lg-5 mt-4 mb-5 h-100 align-items-center justify-content-center text-start">
-                        <div class="h7"><a href="#portfolio">
-                                -back to portfolio-
-                            </a></div>
-                    </div>
-
-                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                </div>
-            </div>
-    </section>
-
-
-    <section class="page-section" id="rfid">
-        <div class="container px-4 px-lg-5 mt-5">
-            <h2 class="text-center mt-0 text-secondary h3">Investigation on introducing RFID enabled electronic asset
-                management
-                system in a Non-Governmental Organization</h2>
-            <hr class="divider" />
-            <div class="row gx-4 gx-lg-5 mt-2 mb-2">
-                <img src="assets/img/portfolio/thumbnails/4.jpg" class="img-fluid" />
-            </div>
-            <div class="row gx-4 gx-lg-5 mt-1 mb-1">
-                <div class="col-lg-12 col-md-12 mb-lg-0 des"> The aim of this project is to investigate the
-                    effectiveness of implementing electronic asset management system in social service unit. Impact
-                    including financial, social and operational, of implementing the new system will be measured and
-                    discussed.
-                </div>
-            </div>
-            <div class="row gx-4 gx-lg-5 mt-5 mb-1">
-                <div class="col-lg-6 col-md-12 mb-lg-0 des"><img src="assets/img/dfd.png" class="img-fluid" />
-                </div>
-                <div class="col-lg-6 col-md-12 mb-lg-0 des"> <img src="assets/img/er.jpg" class="img-fluid" />
-                </div>
-            </div>
-
-            <div class="row gx-4 gx-lg-5 mt-3 mb-1">
-                <img src="assets/img/assetregister_explain.png" class="img-fluid" />
-            </div>
-
-            <div class="row gx-4 gx-lg-5 mt-4 mb-1 h-100 mt-5 align-items-center justify-content-center text-start">
-                <div class="col-lg-8 align-self-center text-center">
-                    <a class="btn bg-primary btn-xl text-white" href="assets/rfid.pdf" target="_blank">DOWNLOAD</a>
-                    <div class="text-muted mt-3 mb-5">Full report (139 pages, word count~17K, 11 chapters)</div>
-                </div>
-            </div>
-
-            <div class="row gx-4 gx-lg-5 mt-4 mb-4 h-100 align-items-center justify-content-center text-start">
-                <div class="h7"><a href="#portfolio">
-                        -back to portfolio-
-                    </a></div>
-            </div>
-
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         </div>
     </section>
-    <P></P>
-    <P></P>
-    <P></P>
 
-    <P></P>
-
-
-    <section class="page-section" id="contact">
-        <div class="container px-4 px-lg-5">
-            <div class="row gx-4 gx-lg-5 mt-5 justify-content-center">
-                <div class="col-lg-8 col-xl-6 text-center">
-                    <h2 class="mt-0">Let's Get In Touch!</h2>
-
-                    <hr class="divider" />
-                    <p class="text-muted mb-5"> Welcome! Feel free to browse the site and learn more about what I do. If
-                        you have any other questions or would like to discuss a potential project, please don't hesitate
-                        to drop me a line <a href="mailto:orpheuslau@gmail.com">orpheuslau@gmail.com</a>. Thanks !</p>
-                    <div>
-                        <a href="https://twitter.com/orpheuslau" target="_blank"><img src="assets/img/X_icon_2.svg.png"
-                                class="img-fluid" width="70px" /></a>
-                        <a href="https://www.linkedin.com/in/ktklau/" target="_blank"><img src="assets/img/ln.png"
-                                class="img-fluid" width="100px" /></a>
-                    </div>
-                </div>
-
+    <section id="jquery-details" class="project-detail-section page-section py-20 px-4 bg-gray-50">
+        <div class="container mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800">Rental Apartments Finder</h2>
+                <p class="text-primary mt-2">jQuery + Java Android (2021)</p>
+                <hr class="divider w-20 h-1 bg-primary mx-auto mt-4 mb-6 rounded-full" />
             </div>
-            <div class="row gx-4 gx-lg-5 mt-5 justify-content-center">
-                <div class="col-lg-8 des2">
-                    <table class="table text-center">
-                        <thead>
+            <div class="max-w-4xl mx-auto">
+                <img src="assets/img/portfolio/thumbnails/3.jpg" alt="Rental Apartments Finder App"
+                    class="rounded-lg shadow-xl mb-8 w-full h-auto object-cover"
+                    onerror="this.onerror=null;this.src='https://placehold.co/800x450/cccccc/333333?text=Rental+App';">
+                <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                    The Rental Apartments Finder is an Android mobile app created using Apache Cordova and jQuery. It
+                    allows users to find, add, and edit rental listings, storing data locally on the device using Web
+                    SQL. A simplified version was also developed in Java.
+                </p>
+                <h4 class="text-2xl font-semibold text-gray-800 mb-4">Features:</h4>
+                <ul class="list-disc list-inside space-y-2 text-gray-700 mb-8">
+                    <li>Landing and input screens with form validation.</li>
+                    <li>Store, view, and delete rental details; checks for duplicates.</li>
+                    <li>Keyword search functionality.</li>
+                    <li>Embedding photos and YouTube links.</li>
+                    <li>Note input screen.</li>
+                    <li>Local data storage (Web SQL).</li>
+                </ul>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                    <img src="assets/img/j11.png" alt="Rental App Feature 1"
+                        class="rounded-md shadow-md object-contain h-80 mx-auto"
+                        onerror="this.onerror=null;this.src='https://placehold.co/300x600/cccccc/333333?text=Rental+Screen+1';">
+                    <img src="assets/img/j14.png" alt="Rental App Feature 2"
+                        class="rounded-md shadow-md object-contain h-80 mx-auto"
+                        onerror="this.onerror=null;this.src='https://placehold.co/300x600/cccccc/333333?text=Rental+Screen+2';">
+                </div>
+                <div class="text-center">
+                    <a href="assets/JqueryJAVAReport.pdf" target="_blank"
+                        class="btn bg-green-600 text-white hover:bg-green-700 font-semibold py-2 px-6 rounded-full inline-flex items-center mr-2 mb-2 md:mb-0">
+                        <i class="fas fa-file-pdf mr-2"></i> Software Spec
+                    </a>
+                    <a href="https://github.com/orpheuslau/Jquery_rentalApp" target="_blank"
+                        class="btn bg-gray-800 text-white hover:bg-gray-900 font-semibold py-2 px-6 rounded-full inline-flex items-center">
+                        <i class="fab fa-github mr-2"></i> GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="page-section bg-gray-800 text-white py-20 px-4" id="contact">
+        <div class="container mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold">Let's Get In Touch!</h2>
+                <hr class="divider w-20 h-1 bg-primary mx-auto mt-4 mb-6 rounded-full" />
+                <p class="text-lg text-gray-300 max-w-2xl mx-auto">
+                    Feel free to browse the site and learn more about what I do. If you have any questions or would like
+                    to discuss a potential project, please don't hesitate to reach out!
+                </p>
+            </div>
+
+            <div class="max-w-3xl mx-auto text-center">
+                <a href="mailto:orpheuslau@gmail.com"
+                    class="text-2xl text-primary hover:text-orange-400 transition-colors mb-8 inline-block">
+                    <i class="fas fa-envelope mr-2"></i> orpheuslau@gmail.com
+                </a>
+                <div class="flex justify-center space-x-6 mb-12">
+                    <a href="https://twitter.com/orpheuslau" target="_blank"
+                        class="text-gray-300 hover:text-white transition-colors text-3xl">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ktklau/" target="_blank"
+                        class="text-gray-300 hover:text-white transition-colors text-3xl">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/orpheuslau" target="_blank"
+                        class="text-gray-300 hover:text-white transition-colors text-3xl">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="max-w-4xl mx-auto bg-white/10 p-6 sm:p-8 rounded-xl shadow-xl">
+                <h3 class="text-2xl font-semibold text-center mb-6">Project Links</h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm text-left text-gray-300">
+                        <thead class="text-xs text-white uppercase bg-white/20">
                             <tr>
-
-                                <th style="width:40%" scope="col">Project</th>
-                                <th style="width:20%" scope="col">Source Code</th>
-                                <th style="width:40%" scope="col">Demo</th>
+                                <th scope="col" class="px-4 py-3">Project</th>
+                                <th scope="col" class="px-4 py-3 text-center">Source Code</th>
+                                <th scope="col" class="px-4 py-3 text-center">Demo / Links</th>
                             </tr>
                         </thead>
                         <tbody>
-                             <tr>
-                                <td>NuVision: Empowering Healthier Eating with AI</td>
-                                <td></td>
-                                <td>
-                                    <!-- <p class="text-muted"> (Test login: jkl, pass: 1)</p> -->
-                                    <a href="https://apps.apple.com/tr/app/nuvision/id6746086162"
-                                        target="_blank"><img src="assets/img/applogo.png" width="40px"
-                                            title="Download from Apple app store" /></a>
-                                    <a
-                                        href="https://youtu.be/4cvz1z18Xy8?si=vFzz6WyID1SacJvQ" target="_blank"><img
-                                            src="assets/img/youtube.png" width="40px"
-                                            title="NuVision: Empowering Healthier Eating with AI" /></a>
+                            <tr class="border-b border-gray-700 hover:bg-white/5">
+                                <td class="px-4 py-3 font-medium">NuVision: AI Nutrition</td>
+                                <td class="px-4 py-3 text-center">-</td>
+                                <td class="px-4 py-3 text-center">
+                                    <a href="https://apps.apple.com/tr/app/nuvision/id6746086162" target="_blank"
+                                        class="text-primary hover:underline mx-1"><i class="fab fa-apple"></i> Store</a>
+                                    <a href="https://youtu.be/4cvz1z18Xy8?si=vFzz6WyID1SacJvQ" target="_blank"
+                                        class="text-red-500 hover:underline mx-1"><i class="fab fa-youtube"></i>
+                                        Video</a>
+
+                                        
+                                    <a href="https://food.orpheuslau.dev" target="_blank"
+                                        class="text-accent hover:underline"><i class="fas fa-external-link-alt"></i>
+                                        Demo</a>
+                                
                                 </td>
                             </tr>
-                            <tr>
-                                <td>IMeMyMine: AI Face Swap app with Text-to-Image Diffusion Models</td>
-                                <td></td>
-                                <td>
-                                    <!-- <p class="text-muted"> (Test login: jkl, pass: 1)</p> -->
-                                    <a
-                                        href="https://youtu.be/U5Sx3Rk-iEE?si=l24-UgYKbaMJQn0p" target="_blank"><img
-                                            src="assets/img/youtube.png" width="40px"
-                                            title="IMeMyMine: AI Face Swap app with Text-to-Image Diffusion Models" /></a>
+                            <tr class="border-b border-gray-700 hover:bg-white/5">
+                                <td class="px-4 py-3 font-medium">IMeMyMine: AI Face Swap</td>
+                                <td class="px-4 py-3 text-center">-</td>
+                                <td class="px-4 py-3 text-center">
+                                    <a href="https://youtu.be/U5Sx3Rk-iEE?si=l24-UgYKbaMJQn0p" target="_blank"
+                                        class="text-red-500 hover:underline mx-1"><i class="fab fa-youtube"></i>
+                                        Video</a>
                                 </td>
                             </tr>
-                            <tr>
-
-                                <td>Pass Secure</td>
-                                <td><a href="https://github.com/orpheuslau/Pass-Secure/tree/main" target="_blank"><img
-                                            src="assets/img/github-logo.png" class="img-fluid" width="30px" /></a></td>
-                                            <td><a href="https://apps.apple.com/hk/app/pass-secure-password-manager/id6479182542"
-                                            target="_blank"><img src="assets/img/applogo.png" width="40px"
-                                                title="Download from Apple app store" /></a>
-                                    <!-- <p class="text-muted"> (Test login: jkl, pass: 1)</p> -->
+                            <tr class="border-b border-gray-700 hover:bg-white/5">
+                                <td class="px-4 py-3 font-medium">Pass Secure</td>
+                                <td class="px-4 py-3 text-center"><a
+                                        href="https://github.com/orpheuslau/Pass-Secure/tree/main" target="_blank"
+                                        class="text-gray-400 hover:underline"><i class="fab fa-github"></i> GitHub</a>
+                                </td>
+                                <td class="px-4 py-3 text-center">
+                                    <a href="https://apps.apple.com/hk/app/pass-secure-password-manager/id6479182542"
+                                        target="_blank" class="text-primary hover:underline"><i
+                                            class="fab fa-apple"></i> Store</a>
                                 </td>
                             </tr>
-
-                            <tr>
-
-                                <td>Student Management Information System</td>
-                                <td><a href="https://github.com/orpheuslau/ReactJSfrontend" target="_blank"><img
-                                            src="assets/img/github-logo.png" class="img-fluid" width="30px" /></a></td>
-                                <td><a href="https://front.orpheuslau.dev" target="_blank"><img
-                                            src="assets/icons8-o-67.png" width="40px"
-                                            title="Visit the Instagram page" /></a>
-                                    <!-- <p class="text-muted"> (Test login: jkl, pass: 1)</p> -->
+                            <tr class="border-b border-gray-700 hover:bg-white/5">
+                                <td class="px-4 py-3 font-medium">Student Management System</td>
+                                <td class="px-4 py-3 text-center"><a
+                                        href="https://github.com/orpheuslau/ReactJSfrontend" target="_blank"
+                                        class="text-gray-400 hover:underline"><i class="fab fa-github"></i> GitHub</a>
+                                </td>
+                                <td class="px-4 py-3 text-center">
+                                    <a href="https://front.orpheuslau.dev" target="_blank"
+                                        class="text-accent hover:underline"><i class="fas fa-external-link-alt"></i>
+                                        Demo</a>
                                 </td>
                             </tr>
-                            <tr>
-                                <td>Caritas Gallery AR apps</td>
-                                <td><a href="https://github.com/orpheuslau/CaritasGallery_Final" target="_blank"><img
-                                            src="assets/img/github-logo.png" class="img-fluid" width="30px" /></a></td>
-                                <td><a href="https://apps.apple.com/tr/app/caritas-gallery-ar/id6449176352"
-                                        target="_blank"><img src="assets/img/applogo.png" width="40px"
-                                            title="Download from Apple app store" /></a><a
-                                        href="https://www.instagram.com/caritas70gallery/" target="_blank"><img
-                                            src="assets/img/iglogo.jpg" width="40px"
-                                            title="Visit the Instagram page" /></a><a
-                                        href="https://www.youtube.com/watch?v=UA6KdNF0PyE" target="_blank"><img
-                                            src="assets/img/youtube.png" width="40px"
-                                            title="Caritas Gallery AR app walkthrough" /></a></td>
+                            <tr class="border-b border-gray-700 hover:bg-white/5">
+                                <td class="px-4 py-3 font-medium">Caritas Gallery AR</td>
+                                <td class="px-4 py-3 text-center"><a
+                                        href="https://github.com/orpheuslau/CaritasGallery_Final" target="_blank"
+                                        class="text-gray-400 hover:underline"><i class="fab fa-github"></i> GitHub</a>
+                                </td>
+                                <td class="px-4 py-3 text-center">
+                                    <a href="https://apps.apple.com/tr/app/caritas-gallery-ar/id6449176352"
+                                        target="_blank" class="text-primary hover:underline mx-1"><i
+                                            class="fab fa-apple"></i> Store</a>
+                                    <a href="https://www.instagram.com/caritas70gallery/" target="_blank"
+                                        class="text-pink-500 hover:underline mx-1"><i class="fab fa-instagram"></i>
+                                        Insta</a>
+                                    <a href="https://www.youtube.com/watch?v=UA6KdNF0PyE" target="_blank"
+                                        class="text-red-500 hover:underline mx-1"><i class="fab fa-youtube"></i>
+                                        Video</a>
+                                </td>
                             </tr>
-                            <tr>
-
-                                <td>jQuery and JAVA Android app</td>
-                                <td><a href="https://github.com/orpheuslau/Jquery_rentalApp" target="_blank"><img
-                                            src="assets/img/github-logo.png" class="img-fluid" width="30px" /></a></td>
-                                <td><a href="assets/JqueryJAVAReport.pdf" target="_blank"><img
-                                            src="assets/img/report.png" width="40px"
-                                            title="Visit the Instagram page" /></a></td>
-                            </tr>
-                            <tr>
-
-                                <td>RFID enabled asset management system</td>
-                                <td></td>
-                                <td><a href="assets/rfid.pdf" target="_blank"><img src="assets/img/report.png"
-                                            width="40px" title="Visit the Instagram page" /></a></td>
+                            <tr class="hover:bg-white/5">
+                                <td class="px-4 py-3 font-medium">Rental Apartments Finder</td>
+                                <td class="px-4 py-3 text-center"><a
+                                        href="https://github.com/orpheuslau/Jquery_rentalApp" target="_blank"
+                                        class="text-gray-400 hover:underline"><i class="fab fa-github"></i> GitHub</a>
+                                </td>
+                                <td class="px-4 py-3 text-center">
+                                    <a href="assets/JqueryJAVAReport.pdf" target="_blank"
+                                        class="text-green-500 hover:underline"><i class="fas fa-file-pdf"></i>
+                                        Report</a>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
-
         </div>
-        <BR><BR><BR>
     </section>
 
-    <!-- Footer-->
-    <footer class="bg-light py-5">
-        <div class="container px-4 px-lg-5">
-            <div class="small text-center text-muted">Copyright &copy; 2023 - Orpheus LAU</div>
+    <footer class="bg-gray-900 text-gray-400 py-8 px-4">
+        <div class="container mx-auto text-center text-sm">
+            <p>&copy; <span id="currentYear"></span> Orpheus LAU. All Rights Reserved.</p>
+            <p class="mt-1">Redesigned with <i class="fas fa-heart text-primary"></i> using Tailwind CSS.</p>
         </div>
     </footer>
-    <!-- Bootstrap core JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- SimpleLightbox plugin JS-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
-    <!-- Core theme JS-->
-    <script src="js/scripts.js"></script>
 
+    <button id="backToTopBtn" title="Go to top"
+        class="fixed bottom-5 right-5 bg-primary/80 hover:bg-primary text-white p-3 rounded-full shadow-lg transition-opacity duration-300 opacity-0 z-50">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+
+    <script src="scripts8.js"></script>
 </body>
 
 </html>
