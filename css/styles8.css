@@ -140,7 +140,6 @@ body.navbar-shrunk section[id] {
 }
 
 
-.custom-icon-size {
-    width: 320px;
-    height: 320px;
+.hidden {
+    display: none;
 }
