@@ -1,3 +1,15 @@
+function showImage(src) {
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    modalImage.src = src;
+    modal.classList.remove('hidden');
+}
+
+function closeImage() {
+    const modal = document.getElementById('imageModal');
+    modal.classList.add('hidden');
+}
+
 window.addEventListener('DOMContentLoaded', event => {
     const mainNav = document.getElementById('mainNav');
     const navToggle = document.getElementById('nav-toggle');
