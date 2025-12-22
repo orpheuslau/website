@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORPHEUS LAU | AI & Full Stack Innovator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/styles8.css"> 
+    <link rel="icon" type="image/x-icon" href="assets/icons8-o-67.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        primary: '#f4623a', 
+                        dark: '#0f172a',      // Slate 900
+                        darker: '#020617',    // Slate 950
+                        card: '#1e293b',      // Slate 800
+                        accent: '#38b2ac',
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SVWP2YHJN5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-SVWP2YHJN5');
+    </script>
+
+    <style>
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #f4623a;
+        }
+        .glass {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+
+<body class="bg-darker text-gray-300 antialiased selection:bg-primary selection:text-white">
+
+    <nav id="mainNav" class="fixed w-full z-50 top-0 transition-all duration-300 border-b border-white/5 bg-dark/80 backdrop-blur-md">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="#page-top" class="text-2xl font-bold text-white tracking-tight hover:text-primary transition-colors">
+                    ORPHEUS <span class="text-primary">LAU</span>
+                </a>
+                
+                <div class="md:hidden">
+                    <button id="nav-toggle" class="text-white focus:outline-none">
+                        <i class="fas fa-bars fa-lg"></i>
+                    </button>
+                </div>
+
+                <div id="nav-menu" class="hidden md:flex md:items-center space-x-8">
+                    <a href="#about" class="text-sm font-medium uppercase tracking-wider text-gray-300 hover:text-primary transition-colors">About</a>
+                    <a href="#portfolio" class="text-sm font-medium uppercase tracking-wider text-gray-300 hover:text-primary transition-colors">Portfolio</a>
+                    <a href="#contact" class="px-5 py-2 text-sm font-medium uppercase tracking-wider text-white bg-primary rounded-full hover:bg-orange-600 transition-all shadow-lg shadow-orange-500/20">Contact</a>
+                </div>
+            </div>
+            
+            <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-2 bg-card rounded-lg p-4 border border-white/10">
+                <a href="#about" class="block text-gray-300 hover:text-primary py-2">About</a>
+                <a href="#portfolio" class="block text-gray-300 hover:text-primary py-2">Portfolio</a>
+                <a href="#contact" class="block text-gray-300 hover:text-primary py-2">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header id="page-top" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="../assets/img/background.jpg" class="w-full h-full object-cover opacity-40" alt="Background">
+            <div class="absolute inset-0 bg-gradient-to-b from-darker via-darker/80 to-darker"></div>
+        </div>
+
+        <div class="container mx-auto px-4 z-10 text-center">
+            <div class="inline-block mb-4 px-4 py-1 rounded-full border border-primary/30 bg-primary/10 text-primary text-sm font-mono animate-bounce">
+                Hello World
+            </div>
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 tracking-tight leading-tight">
+                Curiosity Driven.<br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-400">Innovator.</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
+                I'm Orpheus. I bridge the gap between social impact and emerging tech. 
+                <br>AI · Cyber Security · AR · iOS · Full Stack.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a class="px-8 py-4 bg-primary text-white font-bold rounded-full hover:bg-orange-600 transition-all transform hover:-translate-y-1 shadow-lg shadow-orange-500/30" href="#portfolio">
+                    View Projects
+                </a>
+                <a class="px-8 py-4 bg-transparent border border-white/20 text-white font-bold rounded-full hover:bg-white/10 transition-all" href="#about">
+                    About Me
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-24 bg-darker relative" id="about">
+        <div class="absolute top-0 right-0 w-1/3 h-1/3 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row gap-16 items-start">
+                
+                <div class="lg:w-1/2">
+                    <h2 class="text-4xl font-bold text-white mb-6">About Me</h2>
+                    <div class="h-1 w-20 bg-primary rounded-full mb-8"></div>
+                    
+                    <div class="space-y-6 text-gray-400 text-lg leading-relaxed">
+                        <p>
+                            Transitioning from social work to tech leadership, I bring over two decades of experience in social services. I've successfully managed diverse technology projects within the non-profit sector, spearheading over 10 major initiatives including <strong class="text-white">AI, Cyber Security, AR, iOS app development, and VR projects</strong>.
+                        </p>
+                        <p>
+                            Blending my passions for social impact and innovative solutions, I explore how emerging technologies can create new opportunities and build a more compassionate world.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="lg:w-1/2 w-full">
+                    <div class="glass rounded-2xl p-8 hover:border-primary/50 transition-colors">
+                        <h3 class="text-2xl font-bold text-white mb-6 flex items-center">
+                            <i class="fas fa-graduation-cap text-primary mr-3"></i> Education & Certs
+                        </h3>
+                        <ul class="space-y-4">
+                            <li class="flex gap-4 items-start p-3 rounded-lg hover:bg-white/5 transition-colors">
+                                <div class="mt-1 min-w-[5px] h-5 bg-primary rounded-full"></div>
+                                <div>
+                                    <strong class="block text-white">Master in Artificial Intelligence</strong>
+                                    <span class="text-sm text-gray-500">University of Leeds (Ongoing, 2027 Graduate)</span>
+                                </div>
+                            </li>
+                            <li class="flex gap-4 items-start p-3 rounded-lg hover:bg-white/5 transition-colors">
+                                <div class="mt-1 min-w-[5px] h-5 bg-gray-600 rounded-full"></div>
+                                <div>
+                                    <strong class="block text-white">Bachelor of Computing Science (1st Hon)</strong>
+                                    <span class="text-sm text-gray-500">University of Greenwich</span>
+                                </div>
+                            </li>
+                            <li class="flex gap-4 items-start p-3 rounded-lg hover:bg-white/5 transition-colors">
+                                <div class="mt-1 min-w-[5px] h-5 bg-gray-600 rounded-full"></div>
+                                <div>
+                                    <strong class="block text-white">Google Data Analytics Certificate</strong>
+                                    <span class="text-sm text-gray-500">Google</span>
+                                </div>
+                            </li>
+                            <li class="flex gap-4 items-start p-3 rounded-lg hover:bg-white/5 transition-colors">
+                                <div class="mt-1 min-w-[5px] h-5 bg-gray-600 rounded-full"></div>
+                                <div>
+                                    <strong class="block text-white">Master of Social Sciences (Mgt)</strong>
+                                    <span class="text-sm text-gray-500">The University of Hong Kong</span>
+                                </div>
+                            </li>
+                            <li class="flex gap-4 items-start p-3 rounded-lg hover:bg-white/5 transition-colors">
+                                <div class="mt-1 min-w-[5px] h-5 bg-gray-600 rounded-full"></div>
+                                <div>
+                                    <strong class="block text-white">Diploma in IT</strong>
+                                    <span class="text-sm text-gray-500">The University of Hong Kong (SPACE)</span>
+                                </div>
+                            </li>
+                            <li class="flex gap-4 items-start p-3 rounded-lg hover:bg-white/5 transition-colors">
+                                <div class="mt-1 min-w-[5px] h-5 bg-gray-600 rounded-full"></div>
+                                <div>
+                                    <strong class="block text-white">Bachelor of Social Work (Hons)</strong>
+                                    <span class="text-sm text-gray-500">The University of Hong Kong</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-dark" id="portfolio">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-white">Selected Works</h2>
+                <div class="h-1 w-20 bg-primary rounded-full mx-auto mt-6"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <div class="group relative bg-card rounded-2xl overflow-hidden border border-white/5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-primary/10">
+                    <a href="#sentiment-details" class="block h-full">
+                        <div class="relative h-56 overflow-hidden">
+                            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                src="assets/img/SentiAna/20250812_AI_sharing.png" alt="Sentiment Analysis"
+                                onerror="this.onerror=null;this.src='https://placehold.co/600x400/1e293b/white?text=Sentiment+Analysis';">
+                            <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent opacity-80"></div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex gap-2 mb-3">
+                                <span class="text-xs font-mono bg-blue-900/50 text-blue-200 px-2 py-1 rounded">LLM</span>
+                                <span class="text-xs font-mono bg-purple-900/50 text-purple-200 px-2 py-1 rounded">LoRA</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">Sentiment Analysis & Fine Tuning</h3>
+                            <p class="text-gray-400 text-sm">Unlock deeper insights from multilingual feedback using MLX and LORA.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="group relative bg-card rounded-2xl overflow-hidden border border-white/5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-primary/10">
+                    <a href="#linkyouin-details" class="block h-full">
+                        <div class="relative h-56 overflow-hidden">
+                            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                src="assets/img/linkyouin_thumb.jpg" alt="LinkYouIn"
+                                onerror="this.onerror=null;this.src='https://placehold.co/600x400/f4623a/white?text=LinkYouIn+AI';">
+                            <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent opacity-80"></div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex gap-2 mb-3">
+                                <span class="text-xs font-mono bg-green-900/50 text-green-200 px-2 py-1 rounded">FastAPI</span>
+                                <span class="text-xs font-mono bg-yellow-900/50 text-yellow-200 px-2 py-1 rounded">Ollama</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">LinkYouIn: AI Recruiter</h3>
+                            <p class="text-gray-400 text-sm">Privacy-first automated CV screening pipeline using dual local LLMs.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="group relative bg-card rounded-2xl overflow-hidden border border-white/5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-primary/10">
+                    <a href="#nuvision-details" class="block h-full">
+                        <div class="relative h-56 overflow-hidden">
+                            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                src="assets/img/nuphoto/small/out4.png" alt="NuVision"
+                                onerror="this.onerror=null;this.src='https://placehold.co/600x400/1e293b/white?text=NuVision';">
+                            <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent opacity-80"></div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex gap-2 mb-3">
+                                <span class="text-xs font-mono bg-gray-700 text-white px-2 py-1 rounded">iOS</span>
+                                <span class="text-xs font-mono bg-blue-900/50 text-blue-200 px-2 py-1 rounded">Vision LM</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">NuVision: AI Coach</h3>
+                            <p class="text-gray-400 text-sm">Personal AI coach for nutrition and exercise using Vision LMs.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="group relative bg-card rounded-2xl overflow-hidden border border-white/5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-primary/10">
+                    <a href="#imemymine-details" class="block h-full">
+                        <div class="relative h-56 overflow-hidden">
+                            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                src="assets/img/portfolio/thumbnails/thumbnail_imemymine.jpg" alt="IMeMyMine"
+                                onerror="this.onerror=null;this.src='https://placehold.co/600x400/38b2ac/white?text=Face+Swap';">
+                            <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent opacity-80"></div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex gap-2 mb-3">
+                                <span class="text-xs font-mono bg-pink-900/50 text-pink-200 px-2 py-1 rounded">SDXL</span>
+                                <span class="text-xs font-mono bg-gray-700 text-white px-2 py-1 rounded">Pytorch</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">IMeMyMine: Face Swap</h3>
+                            <p class="text-gray-400 text-sm">AI-powered face swap app for thematic portraits and inclusion.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="group relative bg-card rounded-2xl overflow-hidden border border-white/5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-primary/10">
+                    <a href="#airaffle-details" class="block h-full">
+                        <div class="relative h-56 overflow-hidden">
+                            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                src="assets/img/airaffle/airaffle_main.jpg" alt="AI Raffle"
+                                onerror="this.onerror=null;this.src='https://placehold.co/600x400/f4623a/white?text=AI+Raffle';">
+                            <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent opacity-80"></div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex gap-2 mb-3">
+                                <span class="text-xs font-mono bg-red-900/50 text-red-200 px-2 py-1 rounded">YOLOv10</span>
+                                <span class="text-xs font-mono bg-gray-700 text-white px-2 py-1 rounded">CV2</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">AI Raffle: Object Recognition</h3>
+                            <p class="text-gray-400 text-sm">Real-time serial number recognition using YOLOv10.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="group relative bg-card rounded-2xl overflow-hidden border border-white/5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-primary/10">
+                    <a href="#passsecure-details" class="block h-full">
+                        <div class="relative h-56 overflow-hidden">
+                            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                src="assets/img/portfolio/thumbnails/thumbnail_passSecure.jpg" alt="Pass Secure"
+                                onerror="this.onerror=null;this.src='https://placehold.co/600x400/4a5568/white?text=Pass+Secure';">
+                            <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent opacity-80"></div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex gap-2 mb-3">
+                                <span class="text-xs font-mono bg-gray-700 text-white px-2 py-1 rounded">SwiftData</span>
+                                <span class="text-xs font-mono bg-blue-900/50 text-blue-200 px-2 py-1 rounded">CloudKit</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">Pass Secure Manager</h3>
+                            <p class="text-gray-400 text-sm">Securely manage passwords with SwiftData and iCloud sync.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="group relative bg-card rounded-2xl overflow-hidden border border-white/5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-primary/10">
+                    <a href="#smis-details" class="block h-full">
+                        <div class="relative h-56 overflow-hidden">
+                            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                src="assets/img/portfolio/thumbnails/1.jpg" alt="SMIS"
+                                onerror="this.onerror=null;this.src='https://placehold.co/600x400/f4623a/white?text=SMIS';">
+                            <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent opacity-80"></div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex gap-2 mb-3">
+                                <span class="text-xs font-mono bg-cyan-900/50 text-cyan-200 px-2 py-1 rounded">React</span>
+                                <span class="text-xs font-mono bg-green-900/50 text-green-200 px-2 py-1 rounded">Node</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">Student Management System</h3>
+                            <p class="text-gray-400 text-sm">Full-stack MERN application for managing student assessments.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="group relative bg-card rounded-2xl overflow-hidden border border-white/5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-primary/10">
+                    <a href="#caritasar-details" class="block h-full">
+                        <div class="relative h-56 overflow-hidden">
+                            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                src="assets/img/portfolio/thumbnails/2.jpg" alt="Caritas AR"
+                                onerror="this.onerror=null;this.src='https://placehold.co/600x400/38b2ac/white?text=AR';">
+                            <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent opacity-80"></div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex gap-2 mb-3">
+                                <span class="text-xs font-mono bg-gray-700 text-white px-2 py-1 rounded">iOS</span>
+                                <span class="text-xs font-mono bg-purple-900/50 text-purple-200 px-2 py-1 rounded">ARKit</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">Caritas Gallery AR</h3>
+                            <p class="text-gray-400 text-sm">AR app integrating logos into live camera views.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="group relative bg-card rounded-2xl overflow-hidden border border-white/5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-primary/10">
+                    <a href="#jquery-details" class="block h-full">
+                        <div class="relative h-56 overflow-hidden">
+                            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                src="assets/img/portfolio/thumbnails/3.jpg" alt="Rental Finder"
+                                onerror="this.onerror=null;this.src='https://placehold.co/600x400/4a5568/white?text=Rental';">
+                            <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent opacity-80"></div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex gap-2 mb-3">
+                                <span class="text-xs font-mono bg-orange-900/50 text-orange-200 px-2 py-1 rounded">Java</span>
+                                <span class="text-xs font-mono bg-gray-700 text-white px-2 py-1 rounded">jQuery</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">Rental Finder</h3>
+                            <p class="text-gray-400 text-sm">Mobile app for rental listings with local SQL storage.</p>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="sentiment-details" class="py-24 bg-darker border-t border-white/5">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-white">Sentiment Analysis & LLM Fine Tuning</h2>
+                <div class="inline-block mt-3 px-4 py-1 rounded-full bg-primary/10 text-primary border border-primary/20 text-sm font-mono">
+                    Python + LLM + LORA (2025)
+                </div>
+            </div>
+            
+            <div class="max-w-4xl mx-auto text-gray-300">
+                <p class="text-lg mb-8 leading-relaxed">
+                    Our organization, with staff force over 4,000, has a wealth of valuable feedback captured in training evaluation reports dating back to 2013. We aim to develop a AI-empowered solution to extract and analyze this information, transforming unstructured text into strategic insights.
+                </p>
+
+                <div class="bg-card p-2 rounded-xl border border-white/10 mb-8">
+                    <img src="assets/img/SentiAna/20250812_AI_sharing.png" alt="Sentiment Analysis Diagram" class="rounded-lg w-full"
+                        onerror="this.onerror=null;this.src='https://placehold.co/800x450/1e293b/white?text=Diagram';">
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 items-center mb-8">
+                    <div>
+                        <h4 class="text-xl font-bold text-white mb-3">Smarter Approach</h4>
+                        <p class="text-sm text-gray-400 leading-relaxed">
+                            Using a large language model (LLM), we've successfully performed sentiment analysis on thousands of evaluation reports. Benefit from the Natural Language Processing (NLP) power of LLM, which can accurately analyze user feedback in multiple languages, including English and Chinese. The analyzed result is applied to fine-tune <strong class="text-primary">(MLX framework)</strong> the LLM using LoRA (Low-Rank Adaptation).
+                        </p>
+                    </div>
+                    <div class="bg-card p-2 rounded-xl border border-white/10">
+                        <img src="assets/img/SentiAna/ram.png" alt="RAM Usage" class="rounded-lg w-full"
+                        onerror="this.onerror=null;this.src='https://placehold.co/800x450/1e293b/white?text=RAM+Usage';">
+                        <p class="text-xs text-center mt-2 text-gray-500">(Unified memory utilization: ~40GB)</p>
+                    </div>
+                </div>
+
+                <h4 class="text-xl font-bold text-white mb-4">Code Highlights</h4>
+                <div class="bg-[#1e1e1e] rounded-lg overflow-hidden border border-white/10 shadow-2xl mb-8 font-mono text-sm">
+                    <div class="flex items-center px-4 py-2 bg-[#2d2d2d] border-b border-white/5">
+                        <div class="flex gap-2">
+                            <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                        </div>
+                        <div class="ml-4 text-gray-400 text-xs">fine_tune.py</div>
+                    </div>
+                    <div class="p-6 overflow-x-auto text-gray-300">
+<pre><code><span class="text-purple-400"># Model selection for multilingual sentiment</span>
+model_name = <span class="text-green-400">"clapAI/modernBERT-base-multilingual-sentiment"</span>
+
+<span class="text-purple-400"># Binary classification fine-tuning</span>
+model = AutoModelForSequenceClassification.from_pretrained(
+    model_name,
+    num_labels=<span class="text-orange-400">2</span>,               
+    id2label=id2label,
+    label2id=label2id,
+    ignore_mismatched_sizes=<span class="text-blue-400">True</span>,
+)
+
+<span class="text-purple-400"># Training parameters</span>
+training_args = TrainingArguments(
+    output_dir=<span class="text-green-400">'./fine_tuned_model'</span>,
+    num_train_epochs=<span class="text-orange-400">3</span>,
+    per_device_train_batch_size=<span class="text-orange-400">8</span>,
+    learning_rate=<span class="text-orange-400">2e-5</span>,
+)</code></pre>
+                    </div>
+                </div>
+
+                <div class="glass p-6 rounded-xl">
+                    <h4 class="text-xl font-bold text-white mb-4">Key Benefits</h4>
+                    <ul class="grid sm:grid-cols-2 gap-4 text-sm text-gray-400">
+                        <li class="flex items-center"><i class="bi bi-check-circle-fill text-green-500 mr-2"></i>Reduced manual annotation effort</li>
+                        <li class="flex items-center"><i class="bi bi-check-circle-fill text-green-500 mr-2"></i>High accuracy with less data</li>
+                        <li class="flex items-center"><i class="bi bi-check-circle-fill text-green-500 mr-2"></i>Scalable implementation</li>
+                        <li class="flex items-center"><i class="bi bi-check-circle-fill text-green-500 mr-2"></i>Efficient GPU utilization (MPS)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="linkyouin-details" class="py-24 bg-dark border-t border-white/5">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-white">LinkYouIn: AI Recruiter</h2>
+                <h3 class="text-gray-400 mt-2 text-lg">Local-First Intelligent Recruitment Assistant using Dual LLMs</h3>
+                <div class="inline-block mt-3 px-4 py-1 rounded-full bg-primary/10 text-primary border border-primary/20 text-sm font-mono">
+                    Python + FastAPI + Ollama (2025)
+                </div>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-8 mb-12">
+                    <div>
+                         <h4 class="text-xl font-bold text-white mb-3">The Challenge</h4>
+                         <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                            Recruiters often spend less than 10 seconds scanning a CV. High-volume hiring leads to fatigue and bias. Commercial AI tools often pose data privacy risks by sending sensitive PII to third-party clouds.
+                         </p>
+                         <h4 class="text-xl font-bold text-white mb-3">The Solution</h4>
+                         <p class="text-gray-400 text-sm leading-relaxed">
+                            <strong>LinkYouIn</strong> is a privacy-centric pipeline designed to run on local hardware. It processes CVs (PDF/DOCX) through a multi-stage AI analysis pipeline using <strong>Ollama</strong>. It orchestrates two distinct LLMs (Qwen & Gemma) to score candidates in parallel.
+                         </p>
+                    </div>
+                    <div class="bg-card p-2 rounded-xl border border-white/10">
+                        <img src="assets/img/linkyouin_workflow.png" alt="Workflow" class="rounded-lg w-full h-full object-cover"
+                        onerror="this.onerror=null;this.src='https://placehold.co/800x450/1e293b/white?text=Workflow';">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                    <div class="bg-card p-5 rounded-xl border-l-4 border-primary shadow-lg">
+                        <h5 class="text-white font-bold mb-1">Dual-Model Consensus</h5>
+                        <p class="text-xs text-gray-400">Orchestrates two quantized LLMs. Scores are averaged to create a balanced "Job Fit" metric.</p>
+                    </div>
+                    <div class="bg-card p-5 rounded-xl border-l-4 border-accent shadow-lg">
+                        <h5 class="text-white font-bold mb-1">Holistic Analysis</h5>
+                        <p class="text-xs text-gray-400">Analyzes "Career Stability" and "Interest Levels" using a separate analyst agent.</p>
+                    </div>
+                    <div class="bg-card p-5 rounded-xl border-l-4 border-white shadow-lg">
+                        <h5 class="text-white font-bold mb-1">Privacy First</h5>
+                        <p class="text-xs text-gray-400">Runs entirely locally. No candidate data is ever sent to external APIs.</p>
+                    </div>
+                    <div class="bg-card p-5 rounded-xl border-l-4 border-red-500 shadow-lg">
+                        <h5 class="text-white font-bold mb-1">Fault Tolerance</h5>
+                        <p class="text-xs text-gray-400">Designed to fail gracefully; defaults to secondary model if one hangs.</p>
+                    </div>
+                </div>
+
+                <h4 class="text-xl font-bold text-white mb-4">Core Pipeline Logic</h4>
+                <div class="bg-[#1e1e1e] rounded-lg overflow-hidden border border-white/10 shadow-2xl mb-8 font-mono text-sm">
+                    <div class="flex items-center px-4 py-2 bg-[#2d2d2d] border-b border-white/5">
+                        <div class="flex gap-2">
+                            <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                        </div>
+                        <div class="ml-4 text-gray-400 text-xs">pipeline.py</div>
+                    </div>
+                    <div class="p-6 overflow-x-auto text-gray-300">
+<pre><code><span class="text-purple-400">def</span> <span class="text-blue-400">score_cv</span>(cv_path, job_req, salary):
+    cv_text = extract_text(cv_path)
+    
+    <span class="text-gray-500"># 1. Parallel Job Fit Scoring (Qwen + Gemma)</span>
+    <span class="text-purple-400">with</span> ThreadPoolExecutor(max_workers=<span class="text-orange-400">2</span>) <span class="text-purple-400">as</span> exc:
+        job_fit_func = partial(ask_llm_fit, job_req, cv_text)
+        results = <span class="text-blue-400">list</span>(exc.map(job_fit_func, [LLM_MODEL_1, LLM_MODEL_2]))
+    
+    <span class="text-gray-500"># 2. Serial Deep Analysis</span>
+    interest_score = ask_llm_interest(cv_text, job_req, salary)
+    
+    <span class="text-purple-400">return</span> {
+        <span class="text-green-400">"job_fit_score"</span>: (results[0] + results[1]) / <span class="text-orange-400">2</span>,
+        <span class="text-green-400">"interest_score"</span>: interest_score
+    }</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="nuvision-details" class="py-24 bg-darker border-t border-white/5">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-white">NuVision: AI Health Coach</h2>
+                <p class="text-gray-400 mt-2">LLM + Vision LM + iOS (2025)</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-card/50 p-6 rounded-2xl border border-white/5 mb-8 text-gray-300 text-sm leading-relaxed">
+                    <p class="mb-4">
+                        In Hong Kong, many families reside in subdivided flats with limited cooking space. NuVision is an AI-powered iOS app that empowers you to take control of your health by balancing what you eat with how you move.
+                    </p>
+                    <p>
+                        Just snap a meal photo — NuVision uses AI to instantly analyze calories, protein, fat, carbs, and fiber. It connects with <strong class="text-white">Apple Health</strong> to track your exercise and daily activity.
+                    </p>
+                </div>
+
+                <div class="bg-black rounded-xl overflow-hidden shadow-2xl mb-8 border border-white/10">
+                    <video controls class="w-full">
+                        <source src="assets/img/nuphoto/20250812_NuVision.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+                    <div class="text-center group">
+                        <div class="mb-3 text-primary text-4xl group-hover:scale-110 transition-transform"><i class="bi bi-robot"></i></div>
+                        <h3 class="text-white font-bold text-sm mb-2">Net Calorie Balance</h3>
+                        <p class="text-xs text-gray-500 mb-2">Eat vs Move visualization.</p>
+                        <img src="assets/img/nuphoto/output.png" class="rounded border border-white/10 w-full" alt="Screen">
+                    </div>
+                    <div class="text-center group">
+                        <div class="mb-3 text-primary text-4xl group-hover:scale-110 transition-transform"><i class="bi bi-clipboard-data"></i></div>
+                        <h3 class="text-white font-bold text-sm mb-2">Instant Recognition</h3>
+                        <p class="text-xs text-gray-500 mb-2">Scientific estimation.</p>
+                        <img src="assets/img/nuphoto/output2.png" class="rounded border border-white/10 w-full" alt="Screen">
+                    </div>
+                    <div class="text-center group">
+                        <div class="mb-3 text-primary text-4xl group-hover:scale-110 transition-transform"><i class="bi bi-person-hearts"></i></div>
+                        <h3 class="text-white font-bold text-sm mb-2">Privacy First</h3>
+                        <p class="text-xs text-gray-500 mb-2">Encrypted local storage.</p>
+                        <img src="assets/img/nuphoto/output3.png" class="rounded border border-white/10 w-full" alt="Screen">
+                    </div>
+                    <div class="text-center group">
+                        <div class="mb-3 text-primary text-4xl group-hover:scale-110 transition-transform"><i class="bi bi-graph-up-arrow"></i></div>
+                        <h3 class="text-white font-bold text-sm mb-2">Trend Reports</h3>
+                        <p class="text-xs text-gray-500 mb-2">Export to CSV.</p>
+                        <img src="assets/img/nuphoto/output4.png" class="rounded border border-white/10 w-full" alt="Screen">
+                    </div>
+                </div>
+
+                <div class="glass p-6 rounded-xl mb-8">
+                     <h4 class="text-xl font-bold text-white mb-2">Our Mission</h4>
+                     <p class="text-sm text-gray-400">
+                        NuVision is a non-profit dedicated to empowering underserved communities. Our commitment is to provide a free, ad-free, and privacy-first platform that ensures AI advancements bridge the digital divide rather than deepen it.
+                     </p>
+                </div>
+                
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="https://apps.apple.com/tr/app/nuvision/id6746086162" target="_blank" class="px-6 py-3 bg-white text-dark font-bold rounded-full hover:bg-gray-200 transition-colors flex items-center">
+                        <i class="fab fa-apple mr-2"></i> App Store
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=com.mycrossplatformapp" target="_blank" class="px-6 py-3 bg-transparent border border-white/20 text-white rounded-full hover:bg-white/10 transition-colors flex items-center">
+                        <i class="fab fa-android mr-2"></i> Android
+                    </a>
+                     <a href="http://food.orpheuslau.dev/" target="_blank" class="px-6 py-3 bg-accent text-white rounded-full hover:bg-teal-600 transition-colors flex items-center">
+                        <i class="fas fa-external-link-alt mr-2"></i> Web
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="imemymine-details" class="py-24 bg-dark border-t border-white/5">
+        <div class="container mx-auto px-4">
+             <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-white">IMeMyMine: AI Face Swap</h2>
+                <p class="text-primary mt-2">Pytorch + SDXL + iOS (2024)</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-card p-2 rounded-xl border border-white/10 mb-8">
+                    <img src="assets/img/imemymine.png" alt="Architecture" class="rounded-lg w-full"
+                    onerror="this.onerror=null;this.src='https://placehold.co/800x450/1e293b/white?text=Architecture';">
+                </div>
+                
+                <div class="text-gray-300 mb-8 leading-relaxed">
+                    <p class="mb-4">This project promotes inclusion through an innovative iOS app using AI-powered face-swapping (IP-Adapter). Users transform their faces into thematic portraits, demonstrating diverse identities.</p>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li>• <strong class="text-white">Tech:</strong> Client-Server architecture with Fine-tuned IP-Adapter.</li>
+                        <li>• <strong class="text-white">Impact:</strong> Celebrating individuality and diversity.</li>
+                    </ul>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
+                    <img src="assets/img/im1.png" class="rounded-lg shadow-lg hover:scale-105 transition-transform" onerror="this.onerror=null;this.src='https://placehold.co/300x400/1e293b/white?text=Ex1';">
+                    <img src="assets/img/im2.png" class="rounded-lg shadow-lg hover:scale-105 transition-transform" onerror="this.onerror=null;this.src='https://placehold.co/300x400/1e293b/white?text=Ex2';">
+                    <img src="assets/img/im3.png" class="rounded-lg shadow-lg hover:scale-105 transition-transform" onerror="this.onerror=null;this.src='https://placehold.co/300x400/1e293b/white?text=Ex3';">
+                    <img src="assets/img/im4.png" class="rounded-lg shadow-lg hover:scale-105 transition-transform" onerror="this.onerror=null;this.src='https://placehold.co/300x400/1e293b/white?text=Ex4';">
+                    <img src="assets/img/im5.png" class="rounded-lg shadow-lg hover:scale-105 transition-transform" onerror="this.onerror=null;this.src='https://placehold.co/300x400/1e293b/white?text=Ex5';">
+                    <img src="assets/img/im6.png" class="rounded-lg shadow-lg hover:scale-105 transition-transform" onerror="this.onerror=null;this.src='https://placehold.co/300x400/1e293b/white?text=Ex6';">
+                </div>
+                
+                 <div class="text-center">
+                    <a href="https://youtu.be/U5Sx3Rk-iEE" target="_blank" class="px-6 py-3 bg-red-600 text-white rounded-full hover:bg-red-700 transition-colors inline-flex items-center">
+                        <i class="fab fa-youtube mr-2"></i> Demo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="airaffle-details" class="py-24 bg-darker border-t border-white/5">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-white">AI Raffle</h2>
+                <p class="text-primary mt-2">YOLOv10 + CV2 + Roboflow (2024)</p>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                 <p class="text-gray-300 mb-8 text-center max-w-2xl mx-auto">
+                    Automating the verification of 1 million raffle tickets. Replacing manual labor with high-speed AI object recognition (>90% accuracy).
+                </p>
+                
+                <div class="bg-black rounded-xl overflow-hidden shadow-2xl mb-12 border border-white/10">
+                    <video controls class="w-full">
+                        <source src="assets/img/airaffle/C0362.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+                <h4 class="text-2xl font-bold text-white mb-6">Development Roadmap</h4>
+                
+                <div class="bg-card rounded-xl border border-white/10 overflow-hidden">
+                    <table class="w-full text-left border-collapse">
+                        <tbody class="divide-y divide-white/10">
+                            <tr class="hover:bg-white/5 transition-colors">
+                                <td class="p-4 text-gray-300">
+                                    <strong class="text-white block mb-1">(1) Dataset</strong>
+                                    Annotated ~1,000 tickets in Roboflow.
+                                </td>
+                                <td class="p-4 w-32">
+                                    <img src="assets/img/airaffle/Roboscreenshot.png" class="rounded border border-white/10 cursor-pointer hover:opacity-80" onclick="showImage(this.src)" alt="Roboflow">
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-white/5 transition-colors">
+                                <td class="p-4 text-gray-300">
+                                    <strong class="text-white block mb-1">(2) Training</strong>
+                                    Ubuntu Server + RTX 4090 + Jupyter.
+                                </td>
+                                <td class="p-4 w-32">
+                                    <img src="assets/img/airaffle/jupyter.png" class="rounded border border-white/10 cursor-pointer hover:opacity-80" onclick="showImage(this.src)" alt="Jupyter">
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-white/5 transition-colors">
+                                <td class="p-4 text-gray-300">
+                                    <strong class="text-white block mb-1">(3) Optimization</strong>
+                                    90% accuracy after fine-tuning.
+                                </td>
+                                <td class="p-4 w-32">
+                                    <img src="assets/img/airaffle/results.png" class="rounded border border-white/10 cursor-pointer hover:opacity-80" onclick="showImage(this.src)" alt="Results">
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-white/5 transition-colors">
+                                <td class="p-4 text-gray-300">
+                                    <strong class="text-white block mb-1">(4) Real-Time Inference</strong>
+                                    Video-based rapid scanning.
+                                </td>
+                                <td class="p-4 w-32">
+                                    <img src="assets/img/airaffle/airaffle_main.jpg" class="rounded border border-white/10 cursor-pointer hover:opacity-80" onclick="showImage(this.src)" alt="Inference">
+                                </td>
+                            </tr>
+                             <tr class="hover:bg-white/5 transition-colors">
+                                <td class="p-4 text-gray-300">
+                                    <strong class="text-white block mb-1">(5) Data</strong>
+                                    CSV Output for record keeping.
+                                </td>
+                                <td class="p-4 w-32">
+                                    <img src="assets/img/airaffle/csvfile.png" class="rounded border border-white/10 cursor-pointer hover:opacity-80" onclick="showImage(this.src)" alt="CSV">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="passsecure-details" class="py-24 bg-dark border-t border-white/5">
+        <div class="container mx-auto px-4">
+             <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-white">Pass Secure</h2>
+                <p class="text-primary mt-2">SwiftData + CloudKit + iOS (2024)</p>
+            </div>
+            <div class="max-w-4xl mx-auto text-center">
+                 <img src="assets/img/portfolio/thumbnails/thumbnail_passSecure.jpg" alt="Pass Secure" class="rounded-xl shadow-2xl mx-auto mb-8 max-h-[300px]"
+                 onerror="this.onerror=null;this.src='https://placehold.co/600x400/4a5568/white?text=Pass+Secure';">
+                 
+                 <p class="text-gray-300 mb-8 max-w-2xl mx-auto">
+                    Secure password management leveraging SwiftData and iCloudKit for seamless sync across Apple devices. Features Biometric auth and encrypted exports.
+                 </p>
+                 
+                 <div class="grid grid-cols-3 gap-4 mb-8">
+                     <img src="assets/img/ps1.png" class="rounded-lg shadow-lg border border-white/10" onerror="this.onerror=null;this.src='https://placehold.co/300x600/1e293b/white?text=Screen1';">
+                     <img src="assets/img/ps3.png" class="rounded-lg shadow-lg border border-white/10" onerror="this.onerror=null;this.src='https://placehold.co/300x600/1e293b/white?text=Screen2';">
+                     <img src="assets/img/ps4.png" class="rounded-lg shadow-lg border border-white/10" onerror="this.onerror=null;this.src='https://placehold.co/300x600/1e293b/white?text=Screen3';">
+                 </div>
+                 
+                 <div class="flex justify-center gap-4">
+                     <a href="https://apps.apple.com/hk/app/pass-secure-password-manager/id6479182542" target="_blank" class="px-6 py-3 bg-white text-dark font-bold rounded-full hover:bg-gray-200 transition-colors flex items-center">
+                        <i class="fab fa-apple mr-2"></i> App Store
+                    </a>
+                    <a href="https://github.com/orpheuslau/Pass-Secure/tree/main" target="_blank" class="px-6 py-3 bg-transparent border border-white/20 text-white font-bold rounded-full hover:bg-white/10 transition-colors flex items-center">
+                        <i class="fab fa-github mr-2"></i> GitHub
+                    </a>
+                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="smis-details" class="py-24 bg-darker border-t border-white/5">
+        <div class="container mx-auto px-4">
+             <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-white">SMIS: Student Management</h2>
+                <p class="text-primary mt-2">React + Node + MongoDB (2024)</p>
+            </div>
+             <div class="max-w-4xl mx-auto">
+                <img src="assets/img/smis.png" class="rounded-xl shadow-2xl w-full mb-12 border border-white/10" onerror="this.onerror=null;this.src='https://placehold.co/800x450/f4623a/white?text=SMIS+Architecture';">
+                
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-card p-4 rounded-xl border border-white/5 hover:-translate-y-1 transition-transform">
+                        <img src="assets/img/1.png" class="rounded mb-3 w-full" onerror="this.onerror=null;this.src='https://placehold.co/400x300/1e293b/white?text=CRUD';">
+                        <h5 class="text-white font-bold">Profile CRUD</h5>
+                        <p class="text-xs text-gray-500">Complete student record management.</p>
+                    </div>
+                     <div class="bg-card p-4 rounded-xl border border-white/5 hover:-translate-y-1 transition-transform">
+                        <img src="assets/img/2.png" class="rounded mb-3 w-full" onerror="this.onerror=null;this.src='https://placehold.co/400x300/1e293b/white?text=Assess';">
+                        <h5 class="text-white font-bold">Assessments</h5>
+                        <p class="text-xs text-gray-500">Grade tracking and evaluation.</p>
+                    </div>
+                     <div class="bg-card p-4 rounded-xl border border-white/5 hover:-translate-y-1 transition-transform">
+                        <img src="assets/img/3.png" class="rounded mb-3 w-full" onerror="this.onerror=null;this.src='https://placehold.co/400x300/1e293b/white?text=Export';">
+                        <h5 class="text-white font-bold">Reporting</h5>
+                        <p class="text-xs text-gray-500">PDF and Excel export features.</p>
+                    </div>
+                </div>
+                 <div class="text-center mt-12">
+                    <a href="http://front.orpheuslau.dev/" target="_blank" class="px-6 py-3 bg-accent text-white font-bold rounded-full hover:bg-teal-600 transition-colors inline-flex items-center">
+                        <i class="fas fa-external-link-alt mr-2"></i> Live Demo
+                    </a>
+                </div>
+             </div>
+        </div>
+    </section>
+
+    <section id="caritasar-details" class="py-24 bg-dark border-t border-white/5">
+         <div class="container mx-auto px-4">
+             <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-white">Caritas Gallery AR</h2>
+                <p class="text-primary mt-2">iOS AR App (2023)</p>
+            </div>
+            <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                     <p class="text-gray-300 leading-relaxed mb-6">
+                        Seamlessly integrating the Caritas 70th Anniversary logo into photos using Augmented Reality. Point your camera, place the 3D logo, and capture memorable moments.
+                     </p>
+                     <div class="flex gap-4">
+                        <img src="assets/img/ar1.jpg" class="w-1/3 rounded-lg border border-white/10" onerror="this.onerror=null;this.src='https://placehold.co/300x500/1e293b/white?text=AR1';">
+                        <img src="assets/img/ar1%20(7).jpg" class="w-1/3 rounded-lg border border-white/10" onerror="this.onerror=null;this.src='https://placehold.co/300x500/1e293b/white?text=AR2';">
+                         <img src="assets/img/ar1%20(8).jpg" class="w-1/3 rounded-lg border border-white/10" onerror="this.onerror=null;this.src='https://placehold.co/300x500/1e293b/white?text=AR3';">
+                     </div>
+                </div>
+                <div>
+                     <img src="assets/img/ar1%20(5).jpg" class="rounded-xl w-full border border-white/10 mb-6" onerror="this.onerror=null;this.src='https://placehold.co/600x400/1e293b/white?text=AR+Promo';">
+                     <div class="flex justify-center gap-4">
+                         <a href="https://apps.apple.com/tr/app/caritas-gallery-ar/id6449176352" target="_blank" class="px-6 py-3 bg-white text-dark font-bold rounded-full hover:bg-gray-200 transition-colors flex items-center">
+                        <i class="fab fa-apple mr-2"></i> Store
+                    </a>
+                     </div>
+                </div>
+            </div>
+         </div>
+    </section>
+
+    <section id="jquery-details" class="py-24 bg-darker border-t border-white/5">
+         <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-2">Rental Apartments Finder</h2>
+            <p class="text-gray-400 mb-8">jQuery + Java Android (2021)</p>
+            
+            <div class="max-w-3xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+                <img src="assets/img/j11.png" class="rounded-xl border border-white/10 w-2/3 mx-auto" onerror="this.onerror=null;this.src='https://placehold.co/300x500/1e293b/white?text=Screen1';">
+                <div class="text-left">
+                    <p class="text-gray-300 mb-4">Hybrid mobile app built with Apache Cordova. Features local Web SQL storage, camera integration, and duplicate checking.</p>
+                    <a href="assets/JqueryJAVAReport.pdf" target="_blank" class="text-green-400 hover:text-green-300 underline">View Spec Report</a>
+                </div>
+            </div>
+         </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-darker relative overflow-hidden border-t border-white/5">
+        <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-primary/10 to-transparent pointer-events-none"></div>
+
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-white">Let's Connect</h2>
+                <div class="h-1 w-20 bg-primary rounded-full mx-auto mt-6"></div>
+                <p class="text-gray-400 mt-6 max-w-xl mx-auto">
+                    Interested in AI, ethical tech, or full-stack development? I'm always open to discussing new projects and ideas.
+                </p>
+            </div>
+
+            <div class="flex justify-center gap-8 mb-16">
+                <a href="mailto:orpheuslau@gmail.com" class="text-3xl text-gray-400 hover:text-primary transition-all hover:scale-110"><i class="fas fa-envelope"></i></a>
+                <a href="https://twitter.com/orpheuslau" target="_blank" class="text-3xl text-gray-400 hover:text-blue-400 transition-all hover:scale-110"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/ktklau/" target="_blank" class="text-3xl text-gray-400 hover:text-blue-600 transition-all hover:scale-110"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/orpheuslau" target="_blank" class="text-3xl text-gray-400 hover:text-white transition-all hover:scale-110"><i class="fab fa-github"></i></a>
+            </div>
+
+            <div class="max-w-5xl mx-auto bg-card/50 backdrop-blur rounded-2xl overflow-hidden border border-white/5 shadow-2xl">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-sm text-gray-400">
+                        <thead class="bg-card text-gray-200 uppercase font-bold text-xs">
+                            <tr>
+                                <th class="px-6 py-4">Project</th>
+                                <th class="px-6 py-4">Source Code</th>
+                                <th class="px-6 py-4">Links</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-white/5">
+                             <tr class="hover:bg-white/5">
+                                <td class="px-6 py-4 font-medium text-white">LinkYouIn: AI Recruiter</td>
+                                <td class="px-6 py-4">-</td>
+                                <td class="px-6 py-4 italic text-gray-600">Internal / Private</td>
+                            </tr>
+                            <tr class="hover:bg-white/5">
+                                <td class="px-6 py-4 font-medium text-white">NuVision</td>
+                                <td class="px-6 py-4">-</td>
+                                <td class="px-6 py-4 flex gap-3">
+                                    <a href="https://apps.apple.com/tr/app/nuvision/id6746086162" class="text-primary hover:underline"><i class="fab fa-apple"></i></a>
+                                    <a href="https://play.google.com/store/apps/details?id=com.mycrossplatformapp" class="text-blue-400 hover:underline"><i class="fab fa-android"></i></a>
+                                    <a href="https://food.orpheuslau.dev" class="text-accent hover:underline"><i class="fas fa-globe"></i></a>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-white/5">
+                                <td class="px-6 py-4 font-medium text-white">IMeMyMine</td>
+                                <td class="px-6 py-4">-</td>
+                                <td class="px-6 py-4 flex gap-3">
+                                    <a href="https://youtu.be/U5Sx3Rk-iEE" class="text-red-500 hover:underline"><i class="fab fa-youtube"></i></a>
+                                    <a href="https://github.com/tencent-ailab/IP-Adapter/tree/main" class="text-gray-300 hover:underline"><i class="fab fa-github"></i> Ref</a>
+                                </td>
+                            </tr>
+                             <tr class="hover:bg-white/5">
+                                <td class="px-6 py-4 font-medium text-white">AI Raffle</td>
+                                <td class="px-6 py-4">-</td>
+                                <td class="px-6 py-4">
+                                    <a href="https://www.youtube.com/watch?v=z1p9N5ivJO8" class="text-red-500 hover:underline"><i class="fab fa-youtube"></i> Video</a>
+                                </td>
+                            </tr>
+                             <tr class="hover:bg-white/5">
+                                <td class="px-6 py-4 font-medium text-white">Pass Secure</td>
+                                <td class="px-6 py-4"><a href="https://github.com/orpheuslau/Pass-Secure/tree/main" class="hover:text-white"><i class="fab fa-github"></i> GitHub</a></td>
+                                <td class="px-6 py-4"><a href="https://apps.apple.com/hk/app/pass-secure-password-manager/id6479182542" class="text-primary hover:underline"><i class="fab fa-apple"></i> Store</a></td>
+                            </tr>
+                            <tr class="hover:bg-white/5">
+                                <td class="px-6 py-4 font-medium text-white">SMIS</td>
+                                <td class="px-6 py-4"><a href="https://github.com/orpheuslau/ReactJSfrontend" class="hover:text-white"><i class="fab fa-github"></i> GitHub</a></td>
+                                <td class="px-6 py-4"><a href="https://front.orpheuslau.dev" class="text-accent hover:underline"><i class="fas fa-external-link-alt"></i> Demo</a></td>
+                            </tr>
+                            <tr class="hover:bg-white/5">
+                                <td class="px-6 py-4 font-medium text-white">Caritas AR</td>
+                                <td class="px-6 py-4"><a href="https://github.com/orpheuslau/CaritasGallery_Final" class="hover:text-white"><i class="fab fa-github"></i> GitHub</a></td>
+                                <td class="px-6 py-4 flex gap-3">
+                                    <a href="https://apps.apple.com/tr/app/caritas-gallery-ar/id6449176352" class="text-primary hover:underline"><i class="fab fa-apple"></i></a>
+                                    <a href="https://www.instagram.com/caritas70gallery/" class="text-pink-500 hover:underline"><i class="fab fa-instagram"></i></a>
+                                </td>
+                            </tr>
+                             <tr class="hover:bg-white/5">
+                                <td class="px-6 py-4 font-medium text-white">Rental Finder</td>
+                                <td class="px-6 py-4"><a href="https://github.com/orpheuslau/Jquery_rentalApp" class="hover:text-white"><i class="fab fa-github"></i> GitHub</a></td>
+                                <td class="px-6 py-4"><a href="assets/JqueryJAVAReport.pdf" class="text-green-500 hover:underline"><i class="fas fa-file-pdf"></i> Report</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black py-8 text-center text-gray-500 text-sm">
+        <p>&copy; <span id="currentYear"></span> Orpheus LAU. All Rights Reserved.</p>
+        <p class="mt-2 text-xs">Designed with <i class="fas fa-heart text-red-500 animate-pulse"></i> & Glassmorphism.</p>
+    </footer>
+
+    <div id="imageModal" class="fixed inset-0 z-50 bg-black/90 hidden items-center justify-center p-4 backdrop-blur-sm" onclick="closeImage()">
+        <img id="modalImage" src="" class="max-w-full max-h-full rounded shadow-2xl border border-white/20">
+        <button onclick="closeImage()" class="absolute top-5 right-5 text-white text-3xl hover:text-primary">&times;</button>
+    </div>
+
+    <button id="backToTopBtn" class="fixed bottom-6 right-6 bg-primary text-white p-4 rounded-full shadow-lg opacity-0 transition-opacity duration-300 hover:bg-orange-600 focus:outline-none z-40">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="../js/scripts8.js"></script>
+    <script>
+        // Simple script for Image Modal
+        function showImage(src) {
+            document.getElementById('modalImage').src = src;
+            document.getElementById('imageModal').classList.remove('hidden');
+            document.getElementById('imageModal').classList.add('flex');
+        }
+        function closeImage() {
+            document.getElementById('imageModal').classList.add('hidden');
+            document.getElementById('imageModal').classList.remove('flex');
+        }
+        
+        // Update Year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Mobile Nav Toggle
+        const navToggle = document.getElementById('nav-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if(navToggle){
+            navToggle.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+        
+        // Scroll to Top Logic (if not in scripts8.js)
+        const backToTopBtn = document.getElementById("backToTopBtn");
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTopBtn.classList.remove("opacity-0");
+            } else {
+                backToTopBtn.classList.add("opacity-0");
+            }
+        };
+        backToTopBtn.onclick = function() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        };
+    </script>
+</body>
+</html>

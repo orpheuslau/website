@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORPHEUS LAU | Engineer & Innovator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/styles8.css">
+    <link rel="icon" type="image/x-icon" href="assets/icons8-o-67.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        brand: '#f4623a', 
+                        dark: '#050505',      // True Black
+                        panel: '#0a0a0a',     // Almost Black
+                        border: '#262626',    // Dark Gray Border
+                        accent: '#38b2ac',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SVWP2YHJN5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-SVWP2YHJN5');
+    </script>
+
+    <style>
+        /* Custom Scrollbar for Engineering Look */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #050505;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #f4623a;
+        }
+        
+        /* Grid Background Pattern */
+        .bg-grid {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        }
+    </style>
+</head>
+
+<body class="bg-dark text-gray-400 antialiased font-sans selection:bg-brand selection:text-white">
+
+    <nav class="fixed w-full z-50 top-0 bg-dark/90 backdrop-blur-sm border-b border-border">
+        <div class="container mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="#page-top" class="font-display font-bold text-xl text-white tracking-widest hover:text-brand transition-colors">
+                ORPHEUS<span class="text-brand">.DEV</span>
+            </a>
+            
+            <div class="hidden md:flex space-x-8 font-mono text-xs tracking-widest">
+                <a href="#about" class="hover:text-white transition-colors uppercase">[01] About</a>
+                <a href="#portfolio" class="hover:text-white transition-colors uppercase">[02] Work</a>
+                <a href="#contact" class="hover:text-white transition-colors uppercase">[03] Contact</a>
+            </div>
+
+            <button id="nav-toggle" class="md:hidden text-white">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        
+        <div id="mobile-menu" class="hidden md:hidden bg-panel border-b border-border">
+            <a href="#about" class="block px-6 py-3 text-sm font-mono border-b border-white/5 hover:text-brand">01_About</a>
+            <a href="#portfolio" class="block px-6 py-3 text-sm font-mono border-b border-white/5 hover:text-brand">02_Portfolio</a>
+            <a href="#contact" class="block px-6 py-3 text-sm font-mono hover:text-brand">03_Contact</a>
+        </div>
+    </nav>
+
+    <header id="page-top" class="min-h-screen flex items-center justify-center relative overflow-hidden bg-grid pt-16">
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-4xl">
+                <p class="font-mono text-brand mb-4 text-sm animate-pulse">
+                    > INITIALIZING SYSTEM...
+                </p>
+                <h1 class="font-display text-5xl md:text-8xl font-bold text-white leading-tight mb-8">
+                    BUILDING <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-gray-100 to-gray-600">INTELLIGENCE</span>.
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-500 max-w-2xl font-light mb-12">
+                    I engineer solutions at the intersection of AI, Cybersecurity, and Social Impact. 
+                    <span class="block mt-2 text-gray-600 font-mono text-sm">Python / iOS / Full Stack / AR</span>
+                </p>
+                
+                <div class="flex flex-wrap gap-4">
+                    <a href="#portfolio" class="group relative px-8 py-4 bg-white text-black font-bold font-mono text-sm tracking-wider overflow-hidden">
+                        <span class="relative z-10 group-hover:text-white transition-colors">VIEW PROJECTS</span>
+                        <div class="absolute inset-0 bg-brand transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left ease-out"></div>
+                    </a>
+                    <a href="#about" class="px-8 py-4 border border-white/20 text-white font-mono text-sm tracking-wider hover:bg-white/5 transition-colors">
+                        READ BIO
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="py-24 border-t border-border bg-panel">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16">
+                <div>
+                    <h2 class="font-display text-3xl text-white mb-8 flex items-center">
+                        <span class="text-brand font-mono text-lg mr-4">01.</span> ABOUT
+                    </h2>
+                    <div class="prose prose-invert prose-lg text-gray-400 font-light">
+                        <p>
+                            Transitioning from social work to tech leadership, I bring over two decades of experience in social services. I've successfully managed diverse technology projects within the non-profit sector.
+                        </p>
+                        <p>
+                            I have spearheaded over 10 technology initiatives, ranging from <strong class="text-white font-normal">AI & Cyber Security</strong> to <strong class="text-white font-normal">AR & iOS development</strong>. I blend passion for social impact with engineering rigor to build a more compassionate world.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="border border-border bg-dark p-8 relative">
+                    <div class="absolute top-0 left-0 w-3 h-3 border-t border-l border-brand"></div>
+                    <div class="absolute top-0 right-0 w-3 h-3 border-t border-r border-brand"></div>
+                    <div class="absolute bottom-0 left-0 w-3 h-3 border-b border-l border-brand"></div>
+                    <div class="absolute bottom-0 right-0 w-3 h-3 border-b border-r border-brand"></div>
+
+                    <h3 class="font-mono text-white mb-6 border-b border-border pb-4">EDUCATION_LOG</h3>
+                    <ul class="space-y-6 font-mono text-sm">
+                        <li class="flex flex-col md:flex-row md:justify-between md:items-start group">
+                            <div>
+                                <strong class="text-brand block mb-1 group-hover:text-white transition-colors">Master in Artificial Intelligence</strong>
+                                <span class="text-gray-500">University of Leeds</span>
+                            </div>
+                            <span class="text-gray-600 text-xs mt-1 md:mt-0">[Ongoing - 2027]</span>
+                        </li>
+                        
+                        <li class="flex flex-col md:flex-row md:justify-between md:items-start group">
+                            <div>
+                                <strong class="text-white block mb-1">BSc Computing Science (1st Hon)</strong>
+                                <span class="text-gray-500">University of Greenwich</span>
+                            </div>
+                            <span class="text-gray-600 text-xs mt-1 md:mt-0">[Graduated]</span>
+                        </li>
+
+                        <li class="flex flex-col md:flex-row md:justify-between md:items-start group">
+                            <div>
+                                <strong class="text-white block mb-1">Google Data Analytics Cert</strong>
+                                <span class="text-gray-500">Google</span>
+                            </div>
+                            <span class="text-gray-600 text-xs mt-1 md:mt-0">[Certified]</span>
+                        </li>
+                        
+                        <li class="flex flex-col md:flex-row md:justify-between md:items-start group">
+                            <div>
+                                <strong class="text-white block mb-1">MSocSc (Management)</strong>
+                                <span class="text-gray-500">The University of Hong Kong</span>
+                            </div>
+                            <span class="text-gray-600 text-xs mt-1 md:mt-0">[Graduated]</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="py-24 border-t border-border bg-dark relative">
+        <div class="container mx-auto px-6">
+            <h2 class="font-display text-3xl text-white mb-12 flex items-center">
+                <span class="text-brand font-mono text-lg mr-4">02.</span> SELECTED WORKS
+            </h2>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-1">
+                <a href="#sentiment-details" class="group block bg-panel border border-border hover:border-brand transition-colors p-6 h-full">
+                    <div class="flex justify-between items-start mb-4">
+                        <i class="bi bi-chat-square-quote text-2xl text-gray-600 group-hover:text-brand transition-colors"></i>
+                        <span class="font-mono text-xs text-gray-600">2025</span>
+                    </div>
+                    <h3 class="font-display text-xl text-white font-bold mb-2 group-hover:text-brand">Sentiment Analysis</h3>
+                    <p class="text-sm text-gray-500 mb-4 line-clamp-2">Fine-tuning LLMs with LoRA for multilingual feedback analysis.</p>
+                    <div class="font-mono text-xs text-brand">Python · MLX · LoRA</div>
+                </a>
+
+                <a href="#linkyouin-details" class="group block bg-panel border border-border hover:border-brand transition-colors p-6 h-full">
+                    <div class="flex justify-between items-start mb-4">
+                        <i class="bi bi-person-badge text-2xl text-gray-600 group-hover:text-brand transition-colors"></i>
+                        <span class="font-mono text-xs text-gray-600">2025</span>
+                    </div>
+                    <h3 class="font-display text-xl text-white font-bold mb-2 group-hover:text-brand">LinkYouIn</h3>
+                    <p class="text-sm text-gray-500 mb-4 line-clamp-2">Privacy-first AI Recruiter using dual local LLMs and FastAPI.</p>
+                    <div class="font-mono text-xs text-brand">FastAPI · Ollama · Python</div>
+                </a>
+
+                <a href="#nuvision-details" class="group block bg-panel border border-border hover:border-brand transition-colors p-6 h-full">
+                    <div class="flex justify-between items-start mb-4">
+                        <i class="bi bi-apple text-2xl text-gray-600 group-hover:text-brand transition-colors"></i>
+                        <span class="font-mono text-xs text-gray-600">2025</span>
+                    </div>
+                    <h3 class="font-display text-xl text-white font-bold mb-2 group-hover:text-brand">NuVision</h3>
+                    <p class="text-sm text-gray-500 mb-4 line-clamp-2">AI nutrition coach integrating Vision LMs with Apple Health.</p>
+                    <div class="font-mono text-xs text-brand">iOS · Vision LM · HealthKit</div>
+                </a>
+
+                <a href="#imemymine-details" class="group block bg-panel border border-border hover:border-brand transition-colors p-6 h-full">
+                    <div class="flex justify-between items-start mb-4">
+                        <i class="bi bi-camera text-2xl text-gray-600 group-hover:text-brand transition-colors"></i>
+                        <span class="font-mono text-xs text-gray-600">2024</span>
+                    </div>
+                    <h3 class="font-display text-xl text-white font-bold mb-2 group-hover:text-brand">IMeMyMine</h3>
+                    <p class="text-sm text-gray-500 mb-4 line-clamp-2">AI Face Swap app promoting diversity and inclusion.</p>
+                    <div class="font-mono text-xs text-brand">Pytorch · SDXL · iOS</div>
+                </a>
+
+                <a href="#airaffle-details" class="group block bg-panel border border-border hover:border-brand transition-colors p-6 h-full">
+                    <div class="flex justify-between items-start mb-4">
+                        <i class="bi bi-ticket-perforated text-2xl text-gray-600 group-hover:text-brand transition-colors"></i>
+                        <span class="font-mono text-xs text-gray-600">2024</span>
+                    </div>
+                    <h3 class="font-display text-xl text-white font-bold mb-2 group-hover:text-brand">AI Raffle</h3>
+                    <p class="text-sm text-gray-500 mb-4 line-clamp-2">High-speed object recognition for raffle ticket verification.</p>
+                    <div class="font-mono text-xs text-brand">YOLOv10 · CV2 · Roboflow</div>
+                </a>
+
+                <a href="#passsecure-details" class="group block bg-panel border border-border hover:border-brand transition-colors p-6 h-full">
+                    <div class="flex justify-between items-start mb-4">
+                        <i class="bi bi-shield-lock text-2xl text-gray-600 group-hover:text-brand transition-colors"></i>
+                        <span class="font-mono text-xs text-gray-600">2024</span>
+                    </div>
+                    <h3 class="font-display text-xl text-white font-bold mb-2 group-hover:text-brand">Pass Secure</h3>
+                    <p class="text-sm text-gray-500 mb-4 line-clamp-2">Local-first password manager with iCloud synchronization.</p>
+                    <div class="font-mono text-xs text-brand">SwiftData · CloudKit · iOS</div>
+                </a>
+
+                <a href="#smis-details" class="group block bg-panel border border-border hover:border-brand transition-colors p-6 h-full">
+                    <div class="flex justify-between items-start mb-4">
+                        <i class="bi bi-mortarboard text-2xl text-gray-600 group-hover:text-brand transition-colors"></i>
+                        <span class="font-mono text-xs text-gray-600">2024</span>
+                    </div>
+                    <h3 class="font-display text-xl text-white font-bold mb-2 group-hover:text-brand">SMIS</h3>
+                    <p class="text-sm text-gray-500 mb-4 line-clamp-2">Full-stack student management system.</p>
+                    <div class="font-mono text-xs text-brand">React · Node · MongoDB</div>
+                </a>
+
+                <a href="#caritasar-details" class="group block bg-panel border border-border hover:border-brand transition-colors p-6 h-full">
+                    <div class="flex justify-between items-start mb-4">
+                        <i class="bi bi-phone text-2xl text-gray-600 group-hover:text-brand transition-colors"></i>
+                        <span class="font-mono text-xs text-gray-600">2023</span>
+                    </div>
+                    <h3 class="font-display text-xl text-white font-bold mb-2 group-hover:text-brand">Caritas AR</h3>
+                    <p class="text-sm text-gray-500 mb-4 line-clamp-2">Augmented Reality gallery app.</p>
+                    <div class="font-mono text-xs text-brand">iOS · ARKit</div>
+                </a>
+
+                <a href="#jquery-details" class="group block bg-panel border border-border hover:border-brand transition-colors p-6 h-full">
+                    <div class="flex justify-between items-start mb-4">
+                        <i class="bi bi-house-door text-2xl text-gray-600 group-hover:text-brand transition-colors"></i>
+                        <span class="font-mono text-xs text-gray-600">2021</span>
+                    </div>
+                    <h3 class="font-display text-xl text-white font-bold mb-2 group-hover:text-brand">Rental Finder</h3>
+                    <p class="text-sm text-gray-500 mb-4 line-clamp-2">Hybrid mobile app for rental listings.</p>
+                    <div class="font-mono text-xs text-brand">Java · jQuery</div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="sentiment-details" class="py-24 border-t border-border bg-panel">
+        <div class="container mx-auto px-6">
+            <div class="flex items-center space-x-4 mb-8">
+                <h2 class="font-display text-3xl text-white font-bold">SENTIMENT_ANALYSIS</h2>
+                <span class="px-2 py-1 bg-white/10 text-xs font-mono text-white rounded">2025</span>
+            </div>
+            
+            <div class="grid lg:grid-cols-3 gap-12">
+                <div class="lg:col-span-2 space-y-8">
+                    <div class="prose prose-invert prose-sm max-w-none text-gray-400">
+                        <p class="lead text-lg text-white">We aim to develop a AI-empowered solution to extract and analyze feedback from over 4,000 staff, transforming unstructured text into strategic insights.</p>
+                        <p>Using a large language model (LLM), we performed sentiment analysis on thousands of reports. The result is applied to fine-tune <strong class="text-brand">MLX framework</strong> the LLM using LoRA (Low-Rank Adaptation).</p>
+                    </div>
+
+                    <div class="border border-border bg-dark p-4 rounded-lg">
+                        <div class="flex items-center space-x-2 border-b border-border pb-2 mb-4">
+                            <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                            <span class="font-mono text-xs text-gray-500 ml-2">code_snippet.py</span>
+                        </div>
+                        <pre class="font-mono text-xs text-gray-300 overflow-x-auto"><code><span class="text-blue-400"># Model selection for multilingual</span>
+model_name = <span class="text-green-400">"clapAI/modernBERT-base-multilingual-sentiment"</span>
+
+<span class="text-blue-400"># Binary classification fine-tuning</span>
+model = AutoModelForSequenceClassification.from_pretrained(
+    model_name,
+    num_labels=<span class="text-brand">2</span>,
+    id2label=id2label,
+    label2id=label2id,
+    ignore_mismatched_sizes=<span class="text-brand">True</span>,
+)</code></pre>
+                    </div>
+                </div>
+                
+                <div class="space-y-6">
+                    <img src="assets/img/SentiAna/20250812_AI_sharing.png" class="w-full border border-border" alt="Diagram" onerror="this.onerror=null;this.src='https://placehold.co/400x300/1a1a1a/white?text=Diagram';">
+                    <img src="assets/img/SentiAna/ram.png" class="w-full border border-border" alt="RAM" onerror="this.onerror=null;this.src='https://placehold.co/400x300/1a1a1a/white?text=RAM';">
+                    
+                    <div class="bg-dark p-6 border border-border">
+                        <h4 class="font-mono text-white text-sm mb-4">KEY_METRICS</h4>
+                        <ul class="space-y-2 font-mono text-xs text-gray-400">
+                            <li>> Reduced Manual Effort</li>
+                            <li>> High Accuracy</li>
+                            <li>> Efficient GPU (MPS) Usage</li>
+                            <li>> Scalable Pipeline</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="linkyouin-details" class="py-24 border-t border-border bg-dark">
+        <div class="container mx-auto px-6">
+            <div class="flex items-center space-x-4 mb-8">
+                <h2 class="font-display text-3xl text-white font-bold">LINK_YOU_IN</h2>
+                <span class="px-2 py-1 bg-white/10 text-xs font-mono text-white rounded">NEW</span>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 mb-12">
+                <div class="space-y-6 text-gray-400">
+                    <p class="text-white text-lg">Local-First Intelligent Recruitment Assistant.</p>
+                    <p>
+                        Recruiters spend <10s scanning CVs. LinkYouIn runs entirely locally to process PDF/DOCX CVs through a multi-stage AI analysis. It orchestrates two distinct LLMs (Qwen & Gemma) via Ollama to reduce hallucination.
+                    </p>
+                    <ul class="grid grid-cols-2 gap-4 font-mono text-xs">
+                        <li class="border border-border p-3"><strong class="text-white block mb-1">Dual-Model Consensus</strong>Averages scores from two LLMs.</li>
+                        <li class="border border-border p-3"><strong class="text-white block mb-1">Privacy First</strong>No data sent to cloud APIs.</li>
+                        <li class="border border-border p-3"><strong class="text-white block mb-1">Holistic Analysis</strong>Checks career stability & interest.</li>
+                        <li class="border border-border p-3"><strong class="text-white block mb-1">Fault Tolerance</strong>Fail-safe pipeline design.</li>
+                    </ul>
+                </div>
+                <div>
+                     <img src="assets/img/linkyouin_workflow.png" class="w-full border border-border" alt="Workflow" onerror="this.onerror=null;this.src='https://placehold.co/600x400/1a1a1a/white?text=Workflow';">
+                </div>
+            </div>
+
+            <div class="border border-border bg-panel p-4 rounded-lg">
+                <div class="flex items-center space-x-2 border-b border-border pb-2 mb-4">
+                     <span class="font-mono text-xs text-gray-500 ml-2">pipeline_logic.py</span>
+                </div>
+                <pre class="font-mono text-xs text-gray-300 overflow-x-auto"><code><span class="text-blue-400">def</span> <span class="text-yellow-400">score_cv</span>(cv_path, job_req, salary):
+    cv_text = extract_text(cv_path)
+    
+    <span class="text-gray-500"># Parallel Job Fit Scoring (Qwen + Gemma)</span>
+    <span class="text-blue-400">with</span> ThreadPoolExecutor(max_workers=<span class="text-brand">2</span>) <span class="text-blue-400">as</span> exc:
+        job_fit_func = partial(ask_llm_fit, job_req, cv_text)
+        results = <span class="text-blue-400">list</span>(exc.map(job_fit_func, [LLM_MODEL_1, LLM_MODEL_2]))
+    
+    <span class="text-blue-400">return</span> {
+        <span class="text-green-400">"job_fit_score"</span>: (results[0] + results[1]) / <span class="text-brand">2</span>,
+    }</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <section id="nuvision-details" class="py-24 border-t border-border bg-panel">
+        <div class="container mx-auto px-6">
+            <h2 class="font-display text-3xl text-white font-bold mb-2">NU_VISION</h2>
+            <p class="font-mono text-brand text-sm mb-12">AI NUTRITION & EXERCISE COACH</p>
+
+            <div class="mb-12">
+                <div class="border border-border bg-black p-2">
+                    <video controls class="w-full max-h-[500px] object-cover">
+                        <source src="assets/img/nuphoto/20250812_NuVision.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+                <div class="bg-dark border border-border p-4 text-center group hover:border-brand transition-colors">
+                    <i class="bi bi-robot text-2xl text-white mb-2 block"></i>
+                    <h4 class="font-bold text-white text-sm">Calorie Balance</h4>
+                    <img src="assets/img/nuphoto/output.png" class="mt-4 w-full opacity-80 group-hover:opacity-100" alt="Screen 1">
+                </div>
+                 <div class="bg-dark border border-border p-4 text-center group hover:border-brand transition-colors">
+                    <i class="bi bi-eye text-2xl text-white mb-2 block"></i>
+                    <h4 class="font-bold text-white text-sm">Visual Recog</h4>
+                    <img src="assets/img/nuphoto/output2.png" class="mt-4 w-full opacity-80 group-hover:opacity-100" alt="Screen 2">
+                </div>
+                 <div class="bg-dark border border-border p-4 text-center group hover:border-brand transition-colors">
+                    <i class="bi bi-shield-lock text-2xl text-white mb-2 block"></i>
+                    <h4 class="font-bold text-white text-sm">Privacy</h4>
+                    <img src="assets/img/nuphoto/output3.png" class="mt-4 w-full opacity-80 group-hover:opacity-100" alt="Screen 3">
+                </div>
+                 <div class="bg-dark border border-border p-4 text-center group hover:border-brand transition-colors">
+                    <i class="bi bi-graph-up text-2xl text-white mb-2 block"></i>
+                    <h4 class="font-bold text-white text-sm">Trends</h4>
+                    <img src="assets/img/nuphoto/output4.png" class="mt-4 w-full opacity-80 group-hover:opacity-100" alt="Screen 4">
+                </div>
+            </div>
+
+            <div class="flex justify-center space-x-4">
+                 <a href="https://apps.apple.com/tr/app/nuvision/id6746086162" target="_blank" class="px-6 py-3 bg-white text-black font-mono text-sm font-bold hover:bg-gray-200"><i class="fab fa-apple mr-2"></i>APP STORE</a>
+                 <a href="https://play.google.com/store/apps/details?id=com.mycrossplatformapp" target="_blank" class="px-6 py-3 border border-border text-white font-mono text-sm hover:border-white"><i class="fab fa-android mr-2"></i>ANDROID</a>
+                 <a href="http://food.orpheuslau.dev/" target="_blank" class="px-6 py-3 border border-brand text-brand font-mono text-sm hover:bg-brand hover:text-white"><i class="fas fa-globe mr-2"></i>WEB</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="imemymine-details" class="py-24 border-t border-border bg-dark">
+        <div class="container mx-auto px-6">
+            <h2 class="font-display text-3xl text-white font-bold mb-8">IMeMyMine: FACE SWAP</h2>
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-start">
+                <div>
+                    <img src="assets/img/imemymine.png" class="w-full border border-border mb-6" alt="Diagram">
+                    <p class="text-gray-400 mb-4">
+                        Innovative iOS app using AI-powered face-swapping (IP-Adapter). It uses a Client-Server architecture to handle computational demands, fine-tuned for inclusion and diversity.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://youtu.be/U5Sx3Rk-iEE" target="_blank" class="text-brand hover:text-white font-mono text-sm underline"><i class="fab fa-youtube"></i> WATCH DEMO</a>
+                        <a href="https://github.com/tencent-ailab/IP-Adapter/tree/main" target="_blank" class="text-gray-500 hover:text-white font-mono text-sm underline">REF: IP-ADAPTER</a>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                     <img src="assets/img/im1.png" class="rounded border border-border" alt="Ex1">
+                     <img src="assets/img/im2.png" class="rounded border border-border" alt="Ex2">
+                     <img src="assets/img/im3.png" class="rounded border border-border" alt="Ex3">
+                     <img src="assets/img/im4.png" class="rounded border border-border" alt="Ex4">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="airaffle-details" class="py-24 border-t border-border bg-panel">
+        <div class="container mx-auto px-6">
+            <h2 class="font-display text-3xl text-white font-bold mb-8">AI RAFFLE: RECOGNITION</h2>
+            
+            <div class="mb-12 max-w-3xl mx-auto">
+                <div class="border border-border bg-black p-2">
+                    <video controls class="w-full">
+                        <source src="assets/img/airaffle/C0362.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+
+            <div class="overflow-x-auto">
+                <table class="w-full text-left font-mono text-sm border border-border">
+                    <thead class="bg-dark text-brand border-b border-border">
+                        <tr>
+                            <th class="p-4">PHASE</th>
+                            <th class="p-4">DESCRIPTION</th>
+                            <th class="p-4">EVIDENCE</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-border text-gray-400">
+                        <tr>
+                            <td class="p-4 text-white">01. Dataset</td>
+                            <td class="p-4">Annotated ~1,000 tickets in Roboflow.</td>
+                            <td class="p-4 w-32"><img src="assets/img/airaffle/Roboscreenshot.png" class="cursor-pointer border border-border hover:border-brand" onclick="openModal(this.src)"></td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 text-white">02. Training</td>
+                            <td class="p-4">Ubuntu Server + RTX 4090 + Jupyter.</td>
+                            <td class="p-4 w-32"><img src="assets/img/airaffle/jupyter.png" class="cursor-pointer border border-border hover:border-brand" onclick="openModal(this.src)"></td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 text-white">03. Inference</td>
+                            <td class="p-4">Real-time video scanning (>90% Acc).</td>
+                            <td class="p-4 w-32"><img src="assets/img/airaffle/airaffle_main.jpg" class="cursor-pointer border border-border hover:border-brand" onclick="openModal(this.src)"></td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 text-white">04. Data</td>
+                            <td class="p-4">CSV Output serialization.</td>
+                            <td class="p-4 w-32"><img src="assets/img/airaffle/csvfile.png" class="cursor-pointer border border-border hover:border-brand" onclick="openModal(this.src)"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="mt-8 text-center">
+                 <a href="https://www.youtube.com/watch?v=z1p9N5ivJO8" target="_blank" class="text-brand font-mono hover:text-white"><i class="fab fa-youtube"></i> VIEW FULL DEMO</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="passsecure-details" class="py-24 border-t border-border bg-dark">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="font-display text-3xl text-white font-bold mb-4">PASS SECURE</h2>
+            <p class="font-mono text-sm text-gray-500 mb-12">SWIFTDATA + CLOUDKIT</p>
+            
+            <img src="assets/img/portfolio/thumbnails/thumbnail_passSecure.jpg" class="mx-auto rounded-lg shadow-2xl mb-12 max-h-[300px]" alt="Thumbnail">
+            
+            <div class="grid grid-cols-3 gap-4 max-w-4xl mx-auto mb-12">
+                <img src="assets/img/ps1.png" class="border border-border rounded" alt="Screen">
+                <img src="assets/img/ps3.png" class="border border-border rounded" alt="Screen">
+                <img src="assets/img/ps4.png" class="border border-border rounded" alt="Screen">
+            </div>
+            
+            <a href="https://apps.apple.com/hk/app/pass-secure-password-manager/id6479182542" target="_blank" class="px-6 py-3 bg-white text-black font-mono text-sm font-bold hover:bg-gray-200">APP STORE</a>
+        </div>
+    </section>
+
+    <section id="smis-details" class="py-24 border-t border-border bg-panel">
+         <div class="container mx-auto px-6">
+            <h2 class="font-display text-3xl text-white font-bold mb-12 text-center">SMIS SYSTEM</h2>
+            <img src="assets/img/smis.png" class="w-full border border-border mb-12" alt="Diagram">
+            
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div class="p-6 border border-border hover:border-white transition-colors">
+                    <img src="assets/img/1.png" class="mb-4 mx-auto" alt="CRUD">
+                    <h5 class="text-white font-bold">Profile CRUD</h5>
+                </div>
+                <div class="p-6 border border-border hover:border-white transition-colors">
+                    <img src="assets/img/2.png" class="mb-4 mx-auto" alt="Assess">
+                    <h5 class="text-white font-bold">Assessments</h5>
+                </div>
+                 <div class="p-6 border border-border hover:border-white transition-colors">
+                    <img src="assets/img/3.png" class="mb-4 mx-auto" alt="Export">
+                    <h5 class="text-white font-bold">Reporting</h5>
+                </div>
+            </div>
+             <div class="text-center mt-12">
+                <a href="http://front.orpheuslau.dev/" target="_blank" class="text-brand font-mono underline hover:text-white">LIVE DEMO SITE</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="caritasar-details" class="py-24 border-t border-border bg-dark">
+         <div class="container mx-auto px-6">
+             <div class="grid lg:grid-cols-2 gap-12 items-center">
+                 <div>
+                     <h2 class="font-display text-3xl text-white font-bold mb-6">CARITAS AR</h2>
+                     <p class="text-gray-400 mb-6">Seamlessly integrating the Caritas 70th Anniversary logo into photos using Augmented Reality.</p>
+                     <div class="grid grid-cols-3 gap-2">
+                         <img src="assets/img/ar1.jpg" class="border border-border" alt="AR">
+                         <img src="assets/img/ar1%20(7).jpg" class="border border-border" alt="AR">
+                         <img src="assets/img/ar1%20(8).jpg" class="border border-border" alt="AR">
+                     </div>
+                 </div>
+                 <div class="text-center">
+                      <img src="assets/img/ar1%20(5).jpg" class="w-full border border-border mb-6" alt="Promo">
+                      <a href="https://apps.apple.com/tr/app/caritas-gallery-ar/id6449176352" target="_blank" class="px-6 py-3 bg-white text-black font-mono text-sm font-bold hover:bg-gray-200">APP STORE</a>
+                 </div>
+             </div>
+        </div>
+    </section>
+
+    <section id="jquery-details" class="py-24 border-t border-border bg-panel">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="font-display text-3xl text-white font-bold mb-8">RENTAL FINDER</h2>
+            <div class="flex justify-center items-center gap-8">
+                <img src="assets/img/j11.png" class="max-w-[200px] border border-border" alt="Screen">
+                <div class="text-left max-w-sm">
+                    <p class="text-gray-400 mb-4">Hybrid mobile app built with Apache Cordova & jQuery. Features local Web SQL storage and camera integration.</p>
+                    <a href="assets/JqueryJAVAReport.pdf" target="_blank" class="text-green-500 font-mono text-sm"><i class="fas fa-file-pdf"></i> VIEW SPEC</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 border-t border-border bg-dark">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div>
+                    <p class="font-mono text-brand mb-2">03. CONTACT</p>
+                    <h2 class="font-display text-5xl text-white font-bold">GET IN TOUCH.</h2>
+                </div>
+                <div class="flex space-x-6 mt-6 md:mt-0 text-2xl text-gray-500">
+                     <a href="mailto:orpheuslau@gmail.com" class="hover:text-brand transition-colors"><i class="fas fa-envelope"></i></a>
+                     <a href="https://twitter.com/orpheuslau" class="hover:text-brand transition-colors"><i class="fab fa-twitter"></i></a>
+                     <a href="https://www.linkedin.com/in/ktklau/" class="hover:text-brand transition-colors"><i class="fab fa-linkedin"></i></a>
+                     <a href="https://github.com/orpheuslau" class="hover:text-brand transition-colors"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+
+            <div class="border border-border overflow-hidden">
+                <table class="w-full text-left font-mono text-sm">
+                    <thead class="bg-panel text-white border-b border-border">
+                        <tr>
+                            <th class="p-4">PROJECT_NAME</th>
+                            <th class="p-4 hidden md:table-cell">REPO</th>
+                            <th class="p-4 text-right">DEPLOYMENT</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-border bg-dark text-gray-400">
+                        <tr class="hover:bg-white/5 transition-colors">
+                            <td class="p-4 text-white">LinkYouIn</td>
+                            <td class="p-4 hidden md:table-cell text-gray-600">Private</td>
+                            <td class="p-4 text-right text-gray-600">Internal</td>
+                        </tr>
+                         <tr class="hover:bg-white/5 transition-colors">
+                            <td class="p-4 text-white">NuVision</td>
+                            <td class="p-4 hidden md:table-cell text-gray-600">Private</td>
+                            <td class="p-4 text-right"><a href="https://apps.apple.com/tr/app/nuvision/id6746086162" class="text-brand hover:underline">App Store</a></td>
+                        </tr>
+                        <tr class="hover:bg-white/5 transition-colors">
+                            <td class="p-4 text-white">IMeMyMine</td>
+                            <td class="p-4 hidden md:table-cell text-gray-600">-</td>
+                            <td class="p-4 text-right"><a href="https://youtu.be/U5Sx3Rk-iEE" class="text-brand hover:underline">Demo Video</a></td>
+                        </tr>
+                        <tr class="hover:bg-white/5 transition-colors">
+                            <td class="p-4 text-white">Pass Secure</td>
+                            <td class="p-4 hidden md:table-cell"><a href="https://github.com/orpheuslau/Pass-Secure" class="hover:text-white">GitHub</a></td>
+                            <td class="p-4 text-right"><a href="https://apps.apple.com/hk/app/pass-secure-password-manager/id6479182542" class="text-brand hover:underline">App Store</a></td>
+                        </tr>
+                        <tr class="hover:bg-white/5 transition-colors">
+                            <td class="p-4 text-white">SMIS</td>
+                            <td class="p-4 hidden md:table-cell"><a href="https://github.com/orpheuslau/ReactJSfrontend" class="hover:text-white">GitHub</a></td>
+                            <td class="p-4 text-right"><a href="http://front.orpheuslau.dev/" class="text-brand hover:underline">Live Site</a></td>
+                        </tr>
+                        <tr class="hover:bg-white/5 transition-colors">
+                            <td class="p-4 text-white">Caritas AR</td>
+                            <td class="p-4 hidden md:table-cell"><a href="https://github.com/orpheuslau/CaritasGallery_Final" class="hover:text-white">GitHub</a></td>
+                            <td class="p-4 text-right"><a href="https://apps.apple.com/tr/app/caritas-gallery-ar/id6449176352" class="text-brand hover:underline">App Store</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark border-t border-border py-8 text-center font-mono text-xs text-gray-600">
+        <p>&copy; <span id="currentYear"></span> ORPHEUS LAU. SYSTEM ONLINE.</p>
+    </footer>
+
+    <div id="imgModal" class="fixed inset-0 z-50 bg-black/95 hidden flex-col items-center justify-center p-4" onclick="closeModal()">
+        <img id="modalImg" src="" class="max-w-full max-h-[90vh] border border-border">
+        <button class="mt-4 text-white font-mono hover:text-brand">[CLOSE]</button>
+    </div>
+
+    <button id="backToTop" class="fixed bottom-8 right-8 bg-brand text-white w-12 h-12 flex items-center justify-center opacity-0 transition-opacity font-bold z-40">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="../js/scripts8.js"></script>
+    <script>
+        // Modal Logic
+        function openModal(src) {
+            document.getElementById('modalImg').src = src;
+            document.getElementById('imgModal').classList.remove('hidden');
+            document.getElementById('imgModal').classList.add('flex');
+        }
+        function closeModal() {
+            document.getElementById('imgModal').classList.add('hidden');
+            document.getElementById('imgModal').classList.remove('flex');
+        }
+
+        // Year Update
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Scroll to Top
+        const btn = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) btn.classList.remove('opacity-0');
+            else btn.classList.add('opacity-0');
+        });
+        btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+        // Mobile Nav
+        document.getElementById('nav-toggle').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
