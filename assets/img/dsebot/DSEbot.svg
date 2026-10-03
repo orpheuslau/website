@@ -1,0 +1,510 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1020" width="1600" height="1020" fill="none">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1600" y2="1020" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="60%" stop-color="#f1f5f9"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <linearGradient id="blueCard" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f0f7ff"/>
+      <stop offset="100%" stop-color="#e0f0fe"/>
+    </linearGradient>
+    <linearGradient id="tealCard" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f0fdfa"/>
+      <stop offset="100%" stop-color="#ccfbf1"/>
+    </linearGradient>
+    <linearGradient id="purpleCard" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#faf5ff"/>
+      <stop offset="100%" stop-color="#f3e8ff"/>
+    </linearGradient>
+    <linearGradient id="orangeCard" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fffbeb"/>
+      <stop offset="100%" stop-color="#fef3c7"/>
+    </linearGradient>
+    <linearGradient id="pillGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+    <filter id="shadowSm" x="-10%" y="-10%" width="120%" height="125%" filterUnits="objectBoundingBox">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.06"/>
+    </filter>
+    <filter id="shadowMd" x="-10%" y="-10%" width="120%" height="130%" filterUnits="objectBoundingBox">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1600" height="1020" fill="url(#bgGrad)"/>
+  
+  <!-- Subtle decorative grid -->
+  <g opacity="0.35">
+    <path d="M 0 140 L 1600 140 M 0 680 L 1600 680 M 0 910 L 1600 910" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4 4"/>
+  </g>
+
+  <!-- ==================== HEADER SECTION ==================== -->
+  <g transform="translate(60, 40)">
+    <text font-family="'Plus Jakarta Sans', -apple-system, sans-serif" font-size="38" font-weight="800" fill="#0f274a" letter-spacing="-0.5">
+      Multi-Agent Orchestration (MAO) for DSE Chatbot
+    </text>
+    
+    <text y="42" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="700" fill="#2563eb">
+      Specialized Agents <tspan fill="#64748b">×</tspan> Trusted Data <tspan fill="#64748b">×</tspan> Deterministic Calculation
+    </text>
+    <text x="530" y="42" font-family="'Plus Jakarta Sans', sans-serif" font-size="15" font-weight="500" fill="#475569">
+      Smarter decisions. More reliable answers.
+    </text>
+
+    <!-- Top-Right 4 Badges -->
+    <g transform="translate(850, -5)">
+      <!-- Badge 1: 4 AI Agents -->
+      <g transform="translate(0, 0)">
+        <circle cx="24" cy="24" r="22" fill="#2563eb" fill-opacity="0.1"/>
+        <circle cx="24" cy="24" r="14" fill="#2563eb"/>
+        <path d="M 19 24 Q 24 17, 29 24 T 19 24" stroke="#ffffff" stroke-width="2" fill="none"/>
+        <text x="56" y="20" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="700" fill="#0f172a">4 AI Agents</text>
+        <text x="56" y="36" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#64748b">Each with a clear role</text>
+      </g>
+
+      <!-- Badge 2: Orchestrated Workflow -->
+      <g transform="translate(150, 0)">
+        <circle cx="24" cy="24" r="22" fill="#0284c7" fill-opacity="0.1"/>
+        <circle cx="24" cy="24" r="14" fill="#0284c7"/>
+        <circle cx="21" cy="24" r="4" stroke="#ffffff" stroke-width="2"/>
+        <circle cx="27" cy="24" r="4" stroke="#ffffff" stroke-width="2"/>
+        <text x="56" y="20" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="700" fill="#0f172a">Orchestrated Workflow</text>
+        <text x="56" y="36" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#64748b">Dynamic routing &amp; collaboration</text>
+      </g>
+
+      <!-- Badge 3: Python Math Engine -->
+      <g transform="translate(340, 0)">
+        <circle cx="24" cy="24" r="22" fill="#0d9488" fill-opacity="0.1"/>
+        <circle cx="24" cy="24" r="14" fill="#0d9488"/>
+        <path d="M 19 24 L 23 28 L 29 20" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <text x="56" y="20" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="700" fill="#0f172a">Python Math Engine</text>
+        <text x="56" y="36" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#64748b">Accurate JUPAS calculation</text>
+      </g>
+
+      <!-- Badge 4: Trusted Data Sources -->
+      <g transform="translate(520, 0)">
+        <circle cx="24" cy="24" r="22" fill="#0284c7" fill-opacity="0.1"/>
+        <circle cx="24" cy="24" r="14" fill="#0284c7"/>
+        <ellipse cx="24" cy="20" rx="7" ry="2.5" fill="#ffffff"/>
+        <path d="M 17 20 v 7 c 0 1.5 3 2.5 7 2.5 s 7 -1 7 -2.5 v -7" fill="#ffffff" fill-opacity="0.7"/>
+        <text x="56" y="20" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="700" fill="#0f172a">Trusted Data Sources</text>
+        <text x="56" y="36" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#64748b">Official JUPAS &amp; uni data</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ==================== LEFT: DSE STUDENT QUERY ==================== -->
+  <g transform="translate(50, 220)">
+    <!-- Speech Bubble -->
+    <path d="M 10 0 H 230 A 20 20 0 0 1 250 20 V 100 A 20 20 0 0 1 230 120 H 60 L 30 145 V 120 H 10 A 20 20 0 0 1 -10 100 V 20 A 20 20 0 0 1 10 0 Z" 
+          fill="#eff6ff" stroke="#3b82f6" stroke-width="2" filter="url(#shadowSm)"/>
+    <text x="18" y="40" font-family="'Noto Sans TC', 'Plus Jakarta Sans', sans-serif" font-size="19" font-weight="700" fill="#1e3a8a" line-height="1.4">
+      我中文4、英文5*、
+    </text>
+    <text x="18" y="70" font-family="'Noto Sans TC', 'Plus Jakarta Sans', sans-serif" font-size="19" font-weight="700" fill="#1e3a8a">
+      數學5，入HKU社工
+    </text>
+    <text x="18" y="100" font-family="'Noto Sans TC', 'Plus Jakarta Sans', sans-serif" font-size="19" font-weight="700" fill="#1e3a8a">
+      有冇機會？
+    </text>
+
+    <!-- Student Avatar Graphic -->
+    <g transform="translate(20, 160)">
+      <circle cx="85" cy="50" r="32" fill="#3b82f6" fill-opacity="0.15"/>
+      <path d="M 65 38 C 65 24, 105 24, 105 38 C 105 48, 65 48, 65 38 Z" fill="#1e293b"/>
+      <circle cx="85" cy="46" r="16" fill="#fbcfe8"/>
+      <!-- Torso with backpack -->
+      <path d="M 50 110 C 50 78, 120 78, 120 110 Z" fill="#2563eb"/>
+      <!-- Smartphone -->
+      <rect x="100" y="85" width="22" height="38" rx="4" fill="#0f172a" stroke="#ffffff" stroke-width="2"/>
+    </g>
+
+    <!-- Student Tag -->
+    <rect x="18" y="300" width="190" height="42" rx="21" fill="#1d4ed8" filter="url(#shadowSm)"/>
+    <text x="113" y="327" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">
+      DSE Student
+    </text>
+    <text x="113" y="365" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="500" fill="#475569" text-anchor="middle">
+      Ask questions in natural
+    </text>
+    <text x="113" y="385" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="500" fill="#475569" text-anchor="middle">
+      language (Cantonese / English)
+    </text>
+
+    <!-- Flow Arrow into Agent 1 -->
+    <path d="M 235 180 L 285 180" stroke="#2563eb" stroke-width="3" stroke-linecap="round"/>
+    <polygon points="285,174 297,180 285,186" fill="#2563eb"/>
+  </g>
+
+  <!-- ==================== CENTER: MULTI-AGENT ORCHESTRATION ==================== -->
+  <!-- Top Center Orchestration Banner -->
+  <g transform="translate(640, 195)">
+    <rect x="-160" y="0" width="320" height="38" rx="19" fill="url(#pillGrad)" filter="url(#shadowSm)"/>
+    <text x="0" y="24" font-family="'Plus Jakarta Sans', sans-serif" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="0.5">
+      Multi-Agent Orchestration
+    </text>
+  </g>
+
+  <!-- AGENT 1: Router & Extractor -->
+  <g transform="translate(345, 245)">
+    <rect width="215" height="380" rx="16" fill="url(#blueCard)" stroke="#93c5fd" stroke-width="2" filter="url(#shadowSm)"/>
+    
+    <!-- Header Icon -->
+    <circle cx="107" cy="45" r="24" fill="#2563eb"/>
+    <path d="M 98 43 h 18 v 10 h -18 z M 95 48 h 24" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="102" cy="48" r="2" fill="#60a5fa"/>
+    <circle cx="112" cy="48" r="2" fill="#60a5fa"/>
+
+    <!-- Step number badge -->
+    <circle cx="28" cy="100" r="12" fill="#2563eb"/>
+    <text x="28" y="105" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="800" fill="#ffffff" text-anchor="middle">1</text>
+    <text x="46" y="106" font-family="'Plus Jakarta Sans', sans-serif" font-size="15" font-weight="800" fill="#1e3a8a">Router &amp; Extractor</text>
+
+    <text x="18" y="130" font-family="'Plus Jakarta Sans', sans-serif" font-size="11.5" font-weight="600" fill="#3b82f6">
+      Understand intent &amp; extract key information
+    </text>
+
+    <!-- Bullets -->
+    <g transform="translate(20, 155)" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" fill="#1e293b">
+      <circle cx="3" cy="6" r="2.5" fill="#2563eb"/>
+      <text x="14" y="10">Intent detection</text>
+      
+      <circle cx="3" cy="28" r="2.5" fill="#2563eb"/>
+      <text x="14" y="32">Extract DSE grades</text>
+      
+      <circle cx="3" cy="50" r="2.5" fill="#2563eb"/>
+      <text x="14" y="54">Identify university &amp; prog.</text>
+      
+      <circle cx="3" cy="72" r="2.5" fill="#2563eb"/>
+      <text x="14" y="76">Normalise user input</text>
+    </g>
+
+    <!-- Example Box -->
+    <rect x="14" y="255" width="187" height="60" rx="8" fill="#ffffff" stroke="#bfdbfe"/>
+    <text x="22" y="273" font-family="'Plus Jakarta Sans', sans-serif" font-size="10.5" font-weight="700" fill="#64748b">Example Output:</text>
+    <text x="22" y="293" font-family="'Noto Sans TC', sans-serif" font-size="11" font-weight="600" fill="#1e3a8a">HKU | Social Work | 中文4</text>
+    <text x="22" y="308" font-family="'Noto Sans TC', sans-serif" font-size="11" font-weight="600" fill="#1e3a8a">英文5* 數學5</text>
+
+    <!-- Agent Pill -->
+    <rect x="35" y="340" width="145" height="28" rx="14" fill="#2563eb"/>
+    <text x="107" y="359" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">Agent 1</text>
+  </g>
+
+  <!-- Arrow 1 -> 2 -->
+  <path d="M 565 380 L 585 380" stroke="#3b82f6" stroke-width="2.5" stroke-linecap="round"/>
+  <polygon points="585,375 593,380 585,385" fill="#3b82f6"/>
+
+  <!-- AGENT 2: University Identifier -->
+  <g transform="translate(595, 245)">
+    <rect width="215" height="380" rx="16" fill="url(#tealCard)" stroke="#5eead4" stroke-width="2" filter="url(#shadowSm)"/>
+    
+    <!-- Header Icon -->
+    <circle cx="107" cy="45" r="24" fill="#0d9488"/>
+    <circle cx="104" cy="42" r="8" stroke="#ffffff" stroke-width="2.5" fill="none"/>
+    <line x1="110" y1="48" x2="117" y2="55" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Step number badge -->
+    <circle cx="28" cy="100" r="12" fill="#0d9488"/>
+    <text x="28" y="105" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="800" fill="#ffffff" text-anchor="middle">2</text>
+    <text x="46" y="106" font-family="'Plus Jakarta Sans', sans-serif" font-size="15" font-weight="800" fill="#0f766e">University Identifier</text>
+
+    <text x="18" y="130" font-family="'Plus Jakarta Sans', sans-serif" font-size="11.5" font-weight="600" fill="#0d9488">
+      Standardise university names &amp; find the right code
+    </text>
+
+    <!-- Bullets -->
+    <g transform="translate(20, 160)" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" fill="#1e293b">
+      <circle cx="3" cy="6" r="2.5" fill="#0d9488"/>
+      <text x="14" y="10">Handle expressions</text>
+      
+      <circle cx="3" cy="30" r="2.5" fill="#0d9488"/>
+      <text x="14" y="34">Map to canonical codes</text>
+      
+      <circle cx="3" cy="54" r="2.5" fill="#0d9488"/>
+      <text x="14" y="58">Validate university /</text>
+      <text x="14" y="74">programme matching</text>
+    </g>
+
+    <!-- Example Box -->
+    <rect x="14" y="255" width="187" height="60" rx="8" fill="#ffffff" stroke="#99f6e4"/>
+    <text x="22" y="275" font-family="'Plus Jakarta Sans', sans-serif" font-size="10.5" font-weight="700" fill="#64748b">Example:</text>
+    <text x="22" y="295" font-family="'Noto Sans TC', sans-serif" font-size="12" font-weight="600" fill="#0f766e">港大 / HKU / 香港大學</text>
+    <text x="22" y="311" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="700" fill="#0d9488">→ HKU (JS6901)</text>
+
+    <!-- Agent Pill -->
+    <rect x="35" y="340" width="145" height="28" rx="14" fill="#0d9488"/>
+    <text x="107" y="359" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">Agent 2</text>
+  </g>
+
+  <!-- Arrow 2 -> 3 -->
+  <path d="M 815 380 L 835 380" stroke="#0d9488" stroke-width="2.5" stroke-linecap="round"/>
+  <polygon points="835,375 843,380 835,385" fill="#0d9488"/>
+
+  <!-- AGENT 3: Programme Matcher -->
+  <g transform="translate(845, 245)">
+    <rect width="215" height="380" rx="16" fill="url(#purpleCard)" stroke="#d8b4fe" stroke-width="2" filter="url(#shadowSm)"/>
+    
+    <!-- Header Icon -->
+    <circle cx="107" cy="45" r="24" fill="#7c3aed"/>
+    <!-- Mortarboard cap -->
+    <path d="M 94 43 L 107 37 L 120 43 L 107 49 Z" fill="#ffffff"/>
+    <path d="M 98 46 v 7 c 0 4 9 4 9 0 v -7" fill="#ffffff" opacity="0.8"/>
+
+    <!-- Step number badge -->
+    <circle cx="28" cy="100" r="12" fill="#7c3aed"/>
+    <text x="28" y="105" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="800" fill="#ffffff" text-anchor="middle">3</text>
+    <text x="46" y="106" font-family="'Plus Jakarta Sans', sans-serif" font-size="15" font-weight="800" fill="#581c87">Programme Matcher</text>
+
+    <text x="18" y="130" font-family="'Plus Jakarta Sans', sans-serif" font-size="11.5" font-weight="600" fill="#7c3aed">
+      Match profession to degree &amp; programme code
+    </text>
+
+    <!-- Bullets -->
+    <g transform="translate(20, 155)" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" fill="#1e293b">
+      <circle cx="3" cy="6" r="2.5" fill="#7c3aed"/>
+      <text x="14" y="10">Understand career interest</text>
+      
+      <circle cx="3" cy="28" r="2.5" fill="#7c3aed"/>
+      <text x="14" y="32">Find relevant degree</text>
+      
+      <circle cx="3" cy="50" r="2.5" fill="#7c3aed"/>
+      <text x="14" y="54">Select correct programme</text>
+      
+      <circle cx="3" cy="72" r="2.5" fill="#7c3aed"/>
+      <text x="14" y="76">Check compatibility</text>
+    </g>
+
+    <!-- Example Box -->
+    <rect x="14" y="255" width="187" height="60" rx="8" fill="#ffffff" stroke="#e9d5ff"/>
+    <text x="22" y="273" font-family="'Plus Jakarta Sans', sans-serif" font-size="10.5" font-weight="700" fill="#64748b">Example:</text>
+    <text x="22" y="291" font-family="'Noto Sans TC', sans-serif" font-size="11" font-weight="600" fill="#6b21a8">社工 → Bachelor of Social Work</text>
+    <text x="22" y="307" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700" fill="#7c3aed">→ Code: JS3720 / JS6901</text>
+
+    <!-- Agent Pill -->
+    <rect x="35" y="340" width="145" height="28" rx="14" fill="#7c3aed"/>
+    <text x="107" y="359" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">Agent 3</text>
+  </g>
+
+  <!-- Arrow 3 -> 4 -->
+  <path d="M 1065 380 L 1085 380" stroke="#7c3aed" stroke-width="2.5" stroke-linecap="round"/>
+  <polygon points="1085,375 1093,380 1085,385" fill="#7c3aed"/>
+
+  <!-- AGENT 4: Response Generator -->
+  <g transform="translate(1095, 245)">
+    <rect width="215" height="380" rx="16" fill="url(#orangeCard)" stroke="#fcd34d" stroke-width="2" filter="url(#shadowSm)"/>
+    
+    <!-- Header Icon -->
+    <circle cx="107" cy="45" r="24" fill="#ea580c"/>
+    <path d="M 96 44 Q 96 38, 107 38 Q 118 38, 118 44 Q 118 50, 107 50 L 101 54 L 102 50 Z" fill="#ffffff"/>
+
+    <!-- Step number badge -->
+    <circle cx="28" cy="100" r="12" fill="#ea580c"/>
+    <text x="28" y="105" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="800" fill="#ffffff" text-anchor="middle">4</text>
+    <text x="46" y="106" font-family="'Plus Jakarta Sans', sans-serif" font-size="15" font-weight="800" fill="#9a3412">Response Generator</text>
+
+    <text x="18" y="130" font-family="'Plus Jakarta Sans', sans-serif" font-size="11.5" font-weight="600" fill="#ea580c">
+      Generate natural and helpful reply (no calculation)
+    </text>
+
+    <!-- Bullets -->
+    <g transform="translate(20, 155)" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" fill="#1e293b">
+      <circle cx="3" cy="6" r="2.5" fill="#ea580c"/>
+      <text x="14" y="10">Use verified data &amp; results</text>
+      
+      <circle cx="3" cy="28" r="2.5" fill="#ea580c"/>
+      <text x="14" y="32">Friendly Cantonese tone</text>
+      
+      <circle cx="3" cy="50" r="2.5" fill="#ea580c"/>
+      <text x="14" y="54">Provide advice &amp; next steps</text>
+      
+      <circle cx="3" cy="72" r="2.5" fill="#ea580c"/>
+      <text x="14" y="76">Handle emotional support</text>
+    </g>
+
+    <!-- Empty/Feature box -->
+    <rect x="14" y="255" width="187" height="60" rx="8" fill="#ffffff" stroke="#fde68a"/>
+    <text x="22" y="275" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700" fill="#ea580c">Guardrails Active:</text>
+    <text x="22" y="293" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#78350f">✓ Zero hallucinations</text>
+    <text x="22" y="308" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#78350f">✓ Anxiety de-escalation</text>
+
+    <!-- Agent Pill -->
+    <rect x="35" y="340" width="145" height="28" rx="14" fill="#ea580c"/>
+    <text x="107" y="359" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">Agent 4</text>
+  </g>
+
+  <!-- Arrow 4 -> Output -->
+  <path d="M 1315 380 L 1340 380" stroke="#ea580c" stroke-width="2.5" stroke-linecap="round"/>
+  <polygon points="1340,375 1348,380 1340,385" fill="#ea580c"/>
+
+  <!-- ==================== RIGHT: DSE AI CHATBOT PHONE OUTPUT ==================== -->
+  <g transform="translate(1355, 205)">
+    <!-- Chat Card / Screen Mockup -->
+    <rect width="215" height="425" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2" filter="url(#shadowMd)"/>
+    
+    <!-- Top Bar -->
+    <rect width="215" height="45" rx="18" fill="#eff6ff"/>
+    <circle cx="25" cy="22" r="12" fill="#2563eb"/>
+    <circle cx="21" cy="21" r="2" fill="#ffffff"/>
+    <circle cx="29" cy="21" r="2" fill="#ffffff"/>
+    <text x="45" y="27" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="700" fill="#1e3a8a">DSE AI Chatbot</text>
+
+    <!-- Chat Message Content -->
+    <g transform="translate(12, 60)" font-family="'Noto Sans TC', sans-serif" font-size="11.5" fill="#1e293b" line-height="1.5">
+      <text x="0" y="16">根據你的預計分數，HKU社工的</text>
+      <text x="0" y="34">入學機會屬於中等偏高。你可以</text>
+      <text x="0" y="52">參考以下建議：</text>
+
+      <!-- Stats -->
+      <g transform="translate(4, 72)" fill="#16a34a" font-weight="700">
+        <text x="0" y="0">✓ 你的加權分數：約 25.8</text>
+        <text x="0" y="18">✓ 近年中位數：約 24.0</text>
+        <text x="0" y="36">✓ 你的排名相對位置：約 55%</text>
+      </g>
+
+      <!-- Supportive advice -->
+      <g transform="translate(0, 142)" fill="#334155" font-weight="500">
+        <text x="0" y="0">建議你將社工放在較前位置，</text>
+        <text x="0" y="18">同時留意遞交其他心儀課程。</text>
+        <text x="0" y="44" fill="#0369a1" font-weight="600">記住，DSE 只是人生的一個階段，</text>
+        <text x="0" y="62" fill="#0369a1" font-weight="600">你已經很努力了！ 💙</text>
+      </g>
+
+      <!-- Action Button -->
+      <rect x="0" y="225" width="145" height="28" rx="8" fill="#e0f2fe"/>
+      <text x="12" y="244" font-family="'Noto Sans TC', sans-serif" font-size="12" font-weight="600" fill="#0284c7">更詳細的分析...</text>
+      <text x="170" y="244" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" fill="#94a3b8">10:24</text>
+    </g>
+
+    <!-- Reliable & Supportive Response Pill -->
+    <rect x="10" y="375" width="195" height="34" rx="17" fill="#0284c7" filter="url(#shadowSm)"/>
+    <text x="107" y="397" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">
+      Reliable &amp; Supportive Response
+    </text>
+  </g>
+
+  <!-- ==================== CONNECTING ARROWS TO FOUNDATION ==================== -->
+  <g stroke="#94a3b8" stroke-width="2" stroke-dasharray="4 4" opacity="0.6">
+    <path d="M 452 630 L 452 680 L 225 680 L 225 720"/>
+    <path d="M 702 630 L 702 680 L 590 680 L 590 720"/>
+    <path d="M 952 630 L 952 680 L 952 720"/>
+    <path d="M 1202 630 L 1202 680 L 1315 680 L 1315 720"/>
+  </g>
+
+  <!-- ==================== BOTTOM: 4 FOUNDATION PLATFORMS ==================== -->
+  <!-- 1. Local LLM (LM Studio) -->
+  <g transform="translate(110, 715)">
+    <rect width="280" height="175" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2" filter="url(#shadowSm)"/>
+    
+    <circle cx="45" cy="40" r="20" fill="#3b82f6"/>
+    <!-- Server icon -->
+    <rect x="35" y="32" width="20" height="6" rx="2" fill="#ffffff"/>
+    <rect x="35" y="42" width="20" height="6" rx="2" fill="#ffffff"/>
+
+    <text x="75" y="36" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="700" fill="#1e3a8a">Local LLM</text>
+    <text x="75" y="52" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="600" fill="#64748b">(LM Studio)</text>
+
+    <g transform="translate(25, 80)" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" fill="#334155">
+      <circle cx="3" cy="6" r="2.5" fill="#3b82f6"/>
+      <text x="14" y="10">Natural language understanding</text>
+      
+      <circle cx="3" cy="30" r="2.5" fill="#3b82f6"/>
+      <text x="14" y="34">Intent classification</text>
+      
+      <circle cx="3" cy="54" r="2.5" fill="#3b82f6"/>
+      <text x="14" y="58">Conversation generation</text>
+    </g>
+  </g>
+
+  <!-- 2. Trusted Data Sources -->
+  <g transform="translate(425, 715)">
+    <rect width="330" height="175" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2" filter="url(#shadowSm)"/>
+    
+    <circle cx="45" cy="40" r="20" fill="#0d9488"/>
+    <!-- Bank/Institution icon -->
+    <path d="M 35 44 h 20 v 3 h -20 z M 45 32 L 35 38 h 20 Z" fill="#ffffff"/>
+
+    <text x="75" y="44" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="700" fill="#0f766e">Trusted Data Sources</text>
+
+    <!-- 4 Sub-cards -->
+    <g transform="translate(20, 80)">
+      <!-- JUPAS Database -->
+      <rect x="0" y="0" width="65" height="70" rx="8" fill="#f0fdfa"/>
+      <text x="32" y="45" font-family="'Plus Jakarta Sans', sans-serif" font-size="10.5" font-weight="700" fill="#0f766e" text-anchor="middle">JUPAS</text>
+      <text x="32" y="58" font-family="'Plus Jakarta Sans', sans-serif" font-size="9.5" fill="#475569" text-anchor="middle">Database</text>
+
+      <!-- University Programmes -->
+      <rect x="73" y="0" width="72" height="70" rx="8" fill="#f0fdfa"/>
+      <text x="109" y="45" font-family="'Plus Jakarta Sans', sans-serif" font-size="10.5" font-weight="700" fill="#0f766e" text-anchor="middle">University</text>
+      <text x="109" y="58" font-family="'Plus Jakarta Sans', sans-serif" font-size="9.5" fill="#475569" text-anchor="middle">Programmes</text>
+
+      <!-- Admission Statistics -->
+      <rect x="153" y="0" width="68" height="70" rx="8" fill="#f0fdfa"/>
+      <text x="187" y="45" font-family="'Plus Jakarta Sans', sans-serif" font-size="10.5" font-weight="700" fill="#0f766e" text-anchor="middle">Admission</text>
+      <text x="187" y="58" font-family="'Plus Jakarta Sans', sans-serif" font-size="9.5" fill="#475569" text-anchor="middle">Statistics</text>
+
+      <!-- Official Guidelines -->
+      <rect x="229" y="0" width="65" height="70" rx="8" fill="#f0fdfa"/>
+      <text x="261" y="45" font-family="'Plus Jakarta Sans', sans-serif" font-size="10.5" font-weight="700" fill="#0f766e" text-anchor="middle">Official</text>
+      <text x="261" y="58" font-family="'Plus Jakarta Sans', sans-serif" font-size="9.5" fill="#475569" text-anchor="middle">Guidelines</text>
+    </g>
+  </g>
+
+  <!-- 3. Python Math Engine -->
+  <g transform="translate(790, 715)">
+    <rect width="320" height="175" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2" filter="url(#shadowSm)"/>
+    
+    <circle cx="45" cy="40" r="20" fill="#c026d3"/>
+    <!-- Python snake stylized mark -->
+    <path d="M 37 38 C 37 34, 45 34, 45 38 L 45 42 L 53 42 C 55 42, 55 46, 53 46 Z" fill="#ffffff"/>
+
+    <text x="75" y="44" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="700" fill="#86198f">Python Math Engine</text>
+
+    <g transform="translate(25, 75)" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" fill="#334155">
+      <circle cx="3" cy="6" r="2.5" fill="#c026d3"/>
+      <text x="14" y="10">JUPAS weighting rules</text>
+      
+      <circle cx="3" cy="28" r="2.5" fill="#c026d3"/>
+      <text x="14" y="32">University-specific scales</text>
+      
+      <circle cx="3" cy="50" r="2.5" fill="#c026d3"/>
+      <text x="14" y="54">Mandatory subjects &amp; Best N</text>
+
+      <circle cx="3" cy="72" r="2.5" fill="#c026d3"/>
+      <text x="14" y="76" font-weight="700" fill="#a21caf">Deterministic &amp; testable</text>
+    </g>
+  </g>
+
+  <!-- 4. Redis Cache -->
+  <g transform="translate(1145, 715)">
+    <rect width="300" height="175" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2" filter="url(#shadowSm)"/>
+    
+    <circle cx="45" cy="40" r="20" fill="#0284c7"/>
+    <!-- Database cylinder icon -->
+    <ellipse cx="45" cy="35" rx="10" ry="3" fill="#ffffff"/>
+    <path d="M 35 35 v 10 c 0 2 5 3 10 3 s 10 -1 10 -3 v -10" fill="#ffffff" fill-opacity="0.8"/>
+
+    <text x="75" y="44" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="700" fill="#075985">Redis Cache</text>
+
+    <g transform="translate(25, 80)" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" fill="#334155">
+      <circle cx="3" cy="6" r="2.5" fill="#0284c7"/>
+      <text x="14" y="10">Conversation state</text>
+      
+      <circle cx="3" cy="30" r="2.5" fill="#0284c7"/>
+      <text x="14" y="34">Session management</text>
+      
+      <circle cx="3" cy="54" r="2.5" fill="#0284c7"/>
+      <text x="14" y="58">Performance optimisation</text>
+    </g>
+  </g>
+
+  <!-- ==================== BOTTOM: PHILOSOPHY RIBBON ==================== -->
+  <g transform="translate(380, 935)">
+    <rect width="840" height="48" rx="24" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" filter="url(#shadowSm)"/>
+    <text x="420" y="30" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="700" fill="#0f172a" text-anchor="middle">
+      <tspan fill="#2563eb">Right Information</tspan>  +  <tspan fill="#0d9488">Right Agent</tspan>  +  <tspan fill="#c026d3">Right Tool</tspan>  =  <tspan fill="#1e3a8a">Reliable Answer</tspan>
+    </text>
+  </g>
+</svg>

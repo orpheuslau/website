@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" fill="none">
+  <defs>
+    <linearGradient id="lsgBg" x1="0" y1="0" x2="1200" y2="675" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0a0c10"/>
+      <stop offset="50%" stop-color="#0e131b"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="cardGrad2" x1="0" y1="0" x2="0" y2="1" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#161c28" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#0f1420" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="amberGrad" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#fbbf24"/>
+    </linearGradient>
+    <linearGradient id="emeraldGrad" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+    <pattern id="grid2" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="675" fill="url(#lsgBg)"/>
+  <rect width="1200" height="675" fill="url(#grid2)"/>
+
+  <!-- Glows -->
+  <circle cx="250" cy="300" r="220" fill="#f59e0b" fill-opacity="0.05" filter="blur(70px)"/>
+  <circle cx="850" cy="350" r="240" fill="#10b981" fill-opacity="0.06" filter="blur(80px)"/>
+
+  <!-- Header -->
+  <g transform="translate(80, 75)">
+    <text font-family="'JetBrains Mono', monospace" font-size="13" font-weight="600" fill="#f59e0b" letter-spacing="3">HYBRID RAG ADMINISTRATIVE GOVERNANCE</text>
+    <text y="42" font-family="'Plus Jakarta Sans', sans-serif" font-size="34" font-weight="700" fill="#f4f4f5" letter-spacing="-0.5">LSG &amp; LF Policy Navigator</text>
+    <text y="68" font-family="'JetBrains Mono', monospace" font-size="13" fill="#71717a">Dual Sparse/Dense Pipelines // Reciprocal Rank Fusion // Strict Statutory Clause Grounding</text>
+  </g>
+
+  <!-- Left: Ingestion & Query -->
+  <g transform="translate(80, 190)">
+    <rect width="280" height="400" rx="16" fill="url(#cardGrad2)" stroke="#27272a" stroke-width="1.5"/>
+    <rect x="20" y="20" width="8" height="8" rx="4" fill="#f59e0b"/>
+    <text x="36" y="28" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600" fill="#fcd34d">SWD / LF MANUAL CORPUS</text>
+    <text x="20" y="65" font-family="'Plus Jakarta Sans', sans-serif" font-size="19" font-weight="600" fill="#f4f4f5">Statutory Ingestion</text>
+
+    <!-- Document representations -->
+    <rect x="20" y="100" width="240" height="60" rx="8" fill="#0d1117" stroke="#27272a"/>
+    <text x="35" y="125" font-family="'JetBrains Mono', monospace" font-size="11" fill="#f59e0b">LSG Manual Edition 3.1</text>
+    <text x="35" y="145" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#9ca3af">Provident Fund, Reserve &amp; Virement</text>
+
+    <rect x="20" y="175" width="240" height="60" rx="8" fill="#0d1117" stroke="#27272a"/>
+    <text x="35" y="200" font-family="'JetBrains Mono', monospace" font-size="11" fill="#38bdf8">Lotteries Fund Manual 2024</text>
+    <text x="35" y="220" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#9ca3af">Procurement &amp; Capital Works Clauses</text>
+
+    <rect x="20" y="250" width="240" height="120" rx="8" fill="#0d1117" stroke="#27272a"/>
+    <text x="35" y="275" font-family="'JetBrains Mono', monospace" font-size="11" fill="#10b981">Query Intent: Supervisor</text>
+    <text x="35" y="295" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" fill="#e5e7eb">"Can unspent training subsidy roll over to the next financial year under Section 4?"</text>
+    <text x="35" y="350" font-family="'JetBrains Mono', monospace" font-size="10" fill="#71717a">Target: Statutory Compliance</text>
+  </g>
+
+  <!-- Middle: Dual Pipelines & RRF -->
+  <g transform="translate(390, 190)">
+    <!-- Branch A: Sparse BM25 -->
+    <rect width="360" height="185" rx="14" fill="url(#cardGrad2)" stroke="#f59e0b" stroke-width="1.5" stroke-opacity="0.5"/>
+    <rect x="20" y="18" width="8" height="8" rx="4" fill="#f59e0b"/>
+    <text x="36" y="26" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600" fill="#fcd34d">PIPELINE 01 : LEXICAL SPARSE (BM25)</text>
+    <text x="20" y="55" font-family="'Plus Jakarta Sans', sans-serif" font-size="17" font-weight="600" fill="#f4f4f5">Exact Circular &amp; Clause Match</text>
+    <text x="20" y="80" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" fill="#9ca3af">Retrieves statutory codes, circular numbers, Annex VII tables</text>
+    
+    <rect x="20" y="100" width="320" height="65" rx="8" fill="#0d1117" stroke="#27272a"/>
+    <text x="32" y="125" font-family="'JetBrains Mono', monospace" font-size="11" fill="#fcd34d">BM25 Hit #1: Clause 4.3(b) (Score: 18.4)</text>
+    <text x="32" y="145" font-family="'JetBrains Mono', monospace" font-size="11" fill="#9ca3af">"Virement of subventions across operational codes"</text>
+
+    <!-- Branch B: Dense Semantic (BigQuery Vector) -->
+    <g transform="translate(0, 215)">
+      <rect width="360" height="185" rx="14" fill="url(#cardGrad2)" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.5"/>
+      <rect x="20" y="18" width="8" height="8" rx="4" fill="#10b981"/>
+      <text x="36" y="26" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600" fill="#6ee7b7">PIPELINE 02 : DENSE SEMANTIC VECTOR</text>
+      <text x="20" y="55" font-family="'Plus Jakarta Sans', sans-serif" font-size="17" font-weight="600" fill="#f4f4f5">BigQuery Vector &amp; Vertex AI</text>
+      <text x="20" y="80" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" fill="#9ca3af">768-dim embeddings of contextual policy intent</text>
+      
+      <rect x="20" y="100" width="320" height="65" rx="8" fill="#0d1117" stroke="#27272a"/>
+      <text x="32" y="125" font-family="'JetBrains Mono', monospace" font-size="11" fill="#34d399">Vector Hit #1: Cosine Similarity 0.912</text>
+      <text x="32" y="145" font-family="'JetBrains Mono', monospace" font-size="11" fill="#9ca3af">"Surplus retention caps &amp; clawback mechanisms"</text>
+    </g>
+  </g>
+
+  <!-- Right: RRF & Grounded Synthesis -->
+  <g transform="translate(780, 190)">
+    <rect width="340" height="400" rx="16" fill="url(#cardGrad2)" stroke="#27272a" stroke-width="1.5"/>
+    <rect x="20" y="20" width="8" height="8" rx="4" fill="#38bdf8"/>
+    <text x="36" y="28" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600" fill="#7dd3fc">FUSION &amp; GROUNDED REASONING</text>
+    <text x="20" y="65" font-family="'Plus Jakarta Sans', sans-serif" font-size="19" font-weight="600" fill="#f4f4f5">Reciprocal Rank Fusion</text>
+    <text x="20" y="90" font-family="'JetBrains Mono', monospace" font-size="11" fill="#71717a">RRF(d) = Σ 1 / (60 + r(d))</text>
+
+    <!-- Grounded Output Box -->
+    <rect x="20" y="115" width="300" height="255" rx="10" fill="#0a0d14" stroke="#27272a"/>
+    <text x="35" y="145" font-family="'JetBrains Mono', monospace" font-size="11" fill="#10b981">Gemini API Grounded Output</text>
+    
+    <text x="35" y="175" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="600" fill="#f4f4f5">Statutory Decision Summary:</text>
+    <text x="35" y="198" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#9ca3af">Unspent grants may be carried forward</text>
+    <text x="35" y="216" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#9ca3af">subject to the 25% operating expenditure cap.</text>
+    
+    <!-- Verified Citations -->
+    <rect x="35" y="235" width="270" height="50" rx="6" fill="#161c26" stroke="#f59e0b" stroke-opacity="0.4"/>
+    <text x="45" y="255" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#fcd34d">[Citation 1] LSG Manual §4.3(b)</text>
+    <text x="45" y="272" font-family="'JetBrains Mono', monospace" font-size="10" fill="#a1a1aa">SWD Circular Memo No. 12/2023</text>
+
+    <rect x="35" y="295" width="270" height="55" rx="6" fill="#161c26" stroke="#10b981" stroke-opacity="0.4"/>
+    <text x="45" y="315" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#6ee7b7">[Citation 2] Lotteries Fund §6.2</text>
+    <text x="45" y="332" font-family="'JetBrains Mono', monospace" font-size="10" fill="#a1a1aa">Audit Compliance Clearance: Passed</text>
+  </g>
+
+  <!-- Connectors -->
+  <path d="M 360 280 L 390 280" stroke="#f59e0b" stroke-width="2" opacity="0.6"/>
+  <path d="M 360 480 L 390 480" stroke="#10b981" stroke-width="2" opacity="0.6"/>
+  <path d="M 750 280 L 780 340" stroke="#f59e0b" stroke-width="2" opacity="0.5"/>
+  <path d="M 750 480 L 780 400" stroke="#10b981" stroke-width="2" opacity="0.5"/>
+</svg>

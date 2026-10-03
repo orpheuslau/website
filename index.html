@@ -2,1251 +2,829 @@
 <html lang="en" class="scroll-smooth">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ORPHEUS LAU</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="../css/styles8.css">
-    <link rel="icon" type="image/x-icon" href="assets/icons8-o-67.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SVWP2YHJN5"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orpheus Lau — Creative Technologist & AI Systems Engineer</title>
+  <meta name="description" content="Portfolio of Orpheus Lau. Engineering at the intersection of AI, Cybersecurity, Computer Vision, and Social Impact with 20+ years of sector leadership.">
+  <meta property="og:title" content="Orpheus Lau — Creative Technologist & AI Systems Engineer">
+  <meta property="og:description" content="Engineering solutions at the intersection of AI, Cybersecurity, and Social Impact. 20+ years translating human needs into resilient software.">
+  <meta property="og:type" content="website">
 
-  gtag('config', 'G-SVWP2YHJN5');
-</script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                    colors: {
-                        primary: '#f4623a', // Original primary color
-                        secondary: '#4a5568', // A softer secondary
-                        accent: '#38b2ac', // A teal accent
-                    }
-                }
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/icons8-o-67.png">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#fff7ed',
+              100: '#ffedd5',
+              400: '#fb923c',
+              500: '#f97316',
+              600: '#ea580c',
+              accent: '#f4623a'
             }
+          }
         }
-    </script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SVWP2YHJN5"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-SVWP2YHJN5');
-    </script>
+      }
+    }
+  </script>
+
+  <!-- Typography & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Custom Styling -->
+  <link rel="stylesheet" href="css/styles8.css">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SVWP2YHJN5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SVWP2YHJN5');
+  </script>
 </head>
 
-<body class="bg-gray-100 text-gray-800 antialiased">
+<body class="bg-[#0b0c0e] text-zinc-300 min-h-screen selection:bg-orange-500/30 selection:text-orange-200">
 
-    <nav id="mainNav"
-        class="bg-white/80 backdrop-blur-md shadow-md fixed w-full z-50 top-0 transition-all duration-300">
-        <div class="container mx-auto px-6 py-3">
-            <div class="flex items-center justify-between">
-                <a href="#page-top"
-                    class="text-2xl font-bold text-primary hover:text-primary/80 transition-colors">ORPHEUS LAU</a>
-                <div class="md:hidden">
-                    <button id="nav-toggle" class="text-gray-700 focus:outline-none">
-                        <i class="fas fa-bars fa-lg"></i>
-                    </button>
-                </div>
-                <div id="nav-menu" class="hidden md:flex md:items-center space-x-6">
-                    <a href="#about"
-                        class="nav-link text-gray-700 hover:text-primary transition-colors font-medium">About</a>
-                    <a href="#portfolio"
-                        class="nav-link text-gray-700 hover:text-primary transition-colors font-medium">Portfolio</a>
-                    <a href="#contact"
-                        class="nav-link text-gray-700 hover:text-primary transition-colors font-medium">Contact</a>
-                </div>
+  <!-- Top Glass Navigation Bar -->
+  <header>
+    <nav id="mainNav" class="fixed w-full z-40 top-0 transition-all duration-300 border-b border-transparent">
+      <div class="max-w-7xl mx-auto px-6 sm:px-8 py-4 sm:py-5">
+        <div class="flex items-center justify-between">
+          
+          <!-- Moniker / Brand Mark -->
+          <a href="#hero" class="flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 rounded-lg">
+            <span class="w-8 h-8 rounded-lg bg-gradient-to-br from-orange-500 to-amber-600 flex items-center justify-center font-bold text-white shadow-md shadow-orange-950/40 group-hover:scale-105 transition-transform text-sm font-mono">
+              OL
+            </span>
+            <div class="flex flex-col">
+              <span class="text-sm font-semibold tracking-tight text-zinc-100 group-hover:text-orange-400 transition-colors">
+                ORPHEUS LAU
+              </span>
+              <span class="text-[11px] font-mono text-zinc-400">
+                AI &amp; Social Tech Architect
+              </span>
             </div>
-            <div id="mobile-menu" class="hidden md:hidden mt-3 space-y-2">
-                <a href="#about"
-                    class="block nav-link text-gray-700 hover:text-primary transition-colors py-2">About</a>
-                <a href="#portfolio"
-                    class="block nav-link text-gray-700 hover:text-primary transition-colors py-2">Portfolio</a>
-                <a href="#contact"
-                    class="block nav-link text-gray-700 hover:text-primary transition-colors py-2">Contact</a>
-            </div>
-        </div>
-    </nav>
+          </a>
 
-    <header id="page-top"
-        class="masthead bg-gradient-to-br from-primary to-orange-500 text-white min-h-screen flex items-center justify-center py-20 px-4">
-        <div class="container mx-auto text-center">
- <h1 class="text-5xl md:text-6xl font-extrabold mb-6 animate-fade-in-down">BUILDING INTELLIGENCE</h1>
-            <hr class="divider w-24 h-1.5 bg-white mx-auto mb-8 rounded-full" />
-            <p class="text-lg md:text-xl text-gray-200 mb-10 max-w-3xl mx-auto animate-fade-in-up">
-                I engineer solutions at the intersection of AI, Cybersecurity, and Social Impact.
-            </p>
-            <a class="btn bg-white text-primary hover:bg-gray-100 font-bold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg animate-bounce-slow"
-                href="#about">
-                Find Out More <i class="fas fa-arrow-down ml-2"></i>
+          <!-- Desktop Navigation Menu -->
+          <div class="hidden md:flex items-center gap-8 text-xs font-medium tracking-wide">
+            <a href="#about" class="text-zinc-400 hover:text-zinc-100 transition-colors">About</a>
+            <a href="#works" class="text-zinc-400 hover:text-zinc-100 transition-colors">Selected Works</a>
+            <a href="#archive" class="text-zinc-400 hover:text-zinc-100 transition-colors">Code &amp; Deliverables</a>
+            <a href="#education" class="text-zinc-400 hover:text-zinc-100 transition-colors">Credentials</a>
+            <a href="#contact" class="text-zinc-400 hover:text-zinc-100 transition-colors">Contact</a>
+          </div>
+
+          <!-- Quick Action CTA -->
+          <div class="hidden md:flex items-center gap-4">
+            <a 
+              href="mailto:orpheuslau@gmail.com" 
+              class="inline-flex items-center gap-2 text-xs font-semibold px-4 py-2 rounded-lg bg-zinc-900 hover:bg-zinc-800 text-zinc-200 border border-zinc-700/60 transition-all hover:border-zinc-500"
+            >
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span>Available for Advisory</span>
             </a>
-        </div>
-        <style>
-            .masthead {
-                background-image: url('../assets/img/background.jpg');
-                background-size: cover;
-                background-position: center;
-            }
-        </style>
-    </header>
+          </div>
 
-    <section class="page-section bg-primary text-white py-20 px-4" id="about">
-        <div class="container mx-auto">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold">About Me</h2>
-                <hr class="divider w-20 h-1 bg-white mx-auto mt-4 mb-6 rounded-full" />
-            </div>
-            <div class="max-w-3xl mx-auto text-center md:text-left">
-               <p class="text-lg mb-6 leading-relaxed">
-                    A tech-focused leader with 20+ years of deep experience in the social services sector. I specialize in translating complex human needs into effective technology solutions, having delivered a diverse portfolio of successful projects in
-                                        <strong class="font-semibold">AI, Cyber Security, AR, iOS app development, Case Information Systems,
-                        and more</strong>.
-                          Passionate about leveraging emerging technologies to create scalable social impact
-                </p>
-              
-                <div class="bg-white/20 p-6 rounded-lg shadow-md">
-                    <h3 class="text-2xl font-semibold mb-4 text-center">Education & Certificates</h3>
-                    <ul class="space-y-3 text-left">
-                         <li class="flex items-start"><i
-                            class="fas fa-graduation-cap text-xl mr-3 mt-1 text-orange-300"></i>Master in Artificial Intelligence, <em>University of Leeds (on going, 2027 graduate)</em></li>
-                        <li class="flex items-start"><i
-                                class="fas fa-graduation-cap text-xl mr-3 mt-1 text-orange-300"></i>Bachelor of
-                            Computing
-                            Science (1st Hon), <em>University of Greenwich</em></li>
-                        <li class="flex items-start"><i
-                                class="fab fa-google text-xl mr-3 mt-1 text-orange-300"></i>Google Data Analytics
-                            Certificate, <em>Google</em></li>
-                        <li class="flex items-start"><i
-                                class="fas fa-graduation-cap text-xl mr-3 mt-1 text-orange-300"></i>Master of Social
-                            Sciences (Mgt), <em>The University of Hong Kong</em></li>
-                        <li class="flex items-start"><i
-                                class="fas fa-graduation-cap text-xl mr-3 mt-1 text-orange-300"></i>Diploma in IT,
-                            <em>The
-                                University of Hong Kong (SPACE)</em>
-                        </li>
-                        <li class="flex items-start"><i
-                                class="fas fa-graduation-cap text-xl mr-3 mt-1 text-orange-300"></i>Bachelor of Social
-                            Work (Hons), <em>The University of Hong Kong</em></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="text-center mt-12">
-                <a class="btn bg-white text-primary hover:bg-gray-100 font-bold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
-                    href="#portfolio">
-                    View My Portfolio <i class="fas fa-briefcase ml-2"></i>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section class="page-section py-20 px-4 bg-gray-50" id="portfolio">
-        <div class="container mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-800">Portfolio</h2>
-                <hr class="divider w-20 h-1 bg-primary mx-auto mt-4 mb-6 rounded-full" />
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-                     <div class="portfolio-item-custom group bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
-                    <a href="#linkyouin-details" class="block">
-                        <div class="relative h-56 overflow-hidden">
-                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                                src="assets/img/Gemini_Generated_Image_tc5wtxtc5wtxtc5w.png" alt="LinkYouIn AI Recruiter"
-                                onerror="this.onerror=null;this.src='https://placehold.co/600x400/f4623a/white?text=LinkYouIn+AI';">
-                            <div class="absolute inset-0 bg-white/10 group-hover:bg-black/60 transition-all duration-300">
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold text-primary mb-1">LinkYouIn: AI Recruiter</h3>
-                            <p class="text-sm text-gray-500 mb-2">Dual LLM + FastAPI + Ollama (2025)</p>
-                            <p class="text-gray-700 text-sm">Privacy-first automated CV screening pipeline using dual local LLMs.</p>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="portfolio-item-custom group bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
-                    <a href="#sentiment-details" class="block">
-                        <div class="relative h-56 overflow-hidden">
-                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                                src="assets/img/SentiAna/20250812_AI_sharing.png" alt="Sentiment Analysis & LLM Fine Tuning"
-                                onerror="this.onerror=null;this.src='https://placehold.co/600x400/f4623a/white?text=Sentiment+Analysis';">
-                            <div class="absolute inset-0 bg-white/10 group-hover:bg-black/60 transition-all duration-300">
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold text-primary mb-1">Sentiment Analysis & LLM Fine Tuning</h3>
-                            <p class="text-sm text-gray-500 mb-2">Python + LLM + LORA (2025)</p>
-                            <p class="text-gray-700 text-sm">Fine-tuning a LLM with LoRA allows us to unlock deeper insights from multilingual feedback.</p>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="portfolio-item-custom group bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
-                    <a href="#nuvision-details" class="block">
-                        <div class="relative h-56 overflow-hidden">
-                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                                src="assets/img/nuphoto/small/out4.png" alt="NuVision AI App"
-                                onerror="this.onerror=null;this.src='https://placehold.co/600x400/f4623a/white?text=NuVision+App';">
-                            <div class="absolute inset-0 bg-white/10 group-hover:bg-black/60 transition-all duration-300">
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold text-primary mb-1">NuVision: AI nutrition + exercise</h3>
-                            <p class="text-sm text-gray-500 mb-2">LLM + Vision LM + iOS (2025)</p>
-                            <p class="text-gray-700 text-sm">NuVision: Your personal AI coach for nutrition and exercise
-                            </p>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="portfolio-item-custom group bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
-                    <a href="#imemymine-details" class="block">
-                        <div class="relative h-56 overflow-hidden">
-                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                                src="assets/img/portfolio/thumbnails/thumbnail_imemymine.jpg" alt="IMeMyMine AI App"
-                                onerror="this.onerror=null;this.src='https://placehold.co/600x400/38b2ac/white?text=IMeMyMine+App';">
-                            <div class="absolute inset-0 bg-white/10 group-hover:bg-black/60 transition-all duration-300">
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold text-primary mb-1">IMeMyMine: AI Face Swap</h3>
-                            <p class="text-sm text-gray-500 mb-2">Pytorch + SDXL + iOS (2024)</p>
-                            <p class="text-gray-700 text-sm">AI-powered face swap app for thematic portraits, promoting
-                                inclusion.</p>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="portfolio-item-custom group bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
-                    <a href="#airaffle-details" class="block">
-                        <div class="relative h-56 overflow-hidden">
-                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                                src="assets/img/airaffle/airaffle_main.jpg" alt="AI Raffle"
-                                onerror="this.onerror=null;this.src='https://placehold.co/600x400/f4623a/white?text=AI+Raffle';">
-                            <div class="absolute inset-0 bg-white/10 group-hover:bg-black/60 transition-all duration-300">
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold text-primary mb-1">AI Raffle: Object Recognition</h3>
-                            <p class="text-sm text-gray-500 mb-2">YOLOv10 + CV2 + Python + Roboflow (2024)</p>
-                            <p class="text-gray-700 text-sm">Machine learning exercise using YOLOv10 framework to
-                                recognize raffle ticket serial numbers.</p>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="portfolio-item-custom group bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
-                    <a href="#passsecure-details" class="block">
-                        <div class="relative h-56 overflow-hidden">
-                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                                src="assets/img/portfolio/thumbnails/thumbnail_passSecure.jpg" alt="Pass Secure App"
-                                onerror="this.onerror=null;this.src='https://placehold.co/600x400/4a5568/white?text=Pass+Secure';">
-                            <div class="absolute inset-0 bg-white/10 group-hover:bg-black/60 transition-all duration-300">
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold text-primary mb-1">Pass Secure: Password Manager</h3>
-                            <p class="text-sm text-gray-500 mb-2">SwiftData + CloudKit + iOS (2024)</p>
-                            <p class="text-gray-700 text-sm">Securely manage your passwords with SwiftData and iCloudKit
-                                integration.</p>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="portfolio-item-custom group bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
-                    <a href="#smis-details" class="block">
-                        <div class="relative h-56 overflow-hidden">
-                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                                src="assets/img/portfolio/thumbnails/1.jpg" alt="SMIS"
-                                onerror="this.onerror=null;this.src='https://placehold.co/600x400/f4623a/white?text=SMIS';">
-                            <div class="absolute inset-0 bg-white/10 group-hover:bg-black/60 transition-all duration-300">
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold text-primary mb-1">Student Management System</h3>
-                            <p class="text-sm text-gray-500 mb-2">React.js + Node.js + MongoDB (2024)</p>
-                            <p class="text-gray-700 text-sm">Full-stack application for managing student information and
-                                assessments.</p>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="portfolio-item-custom group bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
-                    <a href="#caritasar-details" class="block">
-                        <div class="relative h-56 overflow-hidden">
-                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                                src="assets/img/portfolio/thumbnails/2.jpg" alt="Caritas AR"
-                                onerror="this.onerror=null;this.src='https://placehold.co/600x400/38b2ac/white?text=Caritas+AR';">
-                            <div class="absolute inset-0 bg-white/10 group-hover:bg-black/60 transition-all duration-300">
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold text-primary mb-1">Caritas Gallery AR</h3>
-                            <p class="text-sm text-gray-500 mb-2">iOS AR App (2023)</p>
-                            <p class="text-gray-700 text-sm">Augmented Reality app to integrate logos into photos for
-                                events.</p>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="portfolio-item-custom group bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
-                    <a href="#jquery-details" class="block">
-                        <div class="relative h-56 overflow-hidden">
-                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                                src="assets/img/portfolio/thumbnails/3.jpg" alt="Rental Finder"
-                                onerror="this.onerror=null;this.src='https://placehold.co/600x400/4a5568/white?text=Rental+Finder';">
-                            <div class="absolute inset-0 bg-white/10 group-hover:bg-black/60 transition-all duration-300">
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold text-primary mb-1">Rental Apartments Finder</h3>
-                            <p class="text-sm text-gray-500 mb-2">jQuery + Java Android (2021)</p>
-                            <p class="text-gray-700 text-sm">Mobile app for finding, adding, and editing rental
-                                listings.</p>
-                        </div>
-                    </a>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section id="sentiment-details" class="project-detail-section page-section py-20 px-4 bg-white">
-        <div class="container mx-auto">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold text-gray-800">Smarter Sentiment Analysis with Fine-tuned LLM</h2>
-                <p class="text-primary mt-2">Python + LLM + LORA (2025)</p>
-                <hr class="divider w-20 h-1 bg-primary mx-auto mt-4 mb-6 rounded-full" />
-            </div>
-            <div class="max-w-4xl mx-auto">
-                <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-                    Our organization, with staff force over 4,000, has a wealth of valuable feedback captured in training evaluation reports dating back to 2013. We aim to develop a AI-empowered solution to extract and analyze this information, transforming unstructured text into strategic insights.
-                </p>
-
-                <img src="assets/img/SentiAna/20250812_AI_sharing.png" alt="Sentiment Analysis Diagram"
-                    class="rounded-lg shadow-xl mb-8 w-full h-auto object-cover"
-                    onerror="this.onerror=null;this.src='https://placehold.co/800x450/cccccc/333333?text=IMeMyMine+Diagram';">
-
-                <h4 class="text-2xl font-semibold text-gray-800 mb-4">A Smarter Approach to Sentiment Analysis</h4>
-                <p class="text-sm text-gray-700 mb-6 leading-relaxed">
-                    Using a large language model (LLM), we've successfully performed sentiment analysis on thousands of evaluation reports. Benefit from the Natural Language Processing (NLP) power of LLM, which can accurately analyze user feedback in multiple languages, including English and Chinese. The analyzed result is applied to fine-tune <B>(MLX framework)</B> the LLM using LoRA (Low-Rank Adaptation).
-                </p>
-
-                <img src="assets/img/SentiAna/ram.png" alt="Ram utilization Diagram"
-                    class="rounded-lg shadow-xl mb-8 w-full h-auto object-cover"
-                    onerror="this.onerror=null;this.src='https://placehold.co/800x450/cccccc/333333?text=IMeMyMine+Diagram';">
-                <p class="text-sm text-gray-700 mb-6 center">(Unified memory utilization during fine-tuning is around 40GB)</p>
-                <h4 class="text-2xl font-semibold text-gray-800 mb-4">Key Benefit</h4>
-                <p class="text-sm text-gray-700 mb-6 leading-relaxed">
-                    Unlike one-off sentiment analysis performed through a simple LLM prompt, this approach offers long-term benefits. By fine-tuning with historical evaluation data, the model retains the organization’s internal knowledge and collective insights. Over time, this continuous learning process further strengthens the model’s ability, ensuring that sentiment analysis on future evaluation reports becomes more accurate and reliable.
-                </p>
- 
-                <h4 class="text-2xl font-semibold text-gray-800 mb-4">Code Highlights</h4>
-                <div class="bg-gray-800 text-green-400 p-4 rounded-lg mb-8 overflow-x-auto">
-                    <pre class="text-sm"><code># Model selection for multilingual sentiment
-model_name = "clapAI/modernBERT-base-multilingual-sentiment"
-
-# Binary classification fine-tuning
-model = AutoModelForSequenceClassification.from_pretrained(
-    model_name,
-    num_labels=2,               # Binary classification
-    id2label=id2label,
-    label2id=label2id,
-    ignore_mismatched_sizes=True,
-)
-
-# Training parameters
-training_args = TrainingArguments(
-    output_dir='./fine_tuned_model',
-    num_train_epochs=3,
-    per_device_train_batch_size=8,
-    learning_rate=2e-5,
-)</code></pre>
-                </div>
-
-                <h4 class="text-2xl font-semibold text-gray-800 mb-4">Benefits</h4>
-                <ul class="list-disc list-inside space-y-2 text-gray-700 mb-8">
-                    <li>Reduced manual annotation effort through pre-trained models</li>
-                    <li>High accuracy with minimal training data requirement</li>
-                    <li>Scalable implementation for large datasets</li>
-                    <li>Efficient GPU utilization with MPS support</li>
-                    <li>Production-ready inference pipeline</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section id="linkyouin-details" class="project-detail-section page-section py-20 px-4 bg-gray-50">
-        <div class="container mx-auto">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold text-gray-800">LinkYouIn: AI-Powered Candidate Screening</h2>
-                <h3 class="text-center mt-3 text-secondary h6">Local-First Intelligent Recruitment Assistant using Dual
-                    LLMs</h3>
-                <p class="text-primary mt-2">Python + FastAPI + Ollama (2025)</p>
-                <hr class="divider w-20 h-1 bg-primary mx-auto mt-4 mb-6 rounded-full" />
-            </div>
-            <div class="max-w-4xl mx-auto">
-                <div class="mb-8">
-                    <h4 class="text-2xl font-semibold text-gray-800 mb-4">The Challenge</h4>
-                    <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-                        Recruiters often spend less than 10 seconds scanning a CV. High-volume hiring leads to fatigue,
-                        unconscious bias, and missed opportunities. While commercial AI tools exist, they often pose
-                        data privacy risks by sending sensitive PII (Personally Identifiable Information) to third-party
-                        clouds.
-                    </p>
-                </div>
-
-                <div class="mb-8">
-                    <h4 class="text-2xl font-semibold text-gray-800 mb-4">The Solution</h4>
-                    <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-                        <strong>LinkYouIn</strong> is a privacy-centric pipeline designed to run on local hardware. It
-                        ingests CVs (PDF/DOCX) from emails or uploads and processes them through a multi-stage AI
-                        analysis pipeline using <strong>Ollama</strong>. It orchestrates two distinct LLMs (Qwen &
-                        Gemma) to score candidates in parallel, reducing hallucination and AI bias.
-                    </p>
-                    <img src="assets/img/Gemini_Generated_Image_tc5wtxtc5wtxtc5w.png" alt="LinkYouIn Workflow"
-                        class="rounded-lg shadow-xl mb-4 w-full h-auto object-cover"
-                        onerror="this.onerror=null;this.src='https://placehold.co/800x450/cccccc/333333?text=Workflow+Diagram';">
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                    <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-primary">
-                        <h5 class="text-xl font-bold mb-2">Dual-Model Consensus</h5>
-                        <p class="text-sm text-gray-600">Orchestrates two different quantized LLMs to score candidates.
-                            Scores are averaged to create a balanced "Job Fit" metric.</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-accent">
-                        <h5 class="text-xl font-bold mb-2">Holistic Analysis</h5>
-                        <p class="text-sm text-gray-600">Beyond keywords, it analyzes "Career Stability" (gaps, tenure)
-                            and "Interest Levels" (salary matching) using a separate analyst agent.</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-gray-800">
-                        <h5 class="text-xl font-bold mb-2">Privacy First</h5>
-                        <p class="text-sm text-gray-600">Runs entirely locally. No candidate data is ever sent to
-                            external APIs like OpenAI.</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-red-500">
-                        <h5 class="text-xl font-bold mb-2">Fault Tolerance</h5>
-                        <p class="text-sm text-gray-600">Designed to fail gracefully; if one LLM hangs, the system
-                            defaults to the secondary model without crashing.</p>
-                    </div>
-                </div>
-
-                 <video controls class="rounded-lg shadow-xl w-full h-auto">
-                    <source src="assets/img/Sequence 01_1.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <BR>
-
-                <h4 class="text-2xl font-semibold text-gray-800 mb-4">Core Pipeline Logic</h4>
-                <div class="bg-gray-800 text-green-400 p-4 rounded-lg mb-8 overflow-x-auto">
-                    <pre class="text-sm"><code># Orchestrating Parallel LLM Scoring
-def score_cv(cv_path, job_req, salary):
-    cv_text = extract_text(cv_path)
-    
-    # 1. Parallel Job Fit Scoring (Qwen + Gemma)
-    with ThreadPoolExecutor(max_workers=2) as exc:
-        job_fit_func = partial(ask_llm_fit, job_req, cv_text)
-        results = list(exc.map(job_fit_func, [LLM_MODEL_1, LLM_MODEL_2]))
-    
-    # 2. Serial Deep Analysis (Career Stability & Interest)
-    interest_score = ask_llm_interest(cv_text, job_req, salary)
-    
-    return {
-        "job_fit_score": (results[0] + results[1]) / 2,
-        "interest_score": interest_score
-    }</code></pre>
-                </div>
-            </div>
+          <!-- Mobile Hamburger Toggle -->
+          <div class="md:hidden flex items-center">
+            <button 
+              id="nav-toggle" 
+              aria-label="Toggle navigation menu"
+              aria-expanded="false"
+              class="p-2 text-zinc-400 hover:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+            >
+              <i class="fas fa-bars text-lg"></i>
+            </button>
+          </div>
         </div>
 
+        <!-- Mobile Drawer Menu -->
+        <div id="mobile-menu" class="hidden md:hidden pt-4 pb-3 border-t border-zinc-800/80 mt-3 space-y-2">
+          <a href="#about" class="block py-2 text-sm text-zinc-400 hover:text-white">About &amp; Philosophy</a>
+          <a href="#works" class="block py-2 text-sm text-zinc-400 hover:text-white">Selected Works</a>
+          <a href="#archive" class="block py-2 text-sm text-zinc-400 hover:text-white">Code &amp; Deliverables</a>
+          <a href="#education" class="block py-2 text-sm text-zinc-400 hover:text-white">Credentials &amp; Education</a>
+          <a href="#contact" class="block py-2 text-sm text-zinc-400 hover:text-white">Contact &amp; Connect</a>
+          <div class="pt-3">
+            <a 
+              href="mailto:orpheuslau@gmail.com" 
+              class="w-full inline-flex items-center justify-center gap-2 text-xs font-semibold px-4 py-2.5 rounded-lg bg-orange-600 text-white"
+            >
+              <i class="fas fa-envelope"></i> orpheuslau@gmail.com
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section id="hero" class="relative min-h-[90vh] flex items-center justify-center pt-28 pb-20 px-6 sm:px-8 overflow-hidden bg-grid-pattern">
+      <!-- Ambient Radial Backlights -->
+      <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-orange-600/10 rounded-full blur-[120px] pointer-events-none"></div>
+      <div class="absolute bottom-10 right-10 w-[400px] h-[250px] bg-amber-500/5 rounded-full blur-[100px] pointer-events-none"></div>
+
+      <div class="max-w-5xl mx-auto text-center relative z-10">
         
-    </section>
-
-    <section id="nuvision-details" class="project-detail-section page-section py-20 px-4 bg-white">
-        <div class="container mx-auto">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold text-gray-800">NuVision: Your personal AI coach for nutrition and exercise
-                </h2>
-                <h3 class="text-center mt-3 text-secondary h6">Health for all regardless of lifestyle and age — make
-                    informed, healthier choices.</h3>
-                <p class="text-primary mt-2">LLM + Vision LM + iOS (2025)</p>
-                <hr class="divider w-20 h-1 bg-primary mx-auto mt-4 mb-6 rounded-full" />
-            </div>
-            <div class="max-w-4xl mx-auto">
-                <div class="col-lg-12 col-md-12 mb-lg-0 des text-sm">
-                    In Hong Kong, many families reside in subdivided flats with limited cooking space. This often makes
-                    preparing nutritious home-cooked meals difficult, leading to a heavy reliance on takeout. Such
-                    circumstances can pose significant challenges to maintaining a healthy and balanced diet,
-                    particularly for underprivileged communities.
-                    <p></p><BR>
-                    NuVision is an AI-powered iOS app that empowers you to take control of your health by balancing what
-                    you eat with how you move.
-                    <p></p><BR>
-                    Just snap a meal photo — NuVision uses AI to instantly analyze calories, protein, fat, carbs, and
-                    fiber. It connects with Apple Health to track your exercise, resting burn, steps, sleep, and daily
-                    activity, giving you a full picture of your lifestyle.
-                </div><BR>
-
-                   <video controls class="rounded-lg shadow-xl w-full h-auto">
-                    <source src="assets/img/nuphoto/20250812_NuVision.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <BR>
-                <BR>
-
-                <h4 class="text-2xl font-semibold text-gray-800 mb-4">Your personal AI health coach:</h4>
-                <ul class="list-disc list-inside space-y-2 text-gray-700 mb-8">
-                    <li>Analyze meals with one photo</li>
-                    <li>Track active + resting calories burned</li>
-                    <li>Holistic view combining diet & exercise</li>
-                    <li>Spot imbalances and get actionable tips</li>
-                    <li>Privacy First, local data storage with encryption</li>
-                </ul>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-                    <div class="mt-5 text-center">
-                        <div class="mb-2"><i class="bi bi-robot fs-1 text-primary custom-icon-size"></i></div>
-                        <B>
-                            <h3 class="h4 mb-2">Managing Nutrition and Exercise at once</h3>
-                        </B>
-                        <p class="text-muted text-sm mb-0">You don't just see what you ate and what you moved
-                            separately; you see them in relation to each other. This means understanding your net
-                            calorie balance.</p>
-                        <BR><img src="assets\img\nuphoto\output.png" alt="..." class="img-fluid" />
-                    </div>
-                    <div class="mt-5 text-center">
-                        <div class="mb-2"><i class="bi bi-clipboard-data fs-1 text-primary"></i></div>
-                        <B>
-                            <h3 class="h4 mb-2">Transform your daily routine with AI</h3>
-                        </B>
-                        <p class="text-muted text-sm mb-0">Instant food recognition to give you scientific nutritional
-                            estimations. Plus, receive the diet and exercise advice crafted from your personal profile,
-                            daily nutrition, and activity</p>
-                        <BR>
-                        <img src="assets\img\nuphoto\output2.png" alt="..." class="img-fluid" />
-                    </div>
-                    <div class="mt-5 text-center">
-                        <div class="mb-2"><i class="bi bi-person-hearts fs-1 text-primary"></i></div>
-                        <B>
-                            <h3 class="h4 mb-2">Your Privacy comes first and protected</h3>
-                        </B>
-                        <p class="text-muted text-sm mb-0">Stores and encrypts all data locally on your iOS devices, not
-                            on any cloud platform. Protecting user privacy with no collection of identifiable personal
-                            information is collected.
-                        </p><BR>
-                        <img src="assets\img\nuphoto\output3.png" alt="..." class="img-fluid" />
-                    </div>
-                    <div class="mt-5 text-center">
-                        <div class="mb-2"><i class="bi bi-graph-up-arrow fs-1 text-primary"></i></div>
-                        <B></v>
-                            <h3 class="h4 mb-2">Progress Tracking and data export</h3>
-                        </B>
-                        <p class="text-muted text-sm mb-0">Monitor your daily intake and view daily, weekly, and monthly
-                            trend reports to stay on track with your healthy eating goals. User can export his/her data
-                            into csv format.</p>
-                        <BR><img src="assets\img\nuphoto\output4.png" alt="..." class="img-fluid" />
-                    </div>
-                </div><BR>
-
-                <div class="row gx-4 gx-lg-5 mt-2">
-                    <h4 class="text-2xl font-semibold text-gray-800 mb-4">Our Mission with NuVision</h4>
-                    <p class="text-muted mb-0">
-                        NuVision is a non-profit dedicated to empowering underserved communities through accessible
-                        technology. Rather than competing in the race for AI innovation, we harness artificial
-                        intelligence to promote equality and well-being. Our commitment is to provide a free, ad-free,
-                        and privacy-first platform that ensures AI advancements bridge the digital divide rather than
-                        deepen it. As a professional in Social Work and Computer Science, this mission reflects my
-                        personal dedication to fostering opportunity and health for all through responsible technology.
-                    </p><BR>
-                    <img src="assets\img\nuphoto\output5.png" alt="..." class="img-fluid" />
-                </div>
-                <BR>
-
-                <BR>
-                <div class="row gx-4 gx-lg-5 mt-2">
-                    <h4 class="text-2xl font-semibold text-gray-800 mb-4">App Highlights</h4>
-                    <img src="assets\img\fout.png" alt="..." class="img-fluid" />
-                </div>
-                <BR>
-
-                <div class="text-center">
-                    <a href="https://apps.apple.com/tr/app/nuvision/id6746086162" target="_blank"
-                        class="btn bg-primary text-white hover:bg-primary/80 font-semibold py-2 px-6 rounded-full inline-flex items-center mr-2 mb-2 md:mb-0">
-                        <i class="fab fa-apple mr-2"></i> App Store (v1.5)
-                    </a>
-                    <a href="https://play.google.com/store/apps/details?id=com.mycrossplatformapp"
-                        target="_blank"
-                        class="btn bg-blue-600 text-white hover:bg-blue-400 font-semibold py-2 px-6 rounded-full inline-flex items-center">
-                        <i class="fab fa-google mr-2"></i> Android (v1.2)
-                    </a>
-                   
-                    <a href="https://youtu.be/4cvz1z18Xy8?si=vFzz6WyID1SacJvQ" target="_blank"
-                        class="btn bg-red-600 text-white hover:bg-red-700 font-semibold py-2 px-6 rounded-full inline-flex items-center">
-                        <i class="fab fa-youtube mr-2"></i> YouTube Demo
-                    </a>
-                </div>
-            </div>
+        <!-- Status Indicator / Tagline (Unboxed, clean) -->
+        <div class="inline-flex items-center gap-2 text-xs font-mono text-zinc-400 mb-6">
+          <span class="w-2 h-2 rounded-full bg-orange-500"></span>
+          <span>ARTIFICIAL INTELLIGENCE · CYBERSECURITY · SOCIAL IMPACT</span>
+          <span class="hidden sm:inline">·</span>
+          <span class="hidden sm:inline text-zinc-400">20+ YEARS SECTOR LEADERSHIP</span>
         </div>
-    </section>
 
-    <section id="imemymine-details" class="project-detail-section page-section py-20 px-4 bg-gray-50">
-        <div class="container mx-auto">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold text-gray-800">IMeMyMine: AI Face Swap App</h2>
-                <p class="text-primary mt-2">Pytorch + SDXL + iOS (2024)</p>
-                <hr class="divider w-20 h-1 bg-primary mx-auto mt-4 mb-6 rounded-full" />
-            </div>
-            <div class="max-w-4xl mx-auto">
-                <img src="assets/img/imemymine.png" alt="IMeMyMine Diagram"
-                    class="rounded-lg shadow-xl mb-8 w-full h-auto object-cover"
-                    onerror="this.onerror=null;this.src='https://placehold.co/800x450/cccccc/333333?text=IMeMyMine+Diagram';">
-                <p class="text-sm text-gray-700 mb-6 leading-relaxed">
-                    This project aims to promote inclusion at a convention through an innovative iOS mobile app that
-                    uses AI-powered
-                    face-swapping technology. Users can transform their faces into various thematic portraits, visually
-                    demonstrating
-                    the diverse identities they can embody.
-                    <BR>
-                    <BR>
-                    To achieve this, the team overcame the technical challenge of face-swapping's computational demands
-                    by
-                    implementing a client-server architecture. They meticulously selected a powerful AI model,
-                    "IP-Adapter," and
-                    fine-tuned it over weeks to ensure efficient and visually appealing results.
-                    <BR>
-                    <BR>
-                    The final stage involves developing the user-friendly mobile app interface. This interactive
-                    experience aims to
-                    spark conversations about inclusion and celebrate human diversity, leaving a lasting impact on
-                    attendees.
-                    Essentially, the project combines cutting-edge technology with a powerful message to create a
-                    memorable and
-                    thought-provoking experience that promotes inclusivity.
-                </p><BR>
-                <h4 class="text-2xl font-semibold text-gray-800 mb-4">Highlights:</h4>
-                <ul class="list-disc list-inside space-y-2 text-gray-700 mb-8">
-                    <li>Modern AI Technology: Implements "IP-Adapter" for face swapping.</li>
-                    <li>Client-Server Architecture: Ensures a user-friendly mobile experience.</li>
-                    <li>User-Centric Design: Simple interface for photo capture and sharing.</li>
-                    <li>Impactful Message: Promotes inclusion by celebrating individuality and diversity.</li>
-                </ul>
-                <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
-                    <img src="assets/img/im1.png" alt="IMeMyMine Example 1" class="rounded-md shadow-md"
-                        onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=Example+1';">
-                    <img src="assets/img/im2.png" alt="IMeMyMine Example 2" class="rounded-md shadow-md"
-                        onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=Example+2';">
-                    <img src="assets/img/im3.png" alt="IMeMyMine Example 3" class="rounded-md shadow-md"
-                        onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=Example+3';">
-                </div>
-                <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
-                    <img src="assets/img/im4.png" alt="IMeMyMine Example 4" class="rounded-md shadow-md"
-                        onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=Example+1';">
-                    <img src="assets/img/im5.png" alt="IMeMyMine Example 5" class="rounded-md shadow-md"
-                        onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=Example+2';">
-                    <img src="assets/img/im6.png" alt="IMeMyMine Example 6" class="rounded-md shadow-md"
-                        onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=Example+3';">
-                </div>
-                <div class="text-center">
-                    <a href="https://youtu.be/U5Sx3Rk-iEE?si=l24-UgYKbaMJQn0p" target="_blank"
-                        class="btn bg-red-600 text-white hover:bg-red-700 font-semibold py-2 px-6 rounded-full inline-flex items-center">
-                        <i class="fab fa-youtube mr-2"></i> YouTube Demo
-                    </a>
-                    <a href="https://github.com/tencent-ailab/IP-Adapter/tree/main" target="_blank"
-                        class="btn bg-gray-800 text-white hover:bg-gray-900 font-semibold py-2 px-6 rounded-full inline-flex items-center ml-2">
-                        <i class="fab fa-github mr-2"></i> IP-Adapter Resource
-                    </a>
-                </div>
-            </div>
+        <!-- Editorial Headline with Serif Elegance -->
+        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-light text-zinc-100 tracking-tight leading-[1.1] mb-8 font-serif-display">
+          Building <span class="italic text-zinc-200">intelligence</span> at the edge of human impact.
+        </h1>
+
+        <!-- Subheading Paragraph -->
+        <p class="text-base sm:text-lg lg:text-xl text-zinc-400 max-w-3xl mx-auto leading-relaxed font-normal mb-10">
+          I engineer production-grade AI systems, edge computer vision pipelines, and cryptographic mobile applications—translating complex human service needs into resilient, privacy-preserving technology.
+        </p>
+
+        <!-- Technical Ticker (Unboxed metadata style) -->
+        <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs font-mono text-zinc-400 mb-12">
+          <span>Multi-Agent &amp; Deterministic Routing</span>
+          <span class="text-zinc-700">/</span>
+          <span>Hybrid RAG &amp; BigQuery Vector</span>
+          <span class="text-zinc-700">/</span>
+          <span>Archival RAG &amp; Curatorial Guardrails</span>
+          <span class="text-zinc-700">/</span>
+          <span>Dual-LLM Consensus</span>
+          <span class="text-zinc-700">/</span>
+          <span>LoRA on Apple MLX</span>
         </div>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a 
+            href="#works" 
+            class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-orange-600 hover:bg-orange-500 text-white font-semibold text-xs tracking-wider uppercase transition-all shadow-lg shadow-orange-950/40 hover:-translate-y-0.5"
+          >
+            <span>Explore Selected Works</span>
+            <i class="fas fa-arrow-down text-xs"></i>
+          </a>
+          <a 
+            href="#about" 
+            class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-zinc-900 hover:bg-zinc-800 text-zinc-300 hover:text-white font-semibold text-xs tracking-wider uppercase border border-zinc-700/60 transition-all hover:border-zinc-500 hover:-translate-y-0.5"
+          >
+            <span>Read Leadership Profile</span>
+            <i class="fas fa-user text-xs text-zinc-500"></i>
+          </a>
+        </div>
+      </div>
     </section>
 
-    <section id="airaffle-details" class="project-detail-section page-section py-20 px-4 bg-white">
-        <div class="container mx-auto">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold text-gray-800">AI Raffle</h2>
-                <p class="text-primary mt-2">YOLOv10 + CV2 + Python + Roboflow (2024)</p>
-                <hr class="divider w-20 h-1 bg-primary mx-auto mt-4 mb-6 rounded-full" />
+    <!-- SECTION 01: ABOUT & LEADERSHIP NARRATIVE -->
+    <section id="about" class="py-24 px-6 sm:px-8 border-t border-zinc-800/80 relative">
+      <div class="max-w-6xl mx-auto">
+        
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+          <div>
+            <div class="text-xs font-mono text-orange-400 uppercase tracking-widest mb-2">
+              01 // Background &amp; Philosophy
             </div>
+            <h2 class="text-3xl sm:text-4xl font-light text-zinc-100 font-serif-display tracking-tight">
+              Bridging computing rigor with <span class="italic">human welfare</span>.
+            </h2>
+          </div>
+          <p class="text-xs font-mono text-zinc-400 max-w-sm">
+            Two decades spent deploying frontline digital transformations for 4,000+ staff and diverse community cohorts.
+          </p>
+        </div>
 
-            <div class="max-w-4xl mx-auto">
+        <!-- Narrative & Core Competencies Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+          
+          <!-- Narrative Prose (7 Cols) -->
+          <div class="lg:col-span-7 space-y-6 text-base text-zinc-300 leading-relaxed">
+            <p>
+              I am a technology leader with over twenty years of deep, dedicated experience across the social services sector. My career is defined by a unique dual foundation: holding formal degrees in both <strong class="text-white font-medium">Computing Science (1st Class Honours)</strong> and <strong class="text-white font-medium">Social Work / Social Sciences</strong> from top universities.
+            </p>
+            <p class="text-zinc-400">
+              Rather than pursuing innovation in a vacuum, I specialize in translating delicate, high-stakes human challenges into robust computational systems. Over the years, I have architected and deployed enterprise case information systems, biometric credential managers, augmented reality platforms, and high-throughput computer vision workstations.
+            </p>
+            <p class="text-zinc-400">
+              Currently pursuing a <strong class="text-zinc-200 font-medium">Master in Artificial Intelligence at the University of Leeds</strong>, my recent technical focus centers on privacy-first local LLM orchestration, parameter-efficient LoRA fine-tuning for specialized institutional knowledge retention, and mobile health utilities engineered specifically for underserved populations.
+            </p>
 
-                <h4 class="text-xl font-semibold text-gray-800 mb-4">Streamlining Caritas Raffle Verification with AI
-                </h4>
-                <p class="text-sm text-gray-700 mb-6 leading-relaxed">
-                    Each year, Caritas prints approximately 1 million raffle tickets, and for over decades, we have
-                    manually verified the serial number of each ticket to ensure printing accuracy, a requirement for
-                    government licensing. This labor-intensive process demands a team of staff annually, consuming
-                    significant manpower. In 2024, we aim to eliminate this repetitive task by leveraging advanced AI
-                    object recognition technology. By adopting this innovative approach, we can achieve unprecedented
-                    accuracy and efficiency, freeing up valuable resources for our mission-driven work.
+            <!-- Key Architectural Principles -->
+            <div class="pt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="p-5 rounded-xl bg-zinc-900/50 border border-zinc-800/80">
+                <div class="text-xs font-mono text-orange-400 mb-1">01. PRIVACY AT THE PERIMETER</div>
+                <p class="text-xs text-zinc-400 leading-relaxed">
+                  Strict zero-PII cloud egress. Sensitive beneficiary records and candidate evaluations are processed strictly on local hardware or client devices.
                 </p>
-
-                <video controls class="rounded-lg shadow-xl w-full h-auto">
-                    <source src="assets/img/airaffle/C0362.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-
-                <BR>
-                <BR>
-
-                <h4 class="text-xl font-semibold text-gray-800 mb-4">Roadmap:</h4>
-
-                <table class="table-auto border-collapse border border-gray-300 w-full text-sm text-gray-700 mb-8">
-                    <thead>
-
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="border border-gray-300 px-2 py-4">
-                                <strong>(1) Dataset Development:</strong> Annotated approximately 1,000 raffle tickets
-                                in Roboflow to create a robust dataset for training.
-                            </td>
-                            <td class="border border-gray-300 px-2 py-4">
-                                <img src="assets/img/airaffle/Roboscreenshot.png" alt="Dataset Development"
-                                    class=" h-auto rounded-lg shadow-md cursor-pointer"
-                                    onclick="showImage('assets/img/airaffle/Roboscreenshot.png')">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="border border-gray-300 px-2 py-4">
-                                <strong>(2) Model Training Environment:</strong> Configured an Ubuntu server with an RTX
-                                4090 GPU, utilizing YOLO, Python, and Jupyter Notebook for model training.
-                            </td>
-                            <td class="border border-gray-300 px-2 py-4">
-                                <img src="assets/img/airaffle/jupyter.png" alt="Model Training Environment"
-                                    class=" h-auto rounded-lg shadow-md cursor-pointer"
-                                    onclick="showImage('assets/img/airaffle/jupyter.png')">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="border border-gray-300 px-2 py-4">
-                                <strong>(3) Model Optimization:</strong> Achieved a remarkable 90% accuracy after
-                                multiple rounds of fine-tuning, ensuring reliable serial number detection.
-                            </td>
-                            <td class="border border-gray-300 px-2 py-4">
-                                <img src="assets/img/airaffle/results.png" alt="Model Optimization"
-                                    class="h-auto rounded-lg shadow-md cursor-pointer"
-                                    onclick="showImage('assets/img/airaffle/results.png')">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="border border-gray-300 px-2 py-4">
-                                <strong>(4) Real-Time Inference:</strong> Implemented video-based inference for rapid
-                                scanning of raffle tickets, enhancing processing speed.
-                            </td>
-                            <td class="border border-gray-300 px-2 py-4">
-                                <img src="assets/img/airaffle/airaffle_main.jpg" alt="Model Optimization"
-                                    class="h-auto rounded-lg shadow-md cursor-pointer"
-                                    onclick="showImage('assets/img/airaffle/airaffle_main.jpg')">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="border border-gray-300 px-2 py-4">
-                                <strong>(5) Data Management:</strong> Sorted and stored recorded serial numbers in CSV
-                                format for efficient record-keeping and verification.
-                            </td>
-                            <td class="border border-gray-300 px-2 py-4">
-                                <img src="assets/img/airaffle/csvfile.png" alt="Model Optimization"
-                                    class="h-25 rounded-lg shadow-md cursor-pointer"
-                                    onclick="showImage('assets/img/airaffle/csvfile.png')">
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <div id="imageModal"
-                    class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center hidden"
-                    onclick="closeImage()">
-                    <img id="modalImage" src="" alt="Full Image" class="max-w-full max-h-full rounded-lg shadow-lg"
-                        onclick="event.stopPropagation()">
-                    <button onclick="closeImage()"
-                        class="absolute top-4 right-4 text-white text-2xl font-bold">&times;</button>
-                </div>
-                <BR>
-
-                <h4 class="text-xl font-semibold text-gray-800 mb-4">Key Features:</h4>
-                <ul class="text-sm list-disc list-inside space-y-2 text-gray-700 mb-8">
-                    <li><strong>YOLOv10 Object Detection Framework:</strong> AI Raffle utilizes YOLOv10, a
-                        state-of-the-art object detection framework, to enable real-time recognition of raffle ticket
-                        serial numbers with fast and reliable performance.</li>
-                    <li><strong>Roboflow Integration:</strong> Utilizes Roboflow for dataset management, annotation, and
-                        model training, simplifying the machine learning workflow.</li>
-                    <li><strong>High Accuracy:</strong> Achieves over 90% accuracy in recognizing serial numbers,
-                        minimizing errors and ensuring reliable results..</li>
-                    <li><strong>Resource Efficiency:</strong> Designed to be lightweight, AI Raffle can operate on a
-                        MacBook Air, using an iPhone as the camera input, making it accessible and cost-effective for
-                        small-scale operations.</li>
-                    <li><strong>CSV Output:</strong> All recorded raffle ticket serial numbers are saved in a CSV
-                        format, enabling easy data management and integration with other systems.</li>
-                </ul>
-
-                <div class="text-center">
-                    <a href="https://www.youtube.com/watch?v=z1p9N5ivJO8&list=PLapYgavEwJHApfBsrHKFdoraWmGXGC7Mg&index"
-                        target="_blank"
-                        class="btn bg-red-600 text-white hover:bg-red-700 font-semibold py-2 px-6 rounded-full inline-flex items-center">
-                        <i class="fab fa-youtube mr-2"></i> YouTube Demo
-                    </a>
-                </div>
-
+              </div>
+              <div class="p-5 rounded-xl bg-zinc-900/50 border border-zinc-800/80">
+                <div class="text-xs font-mono text-orange-400 mb-1">02. SOCIAL MISSION EQUALITY</div>
+                <p class="text-xs text-zinc-400 leading-relaxed">
+                  Harnessing frontier models to actively bridge the digital divide for low-income families and non-profit operations rather than commercial lock-in.
+                </p>
+              </div>
             </div>
+          </div>
+
+          <!-- Academic & Credentials Stack (5 Cols) -->
+          <div id="education" class="lg:col-span-5 p-6 sm:p-7 rounded-2xl bg-zinc-900/40 border border-zinc-800/80 space-y-6">
+            <div class="flex items-center justify-between border-b border-zinc-800/80 pb-4">
+              <h3 class="text-sm font-semibold tracking-wide text-zinc-100 uppercase font-mono">
+                Academic Credentials
+              </h3>
+              <span class="text-xs text-orange-400 font-mono">Continuous Mastery</span>
+            </div>
+
+            <ul class="space-y-4 text-xs">
+              <li class="flex items-start gap-3">
+                <span class="text-orange-400 mt-0.5"><i class="fas fa-graduation-cap"></i></span>
+                <div>
+                  <div class="font-semibold text-zinc-200">Master in Artificial Intelligence</div>
+                  <div class="text-zinc-400">University of Leeds (Ongoing, 2027)</div>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-orange-400 mt-0.5"><i class="fas fa-award"></i></span>
+                <div>
+                  <div class="font-semibold text-zinc-200">Bachelor of Computing Science (1st Class Hon)</div>
+                  <div class="text-zinc-400">University of Greenwich</div>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-orange-400 mt-0.5"><i class="fab fa-google"></i></span>
+                <div>
+                  <div class="font-semibold text-zinc-200">Google Data Analytics Professional Certificate</div>
+                  <div class="text-zinc-400">Google Professional Accreditation</div>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-orange-400 mt-0.5"><i class="fas fa-graduation-cap"></i></span>
+                <div>
+                  <div class="font-semibold text-zinc-200">Master of Social Sciences (Management)</div>
+                  <div class="text-zinc-400">The University of Hong Kong</div>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-orange-400 mt-0.5"><i class="fas fa-certificate"></i></span>
+                <div>
+                  <div class="font-semibold text-zinc-200">Diploma in Information Technology</div>
+                  <div class="text-zinc-400">The University of Hong Kong (SPACE)</div>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-orange-400 mt-0.5"><i class="fas fa-graduation-cap"></i></span>
+                <div>
+                  <div class="font-semibold text-zinc-200">Bachelor of Social Work (Honours)</div>
+                  <div class="text-zinc-400">The University of Hong Kong</div>
+                </div>
+              </li>
+            </ul>
+
+            <!-- Core Skill Matrix Badges (Clean text style) -->
+            <div class="pt-4 border-t border-zinc-800/80">
+              <div class="text-[11px] font-mono text-zinc-400 mb-2">DOMAINS OF SPECIALIZATION</div>
+              <div class="text-xs text-zinc-400 space-y-1 font-mono">
+                <div>· Machine Learning: PyTorch, MLX, LoRA, YOLOv10, Ollama</div>
+                <div>· Mobile &amp; Edge: Swift, SwiftUI, SwiftData, HealthKit, ARKit</div>
+                <div>· Web &amp; Backend: Python FastAPI, Node.js, React, MongoDB</div>
+                <div>· Security: Biometrics, Swift Crypto, Role-Based Access</div>
+              </div>
+            </div>
+          </div>
+
         </div>
+      </div>
     </section>
 
-    <section id="passsecure-details" class="project-detail-section page-section py-20 px-4 bg-white">
-        <div class="container mx-auto">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold text-gray-800">Pass Secure: iOS Password Manager</h2>
-                <p class="text-primary mt-2">SwiftData + CloudKit + iOS (2024)</p>
-                <hr class="divider w-20 h-1 bg-primary mx-auto mt-4 mb-6 rounded-full" />
+    <!-- SECTION 02: SELECTED WORKS / PORTFOLIO -->
+    <section id="works" class="py-24 px-6 sm:px-8 border-t border-zinc-800/80 bg-zinc-950/40">
+      <div class="max-w-6xl mx-auto">
+        
+        <!-- Section Header & Filter Controls -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+          <div>
+            <div class="text-xs font-mono text-orange-400 uppercase tracking-widest mb-2">
+              02 // Selected Works &amp; Case Studies
             </div>
-            <div class="max-w-4xl mx-auto">
-                <img src="assets/img/portfolio/thumbnails/thumbnail_passSecure.jpg" alt="Pass Secure App"
-                    class="rounded-lg shadow-xl mb-8 w-full h-auto object-contain max-h-[400px]"
-                    onerror="this.onerror=null;this.src='https://placehold.co/800x450/cccccc/333333?text=Pass+Secure+App';">
-                <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-                    Pass Secure is an iOS app designed for easy and secure password management. It leverages SwiftData
-                    and iCloudKit for local data protection and seamless synchronization across Apple devices.
-                </p>
-                <h4 class="text-2xl font-semibold text-gray-800 mb-4">Security Features:</h4>
-                <ul class="list-disc list-inside space-y-2 text-gray-700 mb-8">
-                    <li>Biometric (Face ID/Fingerprint) or Passcode authentication.</li>
-                    <li>Passcode records synchronize across your iOS devices.</li>
-                    <li>Encrypted PDF export and plain CSV export options.</li>
-                    <li>Automatic session time-out every 5 minutes.</li>
-                    <li>Keyword search functionality.</li>
-                </ul>
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
-                    <img src="assets/img/ps1.png" alt="Pass Secure Feature 1"
-                        class="rounded-md shadow-md object-contain h-80 mx-auto"
-                        onerror="this.onerror=null;this.src='https://placehold.co/300x600/cccccc/333333?text=PS+Screen+1';">
-                    <img src="assets/img/ps3.png" alt="Pass Secure Feature 2"
-                        class="rounded-md shadow-md object-contain h-80 mx-auto"
-                        onerror="this.onerror=null;this.src='https://placehold.co/300x600/cccccc/333333?text=PS+Screen+2';">
-                    <img src="assets/img/ps4.png" alt="Pass Secure Feature 3"
-                        class="rounded-md shadow-md object-contain h-80 mx-auto"
-                        onerror="this.onerror=null;this.src='https://placehold.co/300x600/cccccc/333333?text=PS+Screen+3';">
-                </div>
-                <div class="text-center">
-                    <a href="https://apps.apple.com/hk/app/pass-secure-password-manager/id6479182542" target="_blank"
-                        class="btn bg-primary text-white hover:bg-primary/80 font-semibold py-2 px-6 rounded-full inline-flex items-center mr-2 mb-2 md:mb-0">
-                        <i class="fab fa-apple mr-2"></i> App Store
-                    </a>
-                    <a href="https://github.com/orpheuslau/Pass-Secure/tree/main" target="_blank"
-                        class="btn bg-gray-800 text-white hover:bg-gray-900 font-semibold py-2 px-6 rounded-full inline-flex items-center">
-                        <i class="fab fa-github mr-2"></i> GitHub
-                    </a>
-                </div>
-            </div>
+            <h2 class="text-3xl sm:text-4xl font-light text-zinc-100 font-serif-display tracking-tight">
+              Engineered systems, <span class="italic">deployed in production</span>.
+            </h2>
+          </div>
+
+          <!-- Segmented Filter Tabs (Buttons allowed under anti-slop guidelines) -->
+          <div class="inline-flex p-1 rounded-xl bg-zinc-900 border border-zinc-800 text-xs font-medium self-start md:self-auto overflow-x-auto max-w-full">
+            <button data-filter="all" class="filter-tab-btn px-3.5 py-1.5 rounded-lg bg-zinc-800 text-white shadow-sm transition-all whitespace-nowrap">
+              All Works
+            </button>
+            <button data-filter="ai" class="filter-tab-btn px-3.5 py-1.5 rounded-lg text-zinc-400 hover:text-zinc-200 transition-all whitespace-nowrap">
+              AI &amp; LLMs
+            </button>
+            <button data-filter="vision" class="filter-tab-btn px-3.5 py-1.5 rounded-lg text-zinc-400 hover:text-zinc-200 transition-all whitespace-nowrap">
+              Computer Vision
+            </button>
+            <button data-filter="mobile" class="filter-tab-btn px-3.5 py-1.5 rounded-lg text-zinc-400 hover:text-zinc-200 transition-all whitespace-nowrap">
+              iOS &amp; Security
+            </button>
+            <button data-filter="fullstack" class="filter-tab-btn px-3.5 py-1.5 rounded-lg text-zinc-400 hover:text-zinc-200 transition-all whitespace-nowrap">
+              Full-Stack &amp; AR
+            </button>
+          </div>
         </div>
+
+        <!-- Dynamic Projects Grid -->
+        <div id="projectsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          <!-- Populated dynamically by scripts8.js -->
+        </div>
+
+        <!-- Interactive Case Study Modal Hint -->
+        <div class="mt-12 text-center text-xs font-mono text-zinc-400">
+          Click any case study to inspect technical challenges, pipeline architecture, sample code, and live demo links.
+        </div>
+      </div>
     </section>
 
-    <section id="smis-details" class="project-detail-section page-section py-20 px-4 bg-gray-50">
-        <div class="container mx-auto">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold text-gray-800">Full Stack Application: SMIS</h2>
-                <p class="text-primary mt-2">React.js + Node.js + MongoDB (2024)</p>
-                <hr class="divider w-20 h-1 bg-primary mx-auto mt-4 mb-6 rounded-full" />
+    <!-- SECTION 03: TECHNICAL REPOSITORY & DELIVERABLES ARCHIVE -->
+    <section id="archive" class="py-24 px-6 sm:px-8 border-t border-zinc-800/80">
+      <div class="max-w-6xl mx-auto">
+        
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-4">
+          <div>
+            <div class="text-xs font-mono text-orange-400 uppercase tracking-widest mb-2">
+              03 // Code &amp; Deliverables Registry
             </div>
-            <div class="max-w-4xl mx-auto">
-                <img src="assets/img/smis.png" alt="SMIS Diagram"
-                    class="rounded-lg shadow-xl mb-8 w-full h-auto object-cover"
-                    onerror="this.onerror=null;this.src='https://placehold.co/800x450/cccccc/333333?text=SMIS+Diagram';">
-                <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-                    The Student Management Information System (SMIS) is a full-stack web application built with ReactJS
-                    for the frontend, Node.js for the backend, and MongoDB as the database. It features JWT for secure
-                    authentication.
-                </p>
-                <h4 class="text-2xl font-semibold text-gray-800 mb-4">Key Pages & Features:</h4>
-                <ul class="list-disc list-inside space-y-2 text-gray-700 mb-8">
-                    <li>Student Profile Management (CRUD operations).</li>
-                    <li>Assessment Management (CRUD operations).</li>
-                    <li>Export data to PDF and Excel formats.</li>
-                    <li>Dashboard for student data visualization.</li>
-                    <li>Search functionality for profiles and assessments.</li>
-                    <li>User setup and management for administrators.</li>
-                </ul>
-                <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
-                    <div>
-                        <img src="assets/img/1.png" alt="SMIS Feature 1" class="rounded-md shadow-md"
-                            onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=SMIS+Feature+1';">
-                        <strong> Student Profile
-                            (CRUD)</strong>
-                        <p class="text-muted"> This page allows teachers to manage student profiles, including creating,
-                            reading, updating, and deleting student information.
-                            CRUD operations refer to the basic functions of persistent storage.</p>
-                    </div>
-                    <div>
-                        <img src="assets/img/2.png" alt="SMIS Feature 1" class="rounded-md shadow-md"
-                            onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=SMIS+Feature+1';">
-                        <strong> Assessment
-                            (CRUD)</strong>
-                        <p class="text-muted"> Teachers can create, read, update, and delete assessments on this page.
-                            Assessments are an integral part of the educational process, allowing teachers to evaluate
-                            student performance</p>
-                    </div>
-                    <div>
-                        <img src="assets/img/3.png" alt="SMIS Feature 1" class="rounded-md shadow-md"
-                            onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=SMIS+Feature+1';">
-                        <strong> Export in
-                            PDF
-                            and Excel Format</strong>
-                        <p class="text-muted"> This feature enables teachers to generate individual assessment reports
-                            for
-                            students in PDF format.
-                            PDF can serve as a print-out version and present to other parties. Also teachers can export
-                            consolidated assessment results in Excel format for complex data manipulation and analysis.
-                        </p>
-                    </div>
-                </div>
+            <h2 class="text-3xl sm:text-4xl font-light text-zinc-100 font-serif-display tracking-tight">
+              Master repository &amp; <span class="italic">artifact directory</span>.
+            </h2>
+          </div>
 
-                <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
-                    <div>
-                        <img src="assets/img/4.png" alt="SMIS Feature 1" class="rounded-md shadow-md"
-                            onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=SMIS+Feature+1';">
-                        <strong> Dashboard
-                            of
-                            Student Data</strong>
-                        <p class="text-muted"> The dashboard provides a visual representation of student and assessment
-                            data,
-                            allowing teachers to
-                            gain insights and track progress. Visualizing data through charts and graphs can aid in
-                            decision-making and identifying trends.
-                            Search.</p>
-                    </div>
-                    <div>
-                        <img src="assets/img/5.png" alt="SMIS Feature 1" class="rounded-md shadow-md"
-                            onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=SMIS+Feature+1';">
-                        <strong> Search</strong>
-                        <p class="text-muted">This feature enables teachers to search for specific student profiles or
-                            assessments based on
-                            various criteria.
-                            Efficient search functionality enhances user experience and improves productivity.</p>
-                    </div>
-                    <div>
-                        <img src="assets/img/6.png" alt="SMIS Feature 1" class="rounded-md shadow-md"
-                            onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=SMIS+Feature+1';">
-                        <strong> User Setup
-                            (Administrator)</strong>
-                        <p class="text-muted"> This page allows the administrators to create and manage user accounts
-                            for
-                            the
-                            application.
-                            Administrators have the authority to grant or revoke access privileges to different users.
-                            While
-                            common users can only access their own record and change their passwords securely, ensuring
-                            the
-                            confidentiality of their
-                            accounts.</p>
-                    </div>
-
-                </div>
-
-                <div class="text-center">
-                    <a href="http://front.orpheuslau.dev/" target="_blank"
-                        class="btn bg-accent text-white hover:bg-accent/80 font-semibold py-2 px-6 rounded-full inline-flex items-center mr-2 mb-2 md:mb-0">
-                        <i class="fas fa-external-link-alt mr-2"></i> Demo Site
-                    </a>
-                    <a href="https://github.com/orpheuslau/ReactJSfrontend" target="_blank"
-                        class="btn bg-gray-800 text-white hover:bg-gray-900 font-semibold py-2 px-6 rounded-full inline-flex items-center">
-                        <i class="fab fa-github mr-2"></i> GitHub
-                    </a>
-                </div>
+          <!-- Quick Search Filter -->
+          <div class="w-full sm:w-64">
+            <div class="relative">
+              <i class="fas fa-search absolute left-3.5 top-1/2 -translate-y-1/2 text-xs text-zinc-500"></i>
+              <input 
+                type="text" 
+                placeholder="Filter by keyword..." 
+                oninput="filterArchiveTable(this.value)"
+                class="w-full bg-zinc-900 border border-zinc-800 rounded-xl pl-9 pr-4 py-2 text-xs text-zinc-200 placeholder-zinc-500 focus:outline-none focus:border-orange-500"
+              />
             </div>
+          </div>
         </div>
+
+        <!-- Master Deliverables Table -->
+        <div class="overflow-x-auto rounded-2xl border border-zinc-800/80 bg-zinc-900/30">
+          <table class="w-full text-xs text-left border-collapse">
+            <thead>
+              <tr class="border-b border-zinc-800/80 bg-zinc-900/80 text-zinc-400 font-mono uppercase tracking-wider text-[11px]">
+                <th class="py-4 px-6">Project Name</th>
+                <th class="py-4 px-6">Domain &amp; Tech Stack</th>
+                <th class="py-4 px-6">Year</th>
+                <th class="py-4 px-6 text-center">Repository</th>
+                <th class="py-4 px-6 text-right">Production Artifacts</th>
+              </tr>
+            </thead>
+            <tbody id="archiveTableBody" class="divide-y divide-zinc-800/60 font-sans">
+              
+              <!-- DSE Bot -->
+              <tr class="hover:bg-zinc-800/30 transition-colors">
+                <td class="py-4 px-6 font-medium text-zinc-100">
+                  <button onclick="openCaseStudy('dse-bot')" class="hover:text-orange-400 text-left transition-colors font-semibold">
+                    DSE Bot: Multi-Agent Admissions &amp; Counseling
+                  </button>
+                  <div class="text-[11px] text-zinc-400 font-mono mt-0.5">Deterministic JUPAS math + empathetic LLM guidance</div>
+                </td>
+                <td class="py-4 px-6 text-zinc-400 font-mono">Multi-Agent · Python Engine · Docker · GCP Cloud Run</td>
+                <td class="py-4 px-6 text-zinc-400 font-mono">2025</td>
+                <td class="py-4 px-6 text-center text-zinc-400 font-mono">GCP Serverless</td>
+                <td class="py-4 px-6 text-right">
+                  <button onclick="openCaseStudy('dse-bot')" class="inline-flex items-center gap-1.5 text-orange-400 hover:text-orange-300 font-medium">
+                    <i class="fas fa-file-lines"></i> <span>Case Study</span>
+                  </button>
+                </td>
+              </tr>
+
+              <!-- LSG & LF AI Policy Navigator -->
+              <tr class="hover:bg-zinc-800/30 transition-colors">
+                <td class="py-4 px-6 font-medium text-zinc-100">
+                  <button onclick="openCaseStudy('lsg-navigator')" class="hover:text-orange-400 text-left transition-colors font-semibold">
+                    LSG &amp; LF AI Policy Navigator
+                  </button>
+                  <div class="text-[11px] text-zinc-400 font-mono mt-0.5">Hybrid RAG (BM25 + BigQuery Vector) with RRF</div>
+                </td>
+                <td class="py-4 px-6 text-zinc-400 font-mono">Hybrid RAG · Next.js · Vertex AI · BigQuery · Gemini</td>
+                <td class="py-4 px-6 text-zinc-400 font-mono">2025</td>
+                <td class="py-4 px-6 text-center text-zinc-400 font-mono">Governance Tool</td>
+                <td class="py-4 px-6 text-right">
+                  <button onclick="openCaseStudy('lsg-navigator')" class="inline-flex items-center gap-1.5 text-orange-400 hover:text-orange-300 font-medium">
+                    <i class="fas fa-file-lines"></i> <span>Case Study</span>
+                  </button>
+                </td>
+              </tr>
+
+              <!-- Diocese 80th Tour Guide -->
+              <tr class="hover:bg-zinc-800/30 transition-colors">
+                <td class="py-4 px-6 font-medium text-zinc-100">
+                  <button onclick="openCaseStudy('messengers-of-hope')" class="hover:text-orange-400 text-left transition-colors font-semibold">
+                    Diocese 80th Exhibition Tour Guide ("Messengers of Hope")
+                  </button>
+                  <div class="text-[11px] text-zinc-400 font-mono mt-0.5">Archival RAG &amp; multilingual kiosk docent</div>
+                </td>
+                <td class="py-4 px-6 text-zinc-400 font-mono">Archival RAG · Embeddings · Curatorial Guardrails · Kiosk</td>
+                <td class="py-4 px-6 text-zinc-400 font-mono">2025</td>
+                <td class="py-4 px-6 text-center text-zinc-400 font-mono">Exhibition Kiosk</td>
+                <td class="py-4 px-6 text-right">
+                  <button onclick="openCaseStudy('messengers-of-hope')" class="inline-flex items-center gap-1.5 text-orange-400 hover:text-orange-300 font-medium">
+                    <i class="fas fa-file-lines"></i> <span>Case Study</span>
+                  </button>
+                </td>
+              </tr>
+
+              <!-- LinkYouIn -->
+              <tr class="hover:bg-zinc-800/30 transition-colors">
+                <td class="py-4 px-6 font-medium text-zinc-100">
+                  <button onclick="openCaseStudy('linkyouin')" class="hover:text-orange-400 text-left transition-colors font-semibold">
+                    LinkYouIn: AI Recruiter
+                  </button>
+                  <div class="text-[11px] text-zinc-400 font-mono mt-0.5">Dual-LLM consensus screening</div>
+                </td>
+                <td class="py-4 px-6 text-zinc-400 font-mono">Python · FastAPI · Ollama · Qwen &amp; Gemma</td>
+                <td class="py-4 px-6 text-zinc-400 font-mono">2025</td>
+                <td class="py-4 px-6 text-center text-zinc-400 font-mono">Private Enterprise</td>
+                <td class="py-4 px-6 text-right">
+                  <a href="https://youtu.be/YS4tOkJmgzQ?si=AqJ7pT0axqP5z0x_" target="_blank" class="inline-flex items-center gap-1.5 text-orange-400 hover:text-orange-300 font-medium">
+                    <i class="fab fa-youtube"></i> <span>Demo Video</span>
+                  </a>
+                </td>
+              </tr>
+
+              <!-- Sentiment Analysis -->
+              <tr class="hover:bg-zinc-800/30 transition-colors">
+                <td class="py-4 px-6 font-medium text-zinc-100">
+                  <button onclick="openCaseStudy('sentiment')" class="hover:text-orange-400 text-left transition-colors font-semibold">
+                    Multilingual Sentiment &amp; LoRA
+                  </button>
+                  <div class="text-[11px] text-zinc-400 font-mono mt-0.5">ModernBERT fine-tuning on Apple MLX</div>
+                </td>
+                <td class="py-4 px-6 text-zinc-400 font-mono">Python · ModernBERT · LoRA · MLX (40GB RAM)</td>
+                <td class="py-4 px-6 text-zinc-400 font-mono">2025</td>
+                <td class="py-4 px-6 text-center text-zinc-400 font-mono">Institutional Archive</td>
+                <td class="py-4 px-6 text-right">
+                  <button onclick="openCaseStudy('sentiment')" class="inline-flex items-center gap-1.5 text-zinc-400 hover:text-zinc-200">
+                    <i class="fas fa-file-lines"></i> <span>Case Study</span>
+                  </button>
+                </td>
+              </tr>
+
+              <!-- NuVision -->
+              <tr class="hover:bg-zinc-800/30 transition-colors">
+                <td class="py-4 px-6 font-medium text-zinc-100">
+                  <button onclick="openCaseStudy('nuvision')" class="hover:text-orange-400 text-left transition-colors font-semibold">
+                    NuVision: AI Nutrition &amp; Exercise
+                  </button>
+                  <div class="text-[11px] text-zinc-400 font-mono mt-0.5">Vision LM + HealthKit for subdivided flats</div>
+                </td>
+                <td class="py-4 px-6 text-zinc-400 font-mono">Vision LM · iOS Swift · HealthKit · Android</td>
+                <td class="py-4 px-6 text-zinc-400 font-mono">2025</td>
+                <td class="py-4 px-6 text-center text-zinc-400 font-mono">Non-Profit App</td>
+                <td class="py-4 px-6 text-right space-x-3">
+                  <a href="https://apps.apple.com/tr/app/nuvision/id6746086162" target="_blank" class="inline-flex items-center gap-1 text-zinc-300 hover:text-white">
+                    <i class="fab fa-apple"></i> <span>App Store</span>
+                  </a>
+                  <a href="https://play.google.com/store/apps/details?id=com.mycrossplatformapp" target="_blank" class="inline-flex items-center gap-1 text-zinc-300 hover:text-white">
+                    <i class="fab fa-google-play"></i> <span>Android</span>
+                  </a>
+                  <a href="https://youtu.be/4cvz1z18Xy8?si=vFzz6WyID1SacJvQ" target="_blank" class="inline-flex items-center gap-1 text-orange-400 hover:text-orange-300">
+                    <i class="fab fa-youtube"></i> <span>Demo</span>
+                  </a>
+                </td>
+              </tr>
+
+              <!-- IMeMyMine -->
+              <tr class="hover:bg-zinc-800/30 transition-colors">
+                <td class="py-4 px-6 font-medium text-zinc-100">
+                  <button onclick="openCaseStudy('imemymine')" class="hover:text-orange-400 text-left transition-colors font-semibold">
+                    IMeMyMine: AI Face Swap App
+                  </button>
+                  <div class="text-[11px] text-zinc-400 font-mono mt-0.5">Convention inclusion portrait engine</div>
+                </td>
+                <td class="py-4 px-6 text-zinc-400 font-mono">PyTorch · SDXL · IP-Adapter · iOS Client</td>
+                <td class="py-4 px-6 text-zinc-400 font-mono">2024</td>
+                <td class="py-4 px-6 text-center">
+                  <a href="https://github.com/tencent-ailab/IP-Adapter/tree/main" target="_blank" class="text-zinc-400 hover:text-zinc-200 inline-flex items-center gap-1">
+                    <i class="fab fa-github"></i> <span>Reference</span>
+                  </a>
+                </td>
+                <td class="py-4 px-6 text-right">
+                  <a href="https://youtu.be/U5Sx3Rk-iEE?si=l24-UgYKbaMJQn0p" target="_blank" class="inline-flex items-center gap-1.5 text-orange-400 hover:text-orange-300">
+                    <i class="fab fa-youtube"></i> <span>Walkthrough</span>
+                  </a>
+                </td>
+              </tr>
+
+              <!-- AI Raffle -->
+              <tr class="hover:bg-zinc-800/30 transition-colors">
+                <td class="py-4 px-6 font-medium text-zinc-100">
+                  <button onclick="openCaseStudy('airaffle')" class="hover:text-orange-400 text-left transition-colors font-semibold">
+                    AI Raffle: Edge Ticket OCR
+                  </button>
+                  <div class="text-[11px] text-zinc-400 font-mono mt-0.5">1,000,000 ticket automated verification</div>
+                </td>
+                <td class="py-4 px-6 text-zinc-400 font-mono">YOLOv10 · OpenCV · Roboflow · RTX 4090</td>
+                <td class="py-4 px-6 text-zinc-400 font-mono">2024</td>
+                <td class="py-4 px-6 text-center text-zinc-400 font-mono">Internal Workstation</td>
+                <td class="py-4 px-6 text-right">
+                  <a href="https://www.youtube.com/watch?v=z1p9N5ivJO8&list=PLapYgavEwJHApfBsrHKFdoraWmGXGC7Mg&index" target="_blank" class="inline-flex items-center gap-1.5 text-orange-400 hover:text-orange-300">
+                    <i class="fab fa-youtube"></i> <span>Field Test</span>
+                  </a>
+                </td>
+              </tr>
+
+              <!-- Pass Secure -->
+              <tr class="hover:bg-zinc-800/30 transition-colors">
+                <td class="py-4 px-6 font-medium text-zinc-100">
+                  <button onclick="openCaseStudy('passsecure')" class="hover:text-orange-400 text-left transition-colors font-semibold">
+                    Pass Secure: iOS Vault
+                  </button>
+                  <div class="text-[11px] text-zinc-400 font-mono mt-0.5">Biometric keychain with private CloudKit</div>
+                </td>
+                <td class="py-4 px-6 text-zinc-400 font-mono">SwiftData · CloudKit · LocalAuthentication · SwiftUI</td>
+                <td class="py-4 px-6 text-zinc-400 font-mono">2024</td>
+                <td class="py-4 px-6 text-center">
+                  <a href="https://github.com/orpheuslau/Pass-Secure/tree/main" target="_blank" class="text-zinc-400 hover:text-zinc-200 inline-flex items-center gap-1">
+                    <i class="fab fa-github"></i> <span>Pass-Secure</span>
+                  </a>
+                </td>
+                <td class="py-4 px-6 text-right">
+                  <a href="https://apps.apple.com/hk/app/pass-secure-password-manager/id6479182542" target="_blank" class="inline-flex items-center gap-1.5 text-zinc-300 hover:text-white">
+                    <i class="fab fa-apple"></i> <span>App Store</span>
+                  </a>
+                </td>
+              </tr>
+
+              <!-- SMIS -->
+              <tr class="hover:bg-zinc-800/30 transition-colors">
+                <td class="py-4 px-6 font-medium text-zinc-100">
+                  <button onclick="openCaseStudy('smis')" class="hover:text-orange-400 text-left transition-colors font-semibold">
+                    Student Management System (SMIS)
+                  </button>
+                  <div class="text-[11px] text-zinc-400 font-mono mt-0.5">Full-stack assessment &amp; report suite</div>
+                </td>
+                <td class="py-4 px-6 text-zinc-400 font-mono">React.js · Node.js · Express · MongoDB · JWT</td>
+                <td class="py-4 px-6 text-zinc-400 font-mono">2024</td>
+                <td class="py-4 px-6 text-center">
+                  <a href="https://github.com/orpheuslau/ReactJSfrontend" target="_blank" class="text-zinc-400 hover:text-zinc-200 inline-flex items-center gap-1">
+                    <i class="fab fa-github"></i> <span>ReactJSfrontend</span>
+                  </a>
+                </td>
+                <td class="py-4 px-6 text-right">
+                  <a href="http://front.orpheuslau.dev/" target="_blank" class="inline-flex items-center gap-1.5 text-emerald-400 hover:text-emerald-300">
+                    <i class="fas fa-arrow-up-right-from-square"></i> <span>Live Demo</span>
+                  </a>
+                </td>
+              </tr>
+
+              <!-- Caritas AR -->
+              <tr class="hover:bg-zinc-800/30 transition-colors">
+                <td class="py-4 px-6 font-medium text-zinc-100">
+                  <button onclick="openCaseStudy('caritasar')" class="hover:text-orange-400 text-left transition-colors font-semibold">
+                    Caritas Gallery AR
+                  </button>
+                  <div class="text-[11px] text-zinc-400 font-mono mt-0.5">Spatial anniversary commemorative app</div>
+                </td>
+                <td class="py-4 px-6 text-zinc-400 font-mono">ARKit · SceneKit · Swift · iOS Camera</td>
+                <td class="py-4 px-6 text-zinc-400 font-mono">2023</td>
+                <td class="py-4 px-6 text-center">
+                  <a href="https://github.com/orpheuslau/CaritasGallery_Final" target="_blank" class="text-zinc-400 hover:text-zinc-200 inline-flex items-center gap-1">
+                    <i class="fab fa-github"></i> <span>Gallery_Final</span>
+                  </a>
+                </td>
+                <td class="py-4 px-6 text-right space-x-3">
+                  <a href="https://apps.apple.com/tr/app/caritas-gallery-ar/id6449176352" target="_blank" class="inline-flex items-center gap-1 text-zinc-300 hover:text-white">
+                    <i class="fab fa-apple"></i> <span>App Store</span>
+                  </a>
+                  <a href="https://www.instagram.com/caritas70gallery/" target="_blank" class="inline-flex items-center gap-1 text-pink-400 hover:text-pink-300">
+                    <i class="fab fa-instagram"></i> <span>Insta</span>
+                  </a>
+                  <a href="https://www.youtube.com/watch?v=UA6KdNF0PyE" target="_blank" class="inline-flex items-center gap-1 text-orange-400 hover:text-orange-300">
+                    <i class="fab fa-youtube"></i> <span>Video</span>
+                  </a>
+                </td>
+              </tr>
+
+              <!-- Rental Finder -->
+              <tr class="hover:bg-zinc-800/30 transition-colors">
+                <td class="py-4 px-6 font-medium text-zinc-100">
+                  <button onclick="openCaseStudy('jquery')" class="hover:text-orange-400 text-left transition-colors font-semibold">
+                    Rental Apartments Finder
+                  </button>
+                  <div class="text-[11px] text-zinc-400 font-mono mt-0.5">Field worker offline housing database</div>
+                </td>
+                <td class="py-4 px-6 text-zinc-400 font-mono">jQuery · Cordova · Java Android · Web SQL</td>
+                <td class="py-4 px-6 text-zinc-400 font-mono">2021</td>
+                <td class="py-4 px-6 text-center">
+                  <a href="https://github.com/orpheuslau/Jquery_rentalApp" target="_blank" class="text-zinc-400 hover:text-zinc-200 inline-flex items-center gap-1">
+                    <i class="fab fa-github"></i> <span>rentalApp</span>
+                  </a>
+                </td>
+                <td class="py-4 px-6 text-right">
+                  <a href="assets/JqueryJAVAReport.pdf" target="_blank" class="inline-flex items-center gap-1.5 text-zinc-300 hover:text-white">
+                    <i class="fas fa-file-pdf text-red-400"></i> <span>IEEE Spec PDF</span>
+                  </a>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Additional Specifications & Whitepapers -->
+        <div class="mt-8 flex flex-wrap items-center justify-between gap-4 p-5 rounded-xl bg-zinc-900/40 border border-zinc-800/80 text-xs">
+          <div class="flex items-center gap-3">
+            <span class="text-zinc-500 font-mono">DOCUMENTATION ARCHIVE:</span>
+            <a href="assets/JqueryJAVAReport.pdf" target="_blank" class="text-zinc-300 hover:text-white inline-flex items-center gap-1.5 font-medium underline underline-offset-4 decoration-zinc-700">
+              <i class="fas fa-file-pdf text-red-400"></i> Software Specification (Jquery/Java)
+            </a>
+            <span class="text-zinc-700">·</span>
+            <a href="assets/rfid.pdf" target="_blank" class="text-zinc-300 hover:text-white inline-flex items-center gap-1.5 font-medium underline underline-offset-4 decoration-zinc-700">
+              <i class="fas fa-file-lines text-blue-400"></i> Asset Register &amp; RFID Report
+            </a>
+          </div>
+          <div class="text-zinc-400 font-mono">
+            All code repositories vetted &amp; archived.
+          </div>
+        </div>
+
+      </div>
     </section>
 
-    <section id="caritasar-details" class="project-detail-section page-section py-20 px-4 bg-white">
-        <div class="container mx-auto">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold text-gray-800">iOS AR App: Caritas Gallery</h2>
-                <p class="text-primary mt-2">iOS AR App (2023)</p>
-                <hr class="divider w-20 h-1 bg-primary mx-auto mt-4 mb-6 rounded-full" />
-            </div>
-            <div class="max-w-4xl mx-auto">
-                <img src="assets/img/ar1%20(5).jpg" alt="Caritas AR App"
-                    class="rounded-lg shadow-xl mb-8 w-full h-auto object-cover"
-                    onerror="this.onerror=null;this.src='https://placehold.co/800x450/cccccc/333333?text=Caritas+AR+App';">
-                <p class="text-sm text-gray-700 mb-6 leading-relaxed">
-                    Introducing Caritas Gallery AR, the innovative iOS app that brings Augmented Reality (AR) to your
-                    fingertips. With this app, you can capture unique and memorable moments by seamlessly integrating
-                    the Caritas 70th Anniversary logo into your photos. Whether you're a fan of Caritas or simply love
-                    their logo, this app lets you take stunning pictures with the iconic symbol in a whole new way.
-                </p>
-
-                <img src="assets/img/ar1%20(3).jpg" alt="Caritas AR App"
-                    class="rounded-lg shadow-xl mb-8 w-full h-auto object-cover"
-                    onerror="this.onerror=null;this.src='https://placehold.co/800x450/cccccc/333333?text=Caritas+AR+App';">
-                <p class="text-sm text-gray-700 mb-6 leading-relaxed">
-                    Using advanced AR technology, Caritas Gallery AR superimposes the logo onto the real world
-                    through your
-                    iPhone's camera. Simply open the app, point your camera at a desired location, and watch as the
-                    Caritas
-                    logo seamlessly blends into the scene. Whether you're at a landmark, a special event, or simply
-                    exploring your surroundings, this app lets you capture moments with a touch of Caritas magic.
-                    <BR>
-                    <BR>
-
-                </p>
-                <h4 class="text-2xl font-semibold text-gray-800 mb-4">Features:</h4>
-                <ul class="list-disc list-inside space-y-2 text-gray-700 mb-8">
-                    <li>AR logo integration into live camera view.</li>
-                    <li>Customization options for logo size and position.</li>
-                    <li>Easy sharing to social media and camera roll.</li>
-                </ul>
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
-                    <img src="assets/img/ar1.jpg" alt="Caritas AR Example 1" class="rounded-md shadow-md"
-                        onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=AR+Example+1';">
-                    <img src="assets/img/ar1%20(7).jpg" alt="Caritas AR Example 2" class="rounded-md shadow-md"
-                        onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=AR+Example+2';">
-                    <img src="assets/img/ar1%20(8).jpg" alt="Caritas AR Example 3" class="rounded-md shadow-md"
-                        onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=AR+Example+3';">
-                </div>
-                <div class="text-center">
-                    <a href="https://apps.apple.com/tr/app/caritas-gallery-ar/id6449176352" target="_blank"
-                        class="btn bg-primary text-white hover:bg-primary/80 font-semibold py-2 px-6 rounded-full inline-flex items-center mr-2 mb-2 md:mb-0">
-                        <i class="fab fa-apple mr-2"></i> App Store
-                    </a>
-                    <a href="https://www.instagram.com/caritas70gallery/" target="_blank"
-                        class="btn bg-pink-500 text-white hover:bg-pink-600 font-semibold py-2 px-6 rounded-full inline-flex items-center mr-2 mb-2 md:mb-0">
-                        <i class="fab fa-instagram mr-2"></i> Instagram
-                    </a>
-                    <a href="https://www.youtube.com/watch?v=UA6KdNF0PyE" target="_blank"
-                        class="btn bg-red-600 text-white hover:bg-red-700 font-semibold py-2 px-6 rounded-full inline-flex items-center">
-                        <i class="fab fa-youtube mr-2"></i> YouTube Demo
-                    </a>
-                </div>
-            </div>
+    <!-- SECTION 04: CONTACT & COLLABORATION -->
+    <section id="contact" class="py-24 px-6 sm:px-8 border-t border-zinc-800/80 bg-zinc-950/60 relative">
+      <div class="max-w-4xl mx-auto text-center">
+        
+        <div class="text-xs font-mono text-orange-400 uppercase tracking-widest mb-3">
+          04 // Direct Contact &amp; Channels
         </div>
+        
+        <h2 class="text-3xl sm:text-5xl font-light text-zinc-100 font-serif-display tracking-tight mb-6">
+          Let’s architect <span class="italic">meaningful technology</span> together.
+        </h2>
+
+        <p class="text-sm sm:text-base text-zinc-400 max-w-2xl mx-auto leading-relaxed mb-10">
+          Whether you require advisory on local LLM deployment, high-accuracy edge computer vision, or architecting digital solutions for community welfare, my inbox is always open.
+        </p>
+
+        <!-- Direct Email Bar with Copy Action -->
+        <div class="inline-flex flex-col sm:flex-row items-center gap-3 p-2 rounded-2xl bg-zinc-900 border border-zinc-800 shadow-xl mb-12 max-w-full">
+          <a 
+            href="mailto:orpheuslau@gmail.com" 
+            class="px-5 py-3 text-base sm:text-lg font-mono text-zinc-200 hover:text-orange-400 transition-colors flex items-center gap-2 truncate"
+          >
+            <i class="fas fa-envelope text-zinc-500"></i>
+            <span>orpheuslau@gmail.com</span>
+          </a>
+          <button 
+            onclick="copyEmailAddress()" 
+            class="px-5 py-2.5 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-xs font-semibold text-zinc-200 transition-colors inline-flex items-center gap-2 w-full sm:w-auto justify-center"
+            title="Copy email to clipboard"
+          >
+            <i class="fas fa-copy"></i>
+            <span>Copy Address</span>
+          </button>
+        </div>
+
+        <div id="copyNotice" class="text-xs font-mono text-emerald-400 transition-opacity duration-300 opacity-0 -mt-8 mb-10">
+          ✓ Email address copied to clipboard
+        </div>
+
+        <!-- Social & Professional Grid -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-2xl mx-auto">
+          <a 
+            href="https://www.linkedin.com/in/ktklau/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="p-4 rounded-xl bg-zinc-900/60 hover:bg-zinc-800 border border-zinc-800/80 hover:border-zinc-700 transition-all flex flex-col items-center gap-2 group"
+          >
+            <i class="fab fa-linkedin text-xl text-zinc-400 group-hover:text-blue-400 transition-colors"></i>
+            <span class="text-xs font-medium text-zinc-300">LinkedIn</span>
+            <span class="text-[10px] font-mono text-zinc-400">/in/ktklau</span>
+          </a>
+
+          <a 
+            href="https://github.com/orpheuslau" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="p-4 rounded-xl bg-zinc-900/60 hover:bg-zinc-800 border border-zinc-800/80 hover:border-zinc-700 transition-all flex flex-col items-center gap-2 group"
+          >
+            <i class="fab fa-github text-xl text-zinc-400 group-hover:text-white transition-colors"></i>
+            <span class="text-xs font-medium text-zinc-300">GitHub</span>
+            <span class="text-[10px] font-mono text-zinc-400">@orpheuslau</span>
+          </a>
+
+          <a 
+            href="https://twitter.com/orpheuslau" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="p-4 rounded-xl bg-zinc-900/60 hover:bg-zinc-800 border border-zinc-800/80 hover:border-zinc-700 transition-all flex flex-col items-center gap-2 group"
+          >
+            <i class="fab fa-x-twitter text-xl text-zinc-400 group-hover:text-white transition-colors"></i>
+            <span class="text-xs font-medium text-zinc-300">Twitter / X</span>
+            <span class="text-[10px] font-mono text-zinc-400">@orpheuslau</span>
+          </a>
+
+          <a 
+            href="https://www.instagram.com/caritas70gallery/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="p-4 rounded-xl bg-zinc-900/60 hover:bg-zinc-800 border border-zinc-800/80 hover:border-zinc-700 transition-all flex flex-col items-center gap-2 group"
+          >
+            <i class="fab fa-instagram text-xl text-zinc-400 group-hover:text-pink-400 transition-colors"></i>
+            <span class="text-xs font-medium text-zinc-300">Instagram</span>
+            <span class="text-[10px] font-mono text-zinc-400">Gallery AR</span>
+          </a>
+        </div>
+
+      </div>
     </section>
+  </main>
 
-    <section id="jquery-details" class="project-detail-section page-section py-20 px-4 bg-gray-50">
-        <div class="container mx-auto">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold text-gray-800">Rental Apartments Finder</h2>
-                <p class="text-primary mt-2">jQuery + Java Android (2021)</p>
-                <hr class="divider w-20 h-1 bg-primary mx-auto mt-4 mb-6 rounded-full" />
-            </div>
-            <div class="max-w-4xl mx-auto">
-                <img src="assets/img/portfolio/thumbnails/3.jpg" alt="Rental Apartments Finder App"
-                    class="rounded-lg shadow-xl mb-8 w-full h-auto object-cover"
-                    onerror="this.onerror=null;this.src='https://placehold.co/800x450/cccccc/333333?text=Rental+App';">
-                <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-                    The Rental Apartments Finder is an Android mobile app created using Apache Cordova and jQuery. It
-                    allows users to find, add, and edit rental listings, storing data locally on the device using Web
-                    SQL. A simplified version was also developed in Java.
-                </p>
-                <h4 class="text-2xl font-semibold text-gray-800 mb-4">Features:</h4>
-                <ul class="list-disc list-inside space-y-2 text-gray-700 mb-8">
-                    <li>Landing and input screens with form validation.</li>
-                    <li>Store, view, and delete rental details; checks for duplicates.</li>
-                    <li>Keyword search functionality.</li>
-                    <li>Embedding photos and YouTube links.</li>
-                    <li>Note input screen.</li>
-                    <li>Local data storage (Web SQL).</li>
-                </ul>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-                    <img src="assets/img/j11.png" alt="Rental App Feature 1"
-                        class="rounded-md shadow-md object-contain h-80 mx-auto"
-                        onerror="this.onerror=null;this.src='https://placehold.co/300x600/cccccc/333333?text=Rental+Screen+1';">
-                    <img src="assets/img/j14.png" alt="Rental App Feature 2"
-                        class="rounded-md shadow-md object-contain h-80 mx-auto"
-                        onerror="this.onerror=null;this.src='https://placehold.co/300x600/cccccc/333333?text=Rental+Screen+2';">
-                </div>
-                <div class="text-center">
-                    <a href="assets/JqueryJAVAReport.pdf" target="_blank"
-                        class="btn bg-green-600 text-white hover:bg-green-700 font-semibold py-2 px-6 rounded-full inline-flex items-center mr-2 mb-2 md:mb-0">
-                        <i class="fas fa-file-pdf mr-2"></i> Software Spec
-                    </a>
-                    <a href="https://github.com/orpheuslau/Jquery_rentalApp" target="_blank"
-                        class="btn bg-gray-800 text-white hover:bg-gray-900 font-semibold py-2 px-6 rounded-full inline-flex items-center">
-                        <i class="fab fa-github mr-2"></i> GitHub
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- FOOTER -->
+  <footer class="py-8 px-6 sm:px-8 border-t border-zinc-800/60 bg-zinc-950 text-xs text-zinc-400 font-mono">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>
+        &copy; <span id="currentYear"></span> Orpheus Lau. Engineered for privacy, resilience &amp; impact.
+      </div>
+      <div class="flex items-center gap-4">
+        <span>Hosted via Node.js on Cloud Run</span>
+        <span>·</span>
+        <a href="#hero" class="hover:text-zinc-200 transition-colors">Back to Top ↑</a>
+      </div>
+    </div>
+  </footer>
 
-    <section class="page-section bg-gray-800 text-white py-20 px-4" id="contact">
-        <div class="container mx-auto">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold">Let's Get In Touch!</h2>
-                <hr class="divider w-20 h-1 bg-primary mx-auto mt-4 mb-6 rounded-full" />
-                <p class="text-lg text-gray-300 max-w-2xl mx-auto">
-                    Feel free to browse the site and learn more about what I do. If you have any questions or would like
-                    to discuss a potential project, please don't hesitate to reach out!
-                </p>
-            </div>
+  <!-- CASE STUDY DETAIL MODAL (Full Screen Drawer) -->
+  <div 
+    id="caseStudyModal" 
+    class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden flex items-center justify-center p-0 sm:p-6 overflow-y-auto"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Case Study Reader"
+  >
+    <div 
+      class="relative w-full max-w-4xl bg-[#0f1115] border border-zinc-800 rounded-none sm:rounded-2xl shadow-2xl overflow-hidden min-h-screen sm:min-h-0 sm:max-h-[90vh] flex flex-col my-auto"
+      onclick="event.stopPropagation()"
+    >
+      <div id="caseStudyContent" class="overflow-y-auto flex-1">
+        <!-- Content injected dynamically by scripts8.js -->
+      </div>
+    </div>
+  </div>
 
-            <div class="max-w-3xl mx-auto text-center">
-                <a href="mailto:orpheuslau@gmail.com"
-                    class="text-2xl text-primary hover:text-orange-400 transition-colors mb-8 inline-block">
-                    <i class="fas fa-envelope mr-2"></i> orpheuslau@gmail.com
-                </a>
-                <div class="flex justify-center space-x-6 mb-12">
-                    <a href="https://twitter.com/orpheuslau" target="_blank"
-                        class="text-gray-300 hover:text-white transition-colors text-3xl">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/ktklau/" target="_blank"
-                        class="text-gray-300 hover:text-white transition-colors text-3xl">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://github.com/orpheuslau" target="_blank"
-                        class="text-gray-300 hover:text-white transition-colors text-3xl">
-                        <i class="fab fa-github"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="max-w-4xl mx-auto bg-white/10 p-6 sm:p-8 rounded-xl shadow-xl">
-                <h3 class="text-2xl font-semibold text-center mb-6">Project Links</h3>
-                <div class="overflow-x-auto">
-                    <table class="w-full text-sm text-left text-gray-300">
-                        <thead class="text-xs text-white uppercase bg-white/20">
-                            <tr>
-                                <th scope="col" class="px-4 py-3">Project</th>
-                                <th scope="col" class="px-4 py-3 text-center">Source Code</th>
-                                <th scope="col" class="px-4 py-3 text-center">Demo / Links</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                             <tr class="border-b border-gray-700 hover:bg-white/5">
-                                <td class="px-4 py-3 font-medium">LinkYouIn: AI Recruiter</td>
-                                <td class="px-4 py-3 text-center">-</td>
-                                <td class="px-4 py-3 text-center">
-                                    
-                                     <a href="https://youtu.be/YS4tOkJmgzQ?si=AqJ7pT0axqP5z0x_" target="_blank"
-                                        class="text-red-500 hover:underline mx-1"><i class="fab fa-youtube"></i>
-                                        Video</a>
-                                </td>
-                            </tr>
-                            <tr class="border-b border-gray-700 hover:bg-white/5">
-                                <td class="px-4 py-3 font-medium">NuVision: AI Nutrition + Exercise</td>
-                                <td class="px-4 py-3 text-center">-</td>
-                                <td class="px-4 py-3 text-center">
-                                    <a href="https://apps.apple.com/tr/app/nuvision/id6746086162" target="_blank"
-                                        class="text-primary hover:underline mx-1"><i class="fab fa-apple"></i> Store</a>
-                                    <a href="https://play.google.com/store/apps/details?id=com.mycrossplatformapp"
-                                        target="_blank" class="text-blue-500 hover:underline mx-1"><i
-                                            class="fab fa-android"></i> Android</a>                            
-                                    <a href="https://youtu.be/4cvz1z18Xy8?si=vFzz6WyID1SacJvQ" target="_blank"
-                                        class="text-red-500 hover:underline mx-1"><i class="fab fa-youtube"></i>
-                                        Video</a>
-                                </td>
-                            </tr>
-                            <tr class="border-b border-gray-700 hover:bg-white/5">
-                                <td class="px-4 py-3 font-medium">IMeMyMine: AI Face Swap</td>
-                                <td class="px-4 py-3 text-center">-</td>
-                                <td class="px-4 py-3 text-center">
-                                    <a href="https://youtu.be/U5Sx3Rk-iEE?si=l24-UgYKbaMJQn0p" target="_blank"
-                                        class="text-red-500 hover:underline mx-1"><i class="fab fa-youtube"></i>
-                                        Video</a>
-                                    <a href="https://github.com/tencent-ailab/IP-Adapter/tree/main" target="_blank"
-                                        class="text-gray-400 hover:underline mx-1"><i class="fab fa-github"></i>
-                                        IP-Adapter Resource</a>
-                                </td>
-                            </tr>
-
-                            <tr class="hover:bg-white/5">
-                                <td class="px-4 py-3 font-medium">AI Raffle</td>
-                                <td class="px-4 py-3 text-center">-
-                                </td>
-                                <td class="px-4 py-3 text-center"><a
-                                        href="https://www.youtube.com/watch?v=z1p9N5ivJO8&list=PLapYgavEwJHApfBsrHKFdoraWmGXGC7Mg"
-                                        target="_blank" class="text-red-500 hover:underline mx-1"><i
-                                            class="fab fa-youtube"></i>
-                                        Video</a></td>
-                            </tr>
-
-
-                            <tr class="border-b border-gray-700 hover:bg-white/5">
-                                <td class="px-4 py-3 font-medium">Pass Secure</td>
-                                <td class="px-4 py-3 text-center"><a
-                                        href="https://github.com/orpheuslau/Pass-Secure/tree/main" target="_blank"
-                                        class="text-gray-400 hover:underline"><i class="fab fa-github"></i> GitHub</a>
-                                </td>
-                                <td class="px-4 py-3 text-center">
-                                    <a href="https://apps.apple.com/hk/app/pass-secure-password-manager/id6479182542"
-                                        target="_blank" class="text-primary hover:underline"><i
-                                            class="fab fa-apple"></i> Store</a>
-                                </td>
-                            </tr>
-                            <tr class="border-b border-gray-700 hover:bg-white/5">
-                                <td class="px-4 py-3 font-medium">Student Management System</td>
-                                <td class="px-4 py-3 text-center"><a
-                                        href="https://github.com/orpheuslau/ReactJSfrontend" target="_blank"
-                                        class="text-gray-400 hover:underline"><i class="fab fa-github"></i> GitHub</a>
-                                </td>
-                                <td class="px-4 py-3 text-center">
-                                    <a href="https://front.orpheuslau.dev" target="_blank"
-                                        class="text-accent hover:underline"><i class="fas fa-external-link-alt"></i>
-                                        Demo</a>
-                                </td>
-                            </tr>
-                            <tr class="border-b border-gray-700 hover:bg-white/5">
-                                <td class="px-4 py-3 font-medium">Caritas Gallery AR</td>
-                                <td class="px-4 py-3 text-center"><a
-                                        href="https://github.com/orpheuslau/CaritasGallery_Final" target="_blank"
-                                        class="text-gray-400 hover:underline"><i class="fab fa-github"></i> GitHub</a>
-                                </td>
-                                <td class="px-4 py-3 text-center">
-                                    <a href="https://apps.apple.com/tr/app/caritas-gallery-ar/id6449176352"
-                                        target="_blank" class="text-primary hover:underline mx-1"><i
-                                            class="fab fa-apple"></i> Store</a>
-                                    <a href="https://www.instagram.com/caritas70gallery/" target="_blank"
-                                        class="text-pink-500 hover:underline mx-1"><i class="fab fa-instagram"></i>
-                                        Insta</a>
-                                    <a href="https://www.youtube.com/watch?v=UA6KdNF0PyE" target="_blank"
-                                        class="text-red-500 hover:underline mx-1"><i class="fab fa-youtube"></i>
-                                        Video</a>
-                                </td>
-                            </tr>
-                            <tr class="border-b border-gray-700 hover:bg-white/5">
-                                <td class="px-4 py-3 font-medium">Rental Apartments Finder</td>
-                                <td class="px-4 py-3 text-center"><a
-                                        href="https://github.com/orpheuslau/Jquery_rentalApp" target="_blank"
-                                        class="text-gray-400 hover:underline"><i class="fab fa-github"></i> GitHub</a>
-                                </td>
-                                <td class="px-4 py-3 text-center">
-                                    <a href="assets/JqueryJAVAReport.pdf" target="_blank"
-                                        class="text-green-500 hover:underline"><i class="fas fa-file-pdf"></i>
-                                        Report</a>
-                                </td>
-                            </tr>
-
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="bg-gray-900 text-gray-400 py-8 px-4">
-        <div class="container mx-auto text-center text-sm">
-            <p>&copy; <span id="currentYear"></span> Orpheus LAU. All Rights Reserved.</p>
-            <p class="mt-1">Redesigned with <i class="fas fa-heart text-primary"></i> using Tailwind CSS.</p>
-        </div>
-    </footer>
-
-    <button id="backToTopBtn" title="Go to top"
-        class="fixed bottom-5 right-5 bg-primary/80 hover:bg-primary text-white p-3 rounded-full shadow-lg transition-opacity duration-300 opacity-0 z-50">
-        <i class="fas fa-arrow-up"></i>
+  <!-- LIGHTBOX IMAGE ZOOM MODAL -->
+  <div 
+    id="lightboxModal" 
+    class="fixed inset-0 z-50 bg-black/95 backdrop-blur-lg hidden flex flex-col items-center justify-center p-4 cursor-pointer"
+    role="dialog"
+    aria-modal="true"
+  >
+    <button 
+      id="lightboxCloseBtn" 
+      class="absolute top-6 right-6 p-3 rounded-full bg-zinc-900/80 text-zinc-300 hover:text-white border border-zinc-700/80 transition-colors"
+      aria-label="Close zoom preview"
+    >
+      <i class="fas fa-xmark text-lg"></i>
     </button>
+    <div class="max-w-5xl max-h-[80vh] flex flex-col items-center" onclick="event.stopPropagation()">
+      <img id="lightboxImage" src="" alt="Zoom preview" class="max-w-full max-h-[75vh] object-contain rounded-lg shadow-2xl border border-zinc-800">
+      <p id="lightboxCaption" class="mt-4 text-xs font-mono text-zinc-400 text-center max-w-xl"></p>
+    </div>
+  </div>
 
-    <script src="../js/scripts8.js"></script>
+  <!-- FLOATING BACK TO TOP BUTTON -->
+  <button 
+    id="backToTopBtn" 
+    title="Return to top"
+    aria-label="Return to top"
+    class="fixed bottom-6 right-6 p-3.5 rounded-full bg-zinc-900/90 text-zinc-300 hover:text-white hover:bg-zinc-800 border border-zinc-700 shadow-xl opacity-0 pointer-events-none transition-all duration-300 z-40 focus:outline-none focus:ring-2 focus:ring-orange-500"
+  >
+    <i class="fas fa-arrow-up text-sm"></i>
+  </button>
+
+  <!-- Core Scripts -->
+  <script src="js/scripts8.js"></script>
 </body>
-
 </html>
