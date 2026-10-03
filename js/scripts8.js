@@ -84,10 +84,17 @@ class DSEMultiAgentOrchestrator:
         }`,
     gallery: [
       { src: "assets/img/dsebot/DSEbot.png", caption: "Multi-Agent Orchestration (MAO) Architecture: 4 Specialized Agents × Trusted Data × Deterministic Math Engine" },
+      { src: "assets/img/dsebot/BD1B3F27-5DDF-4FB4-9BF5-BD9E9C628195_1_201_a.jpeg", caption: "HKDSE AI Advisory Agent: Mobile Conversational Consultation & Career Matching" },
+      { src: "assets/img/dsebot/507D4807-7C35-49C9-89FD-0130B33953B2_1_201_a.jpeg", caption: "JUPAS Admissions Counseling: Score Simulation & Admission Probability Analysis" },
+      { src: "assets/img/dsebot/320f4ff1813613defeea3befd2ecc8aa143060c7f6d1ddbdd85ed4e5e8704890.png", caption: "Interactive Advisory Flow: Subject Grade Input & Academic Goal Selection" },
+      { src: "assets/img/dsebot/4868dbe219085a27e0726f5f24200e92c7f197f085ffda62daf732fdc1d16116.png", caption: "Deterministic Score Engine: University Formula Weighting & Calculation" },
+      { src: "assets/img/dsebot/abc8f27a1b69b7858971e1a7d0f94463a0c51dd0191343d65beedb2545523fc4.png", caption: "Programme Recommendation Matrix: Band A/B Strategy & Historical Medians" },
+      { src: "assets/img/dsebot/bd69ec9d5941e9267374996c64babf5be19c216e58b3ccc1522cf98d2d04970d.png", caption: "Empathetic Advisory Dialogue: Actionable Guidance & Counseling Insights" },
       { src: "assets/img/dse_bot_cover.svg", caption: "Cloud Run Infrastructure & Guardrail Schematic" }
     ],
     links: [
-      { label: "View Architecture PNG", url: "assets/img/dsebot/DSEbot.png", icon: "fa-image", primary: true },
+      { label: "View Architecture PNG", url: "assets/img/dsebot/DSEbot.png", icon: "fa-diagram-project", primary: true },
+      { label: "View Advisory Interface", url: "assets/img/dsebot/BD1B3F27-5DDF-4FB4-9BF5-BD9E9C628195_1_201_a.jpeg", icon: "fa-comments" },
       { label: "Cloud Run Specs", url: "#", icon: "fa-google" }
     ]
   },
@@ -915,7 +922,7 @@ function openCaseStudy(projectId) {
           </div>
           <div 
             class="relative overflow-hidden rounded-xl bg-white border border-zinc-700/80 cursor-pointer shadow-xl"
-            onclick="openLightbox('${project.featuredDiagram.src}', '${escapeHtml(project.featuredDiagram.caption)}')"
+            onclick="openLightbox('${project.featuredDiagram.src}', '${escapeHtml(project.featuredDiagram.caption)}', '${project.id}')"
             title="Click to zoom in full resolution"
           >
             <img 
@@ -1005,7 +1012,7 @@ function openCaseStudy(projectId) {
           </h3>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
             ${project.gallery.map(img => `
-              <div class="group relative rounded-xl overflow-hidden border border-zinc-800 bg-zinc-900/50 cursor-pointer" onclick="openLightbox('${img.src}', '${escapeHtml(img.caption)}')">
+              <div class="group relative rounded-xl overflow-hidden border border-zinc-800 bg-zinc-900/50 cursor-pointer" onclick="openLightbox('${img.src}', '${escapeHtml(img.caption)}', '${project.id}')">
                 <img 
                   src="${img.src}" 
                   alt="${img.caption}" 
@@ -1105,7 +1112,157 @@ function closeCaseStudy() {
   }
 }
 
-// Lightbox
+// Multi-Image Project Lightbox Gallery
+let currentLightboxGallery = [];
+let currentLightboxIndex = 0;
+
+function getProjectGalleryImages(project) {
+  if (!project) return [];
+  const list = [];
+  const seen = new Set();
+
+  // 1. Featured Diagram (if present)
+  if (project.featuredDiagram && project.featuredDiagram.src) {
+    list.push({
+      src: project.featuredDiagram.src,
+      caption: project.featuredDiagram.caption || `${project.title} - Architecture Diagram`,
+      projectTitle: project.title
+    });
+    seen.add(project.featuredDiagram.src);
+  }
+
+  // 2. All Gallery Images
+  if (project.gallery && Array.isArray(project.gallery)) {
+    project.gallery.forEach(img => {
+      if (img.src && !seen.has(img.src)) {
+        list.push({
+          src: img.src,
+          caption: img.caption || '',
+          projectTitle: project.title
+        });
+        seen.add(img.src);
+      }
+    });
+  }
+
+  // 3. Fallback: Cover Image
+  if (list.length === 0 && project.coverImage) {
+    list.push({
+      src: project.coverImage,
+      caption: project.title,
+      projectTitle: project.title
+    });
+  }
+
+  return list;
+}
+
+function openLightbox(src, caption, projectId) {
+  const lightbox = document.getElementById('lightboxModal');
+  if (!lightbox) return;
+
+  // Determine target project
+  let targetProject = null;
+  if (projectId) {
+    targetProject = PROJECTS.find(p => p.id === projectId || p.legacyId === projectId);
+  }
+  if (!targetProject && currentActiveProject) {
+    targetProject = currentActiveProject;
+  }
+
+  // Populate gallery items for this project
+  if (targetProject) {
+    currentLightboxGallery = getProjectGalleryImages(targetProject);
+  } else {
+    currentLightboxGallery = [{ src, caption: caption || '', projectTitle: '' }];
+  }
+
+  // Find index of clicked image
+  let foundIndex = currentLightboxGallery.findIndex(item => item.src === src);
+  if (foundIndex === -1) {
+    currentLightboxGallery.unshift({
+      src,
+      caption: caption || '',
+      projectTitle: targetProject ? targetProject.title : ''
+    });
+    foundIndex = 0;
+  }
+
+  currentLightboxIndex = foundIndex;
+  renderLightboxImage();
+  lightbox.classList.remove('hidden');
+}
+
+function renderLightboxImage() {
+  const item = currentLightboxGallery[currentLightboxIndex];
+  if (!item) return;
+
+  const img = document.getElementById('lightboxImage');
+  const cap = document.getElementById('lightboxCaption');
+  const counter = document.getElementById('lightboxCounter');
+  const titleBadge = document.getElementById('lightboxProjectTitle');
+  const prevBtn = document.getElementById('lightboxPrevBtn');
+  const nextBtn = document.getElementById('lightboxNextBtn');
+
+  if (img) {
+    img.src = item.src;
+    img.alt = item.caption || 'Enlarged project visual';
+  }
+  if (cap) {
+    cap.textContent = item.caption || '';
+  }
+
+  const total = currentLightboxGallery.length;
+  if (counter) {
+    if (total > 1) {
+      counter.textContent = `${currentLightboxIndex + 1} / ${total}`;
+      counter.classList.remove('hidden');
+    } else {
+      counter.classList.add('hidden');
+    }
+  }
+
+  if (titleBadge) {
+    if (item.projectTitle) {
+      titleBadge.textContent = item.projectTitle;
+      titleBadge.classList.remove('hidden');
+    } else {
+      titleBadge.classList.add('hidden');
+    }
+  }
+
+  // Display or hide navigation arrows based on count
+  if (prevBtn && nextBtn) {
+    if (total > 1) {
+      prevBtn.classList.remove('hidden');
+      nextBtn.classList.remove('hidden');
+    } else {
+      prevBtn.classList.add('hidden');
+      nextBtn.classList.add('hidden');
+    }
+  }
+}
+
+function nextLightboxImage() {
+  if (currentLightboxGallery.length <= 1) return;
+  currentLightboxIndex = (currentLightboxIndex + 1) % currentLightboxGallery.length;
+  renderLightboxImage();
+}
+
+function prevLightboxImage() {
+  if (currentLightboxGallery.length <= 1) return;
+  currentLightboxIndex = (currentLightboxIndex - 1 + currentLightboxGallery.length) % currentLightboxGallery.length;
+  renderLightboxImage();
+}
+
+function closeLightbox() {
+  const lightbox = document.getElementById('lightboxModal');
+  if (lightbox) {
+    lightbox.classList.add('hidden');
+  }
+}
+
+// Lightbox Initialization
 function initLightbox() {
   const lightbox = document.getElementById('lightboxModal');
   if (!lightbox) return;
@@ -1116,29 +1273,53 @@ function initLightbox() {
     }
   });
 
+  // Keyboard navigation
   window.addEventListener('keydown', (e) => {
+    if (lightbox && !lightbox.classList.contains('hidden')) {
+      if (e.key === 'ArrowRight') {
+        nextLightboxImage();
+      } else if (e.key === 'ArrowLeft') {
+        prevLightboxImage();
+      } else if (e.key === 'Escape') {
+        closeLightbox();
+      }
+      return;
+    }
+
     if (e.key === 'Escape') {
-      closeLightbox();
       closeCaseStudy();
     }
   });
+
+  // Mobile Touch Swipe Navigation
+  let touchStartX = 0;
+  let touchEndX = 0;
+  lightbox.addEventListener('touchstart', (e) => {
+    if (e.changedTouches && e.changedTouches[0]) {
+      touchStartX = e.changedTouches[0].screenX;
+    }
+  }, { passive: true });
+
+  lightbox.addEventListener('touchend', (e) => {
+    if (e.changedTouches && e.changedTouches[0]) {
+      touchEndX = e.changedTouches[0].screenX;
+      const diff = touchEndX - touchStartX;
+      if (Math.abs(diff) > 40) {
+        if (diff < 0) {
+          nextLightboxImage(); // Swiped left
+        } else {
+          prevLightboxImage(); // Swiped right
+        }
+      }
+    }
+  }, { passive: true });
 }
 
-function openLightbox(src, caption) {
-  const lightbox = document.getElementById('lightboxModal');
-  const img = document.getElementById('lightboxImage');
-  const cap = document.getElementById('lightboxCaption');
-  if (!lightbox || !img) return;
-
-  img.src = src;
-  if (cap) cap.textContent = caption || '';
-  lightbox.classList.remove('hidden');
-}
-
-function closeLightbox() {
-  const lightbox = document.getElementById('lightboxModal');
-  if (lightbox) lightbox.classList.add('hidden');
-}
+// Expose globals for onclick attributes
+window.openLightbox = openLightbox;
+window.closeLightbox = closeLightbox;
+window.nextLightboxImage = nextLightboxImage;
+window.prevLightboxImage = prevLightboxImage;
 
 function initCaseStudyModal() {
   const modal = document.getElementById('caseStudyModal');

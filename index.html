@@ -797,20 +797,61 @@
   <!-- LIGHTBOX IMAGE ZOOM MODAL -->
   <div 
     id="lightboxModal" 
-    class="fixed inset-0 z-50 bg-black/95 backdrop-blur-lg hidden flex flex-col items-center justify-center p-4 cursor-pointer"
+    class="fixed inset-0 z-50 bg-black/95 backdrop-blur-lg hidden flex flex-col items-center justify-center p-4 cursor-pointer select-none"
     role="dialog"
     aria-modal="true"
   >
+    <!-- Top Bar: Counter & Project Title -->
+    <div class="absolute top-4 sm:top-6 left-4 sm:left-6 flex items-center gap-3 z-30" onclick="event.stopPropagation()">
+      <div id="lightboxCounter" class="font-mono text-xs text-zinc-300 bg-zinc-900/90 px-3.5 py-1.5 rounded-full border border-zinc-700/80 shadow-lg">
+        1 / 1
+      </div>
+      <div id="lightboxProjectTitle" class="hidden sm:inline font-mono text-xs text-orange-400 bg-zinc-900/90 px-3.5 py-1.5 rounded-full border border-zinc-700/80 truncate max-w-xs shadow-lg">
+      </div>
+    </div>
+
+    <!-- Close Button -->
     <button 
       id="lightboxCloseBtn" 
-      class="absolute top-6 right-6 p-3 rounded-full bg-zinc-900/80 text-zinc-300 hover:text-white border border-zinc-700/80 transition-colors"
+      class="absolute top-4 sm:top-6 right-4 sm:right-6 p-3 rounded-full bg-zinc-900/80 hover:bg-zinc-800 text-zinc-300 hover:text-white border border-zinc-700/80 transition-colors shadow-lg z-30"
       aria-label="Close zoom preview"
+      title="Close (Esc)"
     >
       <i class="fas fa-xmark text-lg"></i>
     </button>
-    <div class="max-w-5xl max-h-[80vh] flex flex-col items-center" onclick="event.stopPropagation()">
-      <img id="lightboxImage" src="" alt="Zoom preview" class="max-w-full max-h-[75vh] object-contain rounded-lg shadow-2xl border border-zinc-800">
-      <p id="lightboxCaption" class="mt-4 text-xs font-mono text-zinc-400 text-center max-w-xl"></p>
+
+    <!-- Navigation Arrows: Previous & Next -->
+    <button 
+      id="lightboxPrevBtn" 
+      class="absolute left-2 sm:left-6 top-1/2 -translate-y-1/2 p-3.5 sm:p-4 rounded-full bg-zinc-900/85 hover:bg-zinc-800 text-zinc-300 hover:text-white border border-zinc-700/80 transition-all shadow-2xl hover:scale-110 z-30 focus:outline-none"
+      aria-label="Previous image"
+      title="Previous image (Left Arrow key)"
+      onclick="event.stopPropagation(); prevLightboxImage();"
+    >
+      <i class="fas fa-chevron-left text-lg sm:text-2xl"></i>
+    </button>
+
+    <button 
+      id="lightboxNextBtn" 
+      class="absolute right-2 sm:right-6 top-1/2 -translate-y-1/2 p-3.5 sm:p-4 rounded-full bg-zinc-900/85 hover:bg-zinc-800 text-zinc-300 hover:text-white border border-zinc-700/80 transition-all shadow-2xl hover:scale-110 z-30 focus:outline-none"
+      aria-label="Next image"
+      title="Next image (Right Arrow key)"
+      onclick="event.stopPropagation(); nextLightboxImage();"
+    >
+      <i class="fas fa-chevron-right text-lg sm:text-2xl"></i>
+    </button>
+
+    <!-- Main Image & Caption Area -->
+    <div class="max-w-5xl w-full max-h-[85vh] flex flex-col items-center justify-center relative z-20 px-8 sm:px-16" onclick="event.stopPropagation()">
+      <div class="relative max-h-[75vh] flex items-center justify-center">
+        <img 
+          id="lightboxImage" 
+          src="" 
+          alt="Zoom preview" 
+          class="max-w-full max-h-[75vh] object-contain rounded-lg shadow-2xl border border-zinc-800 transition-opacity duration-200"
+        />
+      </div>
+      <p id="lightboxCaption" class="mt-4 text-xs sm:text-sm font-mono text-zinc-300 text-center max-w-2xl px-4 leading-relaxed"></p>
     </div>
   </div>
 
