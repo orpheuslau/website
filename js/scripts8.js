@@ -94,8 +94,7 @@ class DSEMultiAgentOrchestrator:
     ],
     links: [
       { label: "View Architecture PNG", url: "assets/img/dsebot/DSEbot.png", icon: "fa-diagram-project", primary: true },
-      { label: "View Advisory Interface", url: "assets/img/dsebot/BD1B3F27-5DDF-4FB4-9BF5-BD9E9C628195_1_201_a.jpeg", icon: "fa-comments" },
-      { label: "Cloud Run Specs", url: "#", icon: "fa-google" }
+      { label: "View Advisory Interface", url: "assets/img/dsebot/BD1B3F27-5DDF-4FB4-9BF5-BD9E9C628195_1_201_a.jpeg", icon: "fa-comments" }
     ]
   },
   {
@@ -166,8 +165,7 @@ export async function hybridRetrievePolicy(query: string, k: number = 60): Promi
       { src: "assets/img/lsg_navigator_cover.svg", caption: "Interactive RAG Schematic Overview" }
     ],
     links: [
-      { label: "View Architecture PNG", url: "assets/img/lsg_navigator/caritas_lsg_architecture.png", icon: "fa-diagram-project", primary: true },
-      { label: "Vertex AI & BigQuery Specs", url: "#", icon: "fa-google" }
+      { label: "View Architecture PNG", url: "assets/img/lsg_navigator/caritas_lsg_architecture.png", icon: "fa-diagram-project", primary: true }
     ]
   },
   {
@@ -234,10 +232,15 @@ Strict Curatorial Guardrails:
       { src: "assets/img/messengers_of_hope_cover.svg", caption: "Archival RAG Pipeline & Curatorial Guardrails Architecture" }
     ],
     links: [
-      { label: "View Architecture PNG", url: "assets/img/diocese80/diocese80_architecture.png", icon: "fa-diagram-project", primary: true },
-      { label: "View Exhibition Kiosk UI", url: "assets/img/diocese80/F1A2CD1A-79C8-4BF4-883C-3A1011799F25_1_201_a.jpeg", icon: "fa-image" },
-      { label: "Exhibition Hall Details", url: "#", icon: "fa-landmark" }
-    ]
+      { label: "YouTube Demo: Narration & AI Chatbot", url: "https://youtube.com/shorts/IP0l9c_tpdk?si=EFDJNTi2Fjq_oSrn", icon: "fa-youtube", primary: true },
+      { label: "View Architecture PNG", url: "assets/img/diocese80/diocese80_architecture.png", icon: "fa-diagram-project" },
+      { label: "View Exhibition Kiosk UI", url: "assets/img/diocese80/F1A2CD1A-79C8-4BF4-883C-3A1011799F25_1_201_a.jpeg", icon: "fa-image" }
+    ],
+    videoEmbed: {
+      url: "https://www.youtube.com/embed/IP0l9c_tpdk",
+      directUrl: "https://youtube.com/shorts/IP0l9c_tpdk?si=EFDJNTi2Fjq_oSrn",
+      title: "Exhibition Kiosk Live Demo: Cantonese & English Narration + AI Docent"
+    }
   },
   {
     id: "linkyouin",
@@ -1030,6 +1033,39 @@ function openCaseStudy(projectId) {
         </div>
       ` : ''}
 
+      <!-- Live Video Demonstration -->
+      ${project.videoEmbed ? `
+        <div class="rounded-2xl border border-zinc-800 bg-[#0d0f14] p-5 sm:p-7 shadow-xl">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4">
+            <h3 class="text-base sm:text-lg font-semibold text-zinc-100 tracking-tight flex items-center gap-2.5">
+              <i class="fab fa-youtube text-red-500 text-xl"></i>
+              <span>Live Demonstration & Multi-Lingual Narration</span>
+            </h3>
+            <a 
+              href="${project.videoEmbed.directUrl || project.videoEmbed.url}" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-1.5 text-xs text-orange-400 hover:text-orange-300 font-mono tracking-wide"
+            >
+              <span>Watch on YouTube</span>
+              <i class="fas fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+          <div class="relative w-full max-w-[340px] sm:max-w-[380px] mx-auto rounded-2xl overflow-hidden shadow-2xl border border-zinc-800 bg-black aspect-[9/16]">
+            <iframe 
+              src="${project.videoEmbed.url}" 
+              title="${escapeHtml(project.videoEmbed.title || 'Project Demonstration')}"
+              class="w-full h-full border-0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              allowfullscreen
+            ></iframe>
+          </div>
+          <p class="mt-4 text-xs font-mono text-zinc-400 text-center max-w-lg mx-auto leading-relaxed">
+            ${escapeHtml(project.videoEmbed.title || 'Live exhibition kiosk demo showing Cantonese and English audio narration plus interactive AI docent dialogue.')}
+          </p>
+        </div>
+      ` : ''}
+
       <!-- Project Navigation Bar (Prev / Next) -->
       <div class="pt-8 border-t border-zinc-800/80 flex items-center justify-between gap-4">
         ${getPrevNextButtons(project.id)}
@@ -1078,24 +1114,31 @@ function getPrevNextButtons(currentId) {
 
 function renderProjectLinks(links) {
   if (!links || !links.length) return '';
+  const brandIcons = ['fa-youtube', 'fa-github', 'fa-apple', 'fa-google', 'fa-google-play', 'fa-instagram'];
   return `
     <div class="flex flex-wrap items-center gap-3">
-      ${links.map(link => `
+      ${links.map(link => {
+        const isBrand = link.icon && brandIcons.includes(link.icon);
+        const iconPrefix = isBrand ? 'fab' : 'fas';
+        const isYoutube = link.icon === 'fa-youtube';
+        return `
         <a 
           href="${link.url}" 
           target="_blank" 
           rel="noopener noreferrer"
           class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-semibold tracking-wide transition-all ${
             link.primary 
-              ? 'bg-orange-600 hover:bg-orange-500 text-white shadow-lg shadow-orange-900/30' 
+              ? (isYoutube 
+                  ? 'bg-red-600 hover:bg-red-500 text-white shadow-lg shadow-red-900/30' 
+                  : 'bg-orange-600 hover:bg-orange-500 text-white shadow-lg shadow-orange-900/30')
               : 'bg-zinc-900 hover:bg-zinc-800 text-zinc-200 border border-zinc-700/60'
           }"
         >
-          <i class="fab ${link.icon || 'fa-external-link-alt'}"></i>
+          <i class="${iconPrefix} ${link.icon || 'fa-arrow-up-right-from-square'} ${isYoutube && !link.primary ? 'text-red-500' : ''}"></i>
           <span>${link.label}</span>
           <i class="fas fa-arrow-up-right-from-square text-[10px] opacity-70"></i>
         </a>
-      `).join('')}
+      `;}).join('')}
     </div>
   `;
 }
