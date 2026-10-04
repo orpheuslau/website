@@ -12,21 +12,21 @@ const PROJECTS = [
     category: "ai",
     title: "DSE Bot: Multi-Agent Admissions & Empathetic Counseling",
     subtitle: "Multi-Agent Orchestration (MAO): Specialized Agents × Trusted Data × Deterministic Calculation",
-    stack: "Multi-Agent · Python Math Engine · LM Studio Local LLM · Redis · Docker · Cloud Run · 2025",
-    summary: "Orchestrates 4 specialized agents (Router, University Identifier, Programme Matcher, Response Generator) to decouple exact JUPAS admission score math from empathetic Cantonese counseling.",
+    stack: "Multi-Agent · Python Math Engine · LM Studio Local LLM · Redis · Docker · Cloud Run · 2026",
+    summary: "Engineered in 2026 to support Hong Kong secondary candidates and social workers during the HKDSE results release. Orchestrates 4 specialized agents (Router, University Identifier, Programme Matcher, Response Generator) to decouple exact JUPAS admission score math from empathetic Cantonese counseling.",
     coverImage: "assets/img/dsebot/DSEbot.png",
     featuredDiagram: {
       src: "assets/img/dsebot/DSEbot.png",
       caption: "Multi-Agent Orchestration (MAO) Architecture: 4 Specialized Agents × Trusted Data × Deterministic Math Engine"
     },
     meta: {
-      domain: "Youth Guidance & JUPAS Admissions",
-      target: "HKDSE Candidates & Social Workers",
-      deployment: "Google Cloud Run (asia-east1) & LM Studio",
-      paradigm: "4 AI Agents + Python Math Engine + Redis"
+      period: "2026",
+      type: "Multi-Agent AI / Deterministic Calculation",
+      client: "Hong Kong Youth Guidance & HKDSE Candidates",
+      privacy: "Zero Hallucination / Formula Verified"
     },
-    challenge: "Standard generative LLMs frequently hallucinate complex admission scores, percentile cutoffs, and university formula weightings. During high-stakes Hong Kong Diploma of Secondary Education (HKDSE) result-release periods, a miscalculated score or inaccurate JUPAS recommendation can severely misguide a student's academic future and amplify acute psychological distress.",
-    solution: "Built a Multi-Agent Orchestration (MAO) pipeline where tasks are dynamically divided across 4 specialized agents. An Agent Router normalizes user queries (Cantonese/English); a University Identifier standardizes aliases (e.g. 港大/香港大學 -> HKU); a Programme Matcher aligns career aspirations with canonical JUPAS degree codes (e.g. 社工 -> JS3720); and a Python Math Engine executes deterministic formula weighting against official admission statistics. Finally, an Empathetic Response Generator provides anxiety-reducing guidance without doing token-based arithmetic.",
+    challenge: "Standard generative LLMs frequently hallucinate complex admission scores, percentile cutoffs, and university formula weightings. During high-stakes 2026 Hong Kong Diploma of Secondary Education (HKDSE) result-release periods, a miscalculated score or inaccurate JUPAS recommendation can severely misguide a student's academic future and amplify acute psychological distress.",
+    solution: "Developed in 2026, the Multi-Agent Orchestration (MAO) pipeline dynamically divides tasks across 4 specialized agents. An Agent Router normalizes user queries (Cantonese/English); a University Identifier standardizes aliases (e.g. 港大/香港大學 -> HKU); a Programme Matcher aligns career aspirations with canonical JUPAS degree codes (e.g. 社工 -> JS3720); and a dedicated Python Math Engine executes deterministic formula weighting against official admission statistics. Finally, an Empathetic Response Generator provides anxiety-reducing guidance without doing token-based arithmetic.",
     pillars: [
       { title: "Agent 1: Router & Extractor", desc: "Performs intent detection, extracts DSE grades (e.g., 中文4 英文5* 數學5), identifies target universities/programmes, and normalizes conversational user input." },
       { title: "Agent 2: University Identifier", desc: "Handles colloquial expressions and dialect aliases (e.g., 港大 / HKU / 香港大學 -> HKU), mapping user input to canonical university identifiers." },
@@ -103,21 +103,21 @@ class DSEMultiAgentOrchestrator:
     category: "ai",
     title: "Caritas LSG & LF AI Navigator",
     subtitle: "Empowering Hong Kong NGOs with AI-Powered Policy Guidance & Statutory Governance",
-    stack: "Enterprise RAG · Google Gemini · Next.js · BigQuery Vector Search · Tailwind CSS · 2025",
-    summary: "Dual sparse-dense retrieval engine with Reciprocal Rank Fusion (RRF) providing sentence-level grounded citations across hundreds of Social Welfare Department and Lotteries Fund clauses.",
+    stack: "Enterprise RAG · Google Gemini · Next.js · BigQuery Vector Search · Tailwind CSS · 2026",
+    summary: "Developed in 2026 for Hong Kong non-governmental organizations and social service leadership. Features a dual sparse-dense retrieval engine with Reciprocal Rank Fusion (RRF) providing sentence-level grounded citations across hundreds of Social Welfare Department (SWD) Lump Sum Grant and Lotteries Fund clauses.",
     coverImage: "assets/img/lsg_navigator/caritas_lsg_architecture.png",
     featuredDiagram: {
       src: "assets/img/lsg_navigator/caritas_lsg_architecture.png",
       caption: "Caritas LSG & LF AI Navigator: Enterprise RAG Architecture & System Pipeline"
     },
     meta: {
-      domain: "Public Welfare Administration & NGO Governance",
-      users: "Agency Directors, Social Workers & Finance Teams",
-      retrieval: "Hybrid (BM25 Sparse + BigQuery Dense Vector)",
-      citations: "Strict Clause & Annex Grounding"
+      period: "2026",
+      type: "Enterprise Hybrid RAG / Statutory Governance",
+      client: "Caritas Hong Kong / Social Welfare NGOs",
+      privacy: "Strict Statutory Grounding / SWD Compliant"
     },
     challenge: "The Social Welfare Department (SWD) Lump Sum Grant (LSG) and Lotteries Fund (LF) manuals contain hundreds of cross-referenced clauses, circulars, and virement rules. Standard keyword search misses semantic intent, while general LLMs risk hallucinating compliance regulations with severe statutory liability.",
-    solution: "Architected an enterprise Hybrid RAG system pairing BM25 sparse lexical search for exact circular codes with BigQuery Vector Search (powered by Vertex AI text-embedding-004) for conceptual queries. Both pipelines merge via Reciprocal Rank Fusion (RRF), prompting Gemini with strict grounding to deliver clause-verified audit guidance.",
+    solution: "Architected in 2026 as an enterprise Hybrid RAG system pairing BM25 sparse lexical search for exact circular codes with BigQuery Vector Search (powered by Vertex AI text-embedding-004) for conceptual queries. Both pipelines merge via Reciprocal Rank Fusion (RRF), prompting Google Gemini with strict statutory grounding to deliver clause-verified audit guidance and decision support.",
     pillars: [
       { title: "Dual Retrieval Pipelines", desc: "Sparse Lexical Search (BM25) retrieves exact statutory references, circular numbers, and financial clause codes; Dense Semantic Vector Search (BigQuery & Vertex AI) retrieves high-level conceptual context." },
       { title: "Reciprocal Rank Fusion (RRF)", desc: "Merges both ranked result sets based on ordinal positions rather than incompatible distance metrics." },
@@ -172,23 +172,23 @@ export async function hybridRetrievePolicy(query: string, k: number = 60): Promi
     id: "messengers-of-hope",
     legacyId: "messengers-of-hope-details",
     category: "ai",
-    title: 'Diocese 80th Anniversary Tour Guide ("Messengers of Hope")',
+    title: "Historical exhibition of the Catholic Diocese of HK",
     subtitle: "Archival RAG & Multilingual Curatorial Docent for Catholic Diocese 80th Exhibition",
-    stack: "Archival RAG · Embeddings · Context Guardrails · Multilingual Kiosk / Web · 2025",
-    summary: "Public exhibition kiosk AI docent at Caritas House serving eight decades of diocesan archives in Cantonese, English, and Mandarin with theological fidelity guardrails.",
+    stack: "Archival RAG · Embeddings · Context Guardrails · Multilingual Kiosk / Web · 2026",
+    summary: "Developed in 2026 for the 80th anniversary public exhibition at Caritas House. An interactive AI docent serving eight decades of diocesan archives in Cantonese, English, and Mandarin with strict theological fidelity and curatorial neutrality guardrails.",
     coverImage: "assets/img/diocese80/diocese80_architecture.png",
     featuredDiagram: {
       src: "assets/img/diocese80/diocese80_architecture.png",
       caption: 'Catholic Diocese 80th Anniversary "Messengers of Hope" Archival RAG & Multilingual AI Docent System Architecture'
     },
     meta: {
-      domain: "Cultural Heritage & Museum Curation",
-      venue: "Caritas House 80th Anniversary Exhibition Hall",
-      languages: "Cantonese (Traditional) · English · Mandarin",
-      guardrails: "Curatorial Neutrality & Theological Fidelity"
+      period: "2026",
+      type: "Archival RAG / Multilingual AI Kiosk Docent",
+      client: "Catholic Diocese of Hong Kong 80th Exhibition",
+      privacy: "Theological Fidelity & Curatorial Guardrails"
     },
-    challenge: "Static museum placards cannot adapt to diverse visitor backgrounds, while human docents cannot scale during peak hours or provide instant multilingual deep-dives into historical archives. Furthermore, general conversational models risk speculating on sensitive church history without strict verification.",
-    solution: "Developed an Archival RAG interactive docent deployed on public kiosks and mobile web. The system ingests eight decades of diocesan documentation, parish records, and exhibition catalog entries, enforcing theological fidelity and curatorial neutrality guardrails while dynamically switching between Cantonese, English, and Mandarin.",
+    challenge: "Static museum placards cannot adapt to diverse visitor backgrounds, while human docents cannot scale during peak exhibition hours or provide instant multilingual deep-dives into historical archives. Furthermore, general conversational models risk speculating on sensitive church history without strict verification.",
+    solution: "Developed in 2026, this Archival RAG interactive docent is deployed on on-site public exhibition kiosks and mobile web. The system ingests eight decades of diocesan documentation, parish records, and exhibition catalog entries, enforcing theological fidelity and curatorial neutrality guardrails while dynamically switching between Cantonese, English, and Mandarin with synchronized audio narration.",
     pillars: [
       { title: "Front-End Intent & Language Classifier", desc: "Detects visitor language (Cantonese, English, or Mandarin) and categorizes queries (artifact provenance, chronological timeline, or gallery navigation)." },
       { title: "80-Year Archival Vector Store", desc: "Ingests eight decades of diocesan documentation, parish records, and exhibition catalog entries dating from post-war 1946 to present." },
